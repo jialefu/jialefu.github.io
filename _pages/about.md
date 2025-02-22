@@ -42,3 +42,16 @@ I am currently pursuing a Master's degree in Artificial Intelligence at [PALM](h
 **Jiale Fu**, Yaqing Wang, Simeng Han, Jiaming Fan, Xu Yang<br>
 *Preprint, 2024.*<br>
 <a href="https://arxiv.org/pdf/2410.02203" class="mybutton">PDF</a>
+
+# Experiences
+- Southeast University, Nanjing (Sept 2020 – Jun 2024).<br>
+Bachelor’s in Mathematics and Applied Mathematics.
+
+- Baidu Research, Beijing (Nov 2023 – May 2024).<br>
+Intern specializing in reasoning and in-context learning for LLMs.
+
+- Shopee R&D Center, Shanghai (Jun 2024 – Sept 2024)<br>
+Intern focused on multimodal tokenization for LMM pretraining.
+
+- Southeast University, Nanjing (Sept 2024 – Present)<br>
+Master's in Artificial Intelligence.
