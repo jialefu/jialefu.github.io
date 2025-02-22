@@ -28,7 +28,7 @@ redirect_from:
       text-decoration: none;
       font-weight: strong;
       border-width: 1px;
-      border-color: black;
+      border-color: black !important;
       border-style: solid;
       padding-right: 6px;
       padding-left: 6px;
