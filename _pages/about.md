@@ -10,7 +10,7 @@ redirect_from:
 <style>
   .mybutton {
       color: black;
-      font-size: 14px;
+      font-size: 15px;
       text-decoration: none;
       font-weight: strong;
       border-width: 1px;
@@ -20,12 +20,20 @@ redirect_from:
       padding-left: 6px;
       padding-top: 0px;
       padding-bottom: 0px;
-    
-    &:hover {
-      text-decoration: none;
+  }
+  .mybutton:hover {
       color: black;
+      font-size: 15px;
       opacity: 0.8;
-    }
+      text-decoration: none;
+      font-weight: strong;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      padding-right: 6px;
+      padding-left: 6px;
+      padding-top: 0px;
+      padding-bottom: 0px;
   }
 </style>
 
