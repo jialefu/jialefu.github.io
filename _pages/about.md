@@ -51,10 +51,10 @@ I am currently a first-year master's student at [PALM](https://palm.seu.edu.cn/h
 *Underreview.*<br>
 <a href="https://arxiv.org/pdf/2410.02203" class="mybutton">PDF</a> <a href="Coming Soon" class="mybutton">Code</a> 
 
-[Mimic In-Context Learning for Multimodal Tasks.](https://ComingSoon.com)<br>
+[Mimic In-Context Learning for Multimodal Tasks.](https://arxiv.org/abs/2504.08851)<br>
 Yuchu Jiang, **Jiale Fu**, Chenduo Hao, Xinting Hu, Yingzhe Peng, Xin Geng, Xu Yang<br>
 *IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.*<br>
-<a href="Coming Soon" class="mybutton">PDF</a> <a href="https://github.com/Kamichanw/MimIC" class="mybutton">Code</a> 
+<a href="https://arxiv.org/pdf/2504.08851" class="mybutton">PDF</a> <a href="https://github.com/Kamichanw/MimIC" class="mybutton">Code</a> 
 
 # Experiences
 - Southeast University, Nanjing (Sept 2024 – Present)<br>
