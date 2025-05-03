@@ -43,7 +43,7 @@ I am currently a first-year master's student at [PALM](https://palm.seu.edu.cn/h
 # Publications
 [Speculative Ensemble: Fast Large Language Model Ensemble via Speculation](https://arxiv.org/abs/2502.01662)<br>
 **Jiale Fu**\*, Yuchu Jiang\*, Junkai Chen, Jiaming Fan, Xin Geng, Xu Yang<br>
-*Underreview.*<br>
+*International Conference on Machine Learning (ICML), 2025.*<br>
 <a href="https://arxiv.org/pdf/2502.01662" class="mybutton">PDF</a> <a href="https://github.com/Kamichanw/Speculative-Ensemble/" class="mybutton">Code</a> <a href="https://kamichanw.github.io/publication/2025-02-01-speculative-ensemble" class="mybutton">Blog</a> <a href="https://mp.weixin.qq.com/s/q6PurYDICkzT6lEbd24uGQ" class="mybutton">Blog (Zh)</a> 
 
 [GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning](https://arxiv.org/abs/2410.02203)<br>
