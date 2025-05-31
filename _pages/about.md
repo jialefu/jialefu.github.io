@@ -41,10 +41,10 @@ redirect_from:
 I am currently a first-year master's student at [PALM](https://palm.seu.edu.cn/home.html) Lab, School of Computer Science and Engineering, Southeast University (SEU), under the supervision of Professor [Xu Yang](https://yangxuntu.github.io/). Prior to this, I completed my Bachelor's degree in School of Mathematics at the same institution. My research interests primarily focus on parallel inference in Large Language Models (LLMs), with a focus on speculative decoding methods, as well as the reasoning ability of LLMs.
 
 # Publications
-[Speculative Ensemble: Fast Large Language Model Ensemble via Speculation](https://arxiv.org/abs/2502.01662)<br>
+[Fast Large Language Model Collaborative Decoding via Speculation](https://arxiv.org/abs/2502.01662)<br>
 **Jiale Fu**\*, Yuchu Jiang\*, Junkai Chen, Jiaming Fan, Xin Geng, Xu Yang<br>
 *International Conference on Machine Learning (ICML), 2025.*<br>
-<a href="https://arxiv.org/pdf/2502.01662" class="mybutton">PDF</a> <a href="https://github.com/Kamichanw/Speculative-Ensemble/" class="mybutton">Code</a> <a href="https://kamichanw.github.io/publication/2025-02-01-speculative-ensemble" class="mybutton">Blog</a> <a href="https://mp.weixin.qq.com/s/q6PurYDICkzT6lEbd24uGQ" class="mybutton">Blog (Zh)</a> 
+<a href="https://arxiv.org/pdf/2502.01662" class="mybutton">PDF</a> <a href="https://github.com/Kamichanw/CoS" class="mybutton">Code</a> <a href="https://kamichanw.github.io/publication/2025-02-01-cos" class="mybutton">Blog</a> <a href="https://mp.weixin.qq.com/s/q6PurYDICkzT6lEbd24uGQ" class="mybutton">Blog (Zh)</a> 
 
 [GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning](https://arxiv.org/abs/2410.02203)<br>
 **Jiale Fu**, Yaqing Wang, Simeng Han, Jiaming Fan, Xu Yang<br>
