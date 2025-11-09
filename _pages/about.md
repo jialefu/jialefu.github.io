@@ -50,17 +50,17 @@ I am currently a second-year master's student at [PALM](https://palm.seu.edu.cn/
 <a href="https://kamichanw.github.io/publication/2025-02-01-cos" class="mybutton">Blog</a>
 <a href="https://mp.weixin.qq.com/s/q6PurYDICkzT6lEbd24uGQ" class="mybutton">Blog (Zh)</a>
 
+[GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning](https://arxiv.org/abs/2410.02203)<br>
+**Jiale Fu**, Yaqing Wang, Simeng Han, Jiaming Fan, Xu Yang<br>
+*Association for the Advancement of Artificial Intelligence (AAAI), 2026*<br>
+<a href="https://arxiv.org/pdf/2410.02203" class="mybutton">PDF</a> <a href="Coming Soon" class="mybutton">Code</a> 
+
 [Mimic In-Context Learning for Multimodal Tasks.](https://arxiv.org/abs/2504.08851)<br>
 Yuchu Jiang, **Jiale Fu**, Chenduo Hao, Xinting Hu, Yingzhe Peng, Xin Geng, Xu Yang<br>
 *IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.*<br>
 <a href="https://arxiv.org/pdf/2504.08851" class="mybutton">PDF</a>
 <a href="https://github.com/Kamichanw/MimIC" class="mybutton">Code</a>
 <a href="https://kamichanw.github.io/publication/2025-11-20-mimic" class="mybutton">Blog</a> 
-
-[GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning](https://arxiv.org/abs/2410.02203)<br>
-**Jiale Fu**, Yaqing Wang, Simeng Han, Jiaming Fan, Xu Yang<br>
-*Association for the Advancement of Artificial Intelligence (AAAI), 2026*<br>
-<a href="https://arxiv.org/pdf/2410.02203" class="mybutton">PDF</a> <a href="Coming Soon" class="mybutton">Code</a> 
 
 # Experiences
 - Southeast University, Nanjing (Sept 2024 – Present)<br>
