@@ -21,9 +21,9 @@ selected_papers: true
 social: true
 ---
 
-I am Jiale Fu, a master's student at Southeast University and PALM Lab, where I work on efficient inference for large language models. My research interests focus on LLM efficiency, particularly speculative decoding, sparse attention, and the co-design of algorithms and inference infrastructure for practical deployment.
+I am Jiale Fu, a master's student at Southeast University and PALM Lab, advised by Xu Yang. My current graduate research centers on LLM efficiency.
 
-Before graduate study, I completed a bachelor's degree in mathematics at Southeast University.
+Before graduate study, I completed a bachelor's degree in mathematics at Southeast University, where I was advised by Wenwu Yu and worked on complex networks.
 
 <p class="inline-icon-links">
   You can also find me via
@@ -33,11 +33,13 @@ Before graduate study, I completed a bachelor's degree in mathematics at Southea
   <i class="fa-brands fa-github"></i> <a href="https://github.com/jialefu">GitHub</a>.
 </p>
 
-### Research
+### Research Interests
 
-- Efficient inference for large language models
-- Speculative decoding
-- Sparse attention
+My research interests focus on LLM efficiency, particularly:
+
+- speculative decoding
+- sparse attention
+- the co-design of algorithms and inference infrastructure
 
 ### Experience
 
