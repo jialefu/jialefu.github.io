@@ -43,6 +43,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         width: 100%;
         max-width: 208px;
         aspect-ratio: 4 / 3;
@@ -77,12 +78,16 @@
       .abbr {
         margin-bottom: 0.5rem;
 
-        abbr {
+        .venue-badge {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
           border-radius: 0.24rem !important;
           color: var(--global-card-bg-color) !important;
+          padding: 0.18rem 0.84rem;
+          font-size: 0.7rem;
+          font-weight: 700;
+          line-height: 1;
 
           a {
             color: white;
@@ -96,6 +101,18 @@
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
+        }
+      }
+
+      .preview-badge {
+        position: absolute;
+        top: 0.32rem;
+        left: 0.32rem;
+        z-index: 2;
+
+        .venue-badge {
+          margin-bottom: 0;
+          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
         }
       }
 

@@ -1,32 +1,41 @@
 ---
 ---
 <div class="row">
+  {% capture badge_markup %}
+    {%- if entry.abbr -%}
+      {%- if site.data.venues[entry.abbr] -%}
+        {% assign venue_style = null %}
+        {% if site.data.venues[entry.abbr].color != blank %}
+          {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+        {%- endif -%}
+        <abbr
+          class="badge venue-badge"
+          {% if venue_style %}
+            {{ venue_style }}
+          {% endif -%}
+        >
+          {% if site.data.venues[entry.abbr].url %}
+            <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
+          {% else %}
+            <div>{{- entry.abbr -}}</div>
+          {% endif %}
+        </abbr>
+      {% else %}
+        <abbr class="badge venue-badge">{{ entry.abbr }}</abbr>
+      {% endif %}
+    {% endif %}
+  {% endcapture %}
+  {% assign badge_markup = badge_markup | strip %}
+
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-3 abbr">
-      {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
-      {% endif %}
       {% if entry.preview %}
         <div class="preview-thumb">
+          {% if badge_markup != '' %}
+            <div class="preview-badge">
+              {{ badge_markup }}
+            </div>
+          {% endif %}
           {% if entry.preview contains '://' %}
             <img class="preview rounded" src="{{ entry.preview }}" alt="{{ entry.preview }}">
           {% else %}
@@ -41,6 +50,8 @@
             %}
           {% endif %}
         </div>
+      {% elsif badge_markup != '' %}
+        {{ badge_markup }}
       {% endif %}
     </div>
   {% endif %}
