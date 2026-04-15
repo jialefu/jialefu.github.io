@@ -1,12 +1,13 @@
 # Jiale Fu Personal Website
 
-This branch contains a fresh personal website rebuild for `jialefu/jialefu.github.io` on top of the [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme.
+This branch contains the rebuilt `jialefu/jialefu.github.io` website on top of the [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme. The original AcademicPages site was left untouched on `master`; the new site lives on `al-folio-rebuild`.
 
-## Branch setup
+## Structure
 
-- Rebuilt on a clean orphan branch: `al-folio-rebuild`
-- Existing AcademicPages implementation was left untouched
-- Theme base imported from `alshedivat/al-folio` at commit `af82cce72a2b6a46ba80ed89e8f13bf82b60890d`
+- Home page content lives in `_pages/about.md`
+- Publications are maintained in `_bibliography/papers.bib`
+- News items are maintained in `_news/`
+- Social/contact links are configured in `_data/socials.yml`
 
 ## Local development
 
@@ -17,10 +18,16 @@ This branch contains a fresh personal website rebuild for `jialefu/jialefu.githu
 bundle install
 ```
 
-3. Start the site locally:
+3. Start the local preview:
+
+```powershell
+.\preview.ps1
+```
+
+Or run Jekyll directly:
 
 ```bash
-bundle exec jekyll serve
+bundle exec jekyll serve --config _config.yml,_config_local.yml
 ```
 
 4. Open `http://127.0.0.1:4000`.
@@ -35,4 +42,4 @@ bundle exec jekyll serve
 
 - Replace the placeholder teaser thumbnails in `assets/img/publication_preview/`
 - Add a CV PDF if you want a downloadable resume link later
-- Add more publications or project pages as new work appears
+- Add blog posts or additional pages as new content appears
