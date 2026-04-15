@@ -147,7 +147,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: "pip"
       - name: Update _config.yml
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -160,7 +159,7 @@ jobs:
           JEKYLL_ENV: production
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          python -m pip install --upgrade nbconvert
           bundle exec jekyll build
       - name: Purge unused CSS
         run: |
