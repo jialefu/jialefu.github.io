@@ -21,9 +21,9 @@ selected_papers: true
 social: true
 ---
 
-I am Jiale Fu, a Master's student at Southeast University's PALM Lab, advised by Prof. Xu Yang. My research focuses on improving the efficiency of Large Language Models.
+I am Jiale Fu, a Master's student at [Southeast University](https://www.seu.edu.cn/)'s [PALM Lab](https://palm.seu.edu.cn/), advised by [Prof. Xu Yang](https://yangxuntu.github.io/). My research focuses on improving the efficiency of Large Language Models.
 
-Before graduate study, I completed a bachelor's degree in mathematics at Southeast University, where I was advised by Wenwu Yu and worked on complex networks.
+Before graduate study, I completed a bachelor's degree in mathematics at Southeast University, where I was advised by [Wenwu Yu](https://math.seu.edu.cn/yww/list.htm) and worked on complex networks.
 
 <p class="inline-icon-links">
   You can also find me via
@@ -45,5 +45,5 @@ My research interests focus on LLM efficiency, particularly:
 
 - **Southeast University** - Master's Student, Sept 2024-Present. Conducting research in the School of Computer Science and Engineering and PALM Lab.
 - **Shopee R&D Center** - Multimodal AI Intern, Jun 2024-Sept 2024. Worked on multimodal tokenization for large multimodal model pretraining.
-- **Baidu Research** - Research Intern, Nov 2023-May 2024. Mentored by Yaqing Wang and focused on reasoning and in-context learning for large language models.
+- **Baidu Research** - Research Intern, Nov 2023-May 2024. Mentored by [Yaqing Wang](https://wangyaqing.github.io/) and focused on reasoning and in-context learning for large language models.
 - **Southeast University** - Bachelor's Student in Mathematics, Sept 2020-Jun 2024.

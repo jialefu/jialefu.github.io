@@ -60,6 +60,17 @@ body.sticky-bottom-footer {
   width: 1rem;
   color: var(--global-theme-color);
   line-height: 1.6;
+
+  .fa-party-horn {
+    font-style: normal;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1;
+
+    &::before {
+      content: "\1F389";
+    }
+  }
 }
 
 .news-copy {
