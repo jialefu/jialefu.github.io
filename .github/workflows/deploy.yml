@@ -6,61 +6,11 @@ on:
       - master
       - main
       - al-folio-rebuild
-    paths:
-      - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   pull_request:
     branches:
       - master
       - main
       - al-folio-rebuild
-    paths:
-      - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   workflow_dispatch:
 
 permissions:
@@ -78,6 +28,72 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Ensure GitHub Pages uses workflow deployments
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          ref_name = os.environ["GITHUB_REF_NAME"]
+          token = os.environ["GITHUB_TOKEN"]
+          url = f"https://api.github.com/repos/{repo}/pages"
+          headers = {
+              "Accept": "application/vnd.github+json",
+              "Authorization": f"Bearer {token}",
+              "X-GitHub-Api-Version": "2026-03-10",
+          }
+
+          def request(method, payload=None):
+              data = None if payload is None else json.dumps(payload).encode("utf-8")
+              req = urllib.request.Request(url, data=data, headers=headers, method=method)
+              with urllib.request.urlopen(req) as response:
+                  body = response.read().decode("utf-8")
+                  return response.status, json.loads(body) if body else None
+
+          desired = {"build_type": "workflow", "source": {"branch": ref_name, "path": "/"}}
+
+          try:
+              _, current = request("GET")
+              build_type = current.get("build_type")
+              source = current.get("source") or {}
+              print(f"Current Pages config: build_type={build_type}, source={source}")
+
+              if build_type == "workflow" and source.get("branch") == ref_name and source.get("path") == "/":
+                  print("GitHub Pages is already configured for workflow deployments.")
+              else:
+                  try:
+                      request("PUT", desired)
+                      print(f"::notice::Updated GitHub Pages to workflow mode on branch '{ref_name}'.")
+                  except urllib.error.HTTPError as error:
+                      details = error.read().decode("utf-8", errors="replace")
+                      print(
+                          "::warning::GitHub Pages is not in workflow mode and the workflow could not update it "
+                          f"automatically ({error.code}). Response: {details}"
+                      )
+          except urllib.error.HTTPError as error:
+              details = error.read().decode("utf-8", errors="replace")
+              if error.code == 404:
+                  try:
+                      request("POST", desired)
+                      print(f"::notice::Created a GitHub Pages site in workflow mode on branch '{ref_name}'.")
+                  except urllib.error.HTTPError as create_error:
+                      create_details = create_error.read().decode("utf-8", errors="replace")
+                      print(
+                          "::warning::GitHub Pages is not configured yet and the workflow could not create it "
+                          f"automatically ({create_error.code}). Response: {create_details}"
+                      )
+              else:
+                  print(
+                      "::warning::Could not inspect GitHub Pages settings before deployment "
+                      f"({error.code}). Response: {details}"
+                  )
+          PY
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
@@ -111,7 +127,7 @@ jobs:
           purgecss -c purgecss.config.js
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 

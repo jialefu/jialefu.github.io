@@ -37,7 +37,8 @@ bundle exec jekyll serve --config _config.yml,_config_local.yml
 - GitHub Pages deployment is handled through `.github/workflows/deploy.yml`
 - The workflow builds the Jekyll site and deploys `_site` as a GitHub Pages artifact
 - The workflow is configured for `main`, `master`, and `al-folio-rebuild`
-- In `Settings -> Pages`, set `Source` to `GitHub Actions`
+- The workflow also checks GitHub Pages mode and will try to switch the repo from branch-based `legacy` builds to `workflow`
+- If GitHub still refuses that automatic switch, set `Settings -> Pages -> Source` to `GitHub Actions`
 - Do not use the branch-based Pages builder for this repo; it does not support `jekyll-scholar` and fails on `{% bibliography %}`
 
 ## Content TODOs
