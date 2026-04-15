@@ -22,11 +22,18 @@
           <tr>
             <th scope="row" style="width: 20%">{{ news_date }}</th>
             <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
+              <div class="news-entry">
+                <span class="news-icon">
+                  <i class="{% if item.icon %}{{ item.icon }}{% else %}fa-regular fa-circle-dot{% endif %}"></i>
+                </span>
+                <span class="news-copy">
+                  {% if item.inline %}
+                    {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {% else %}
+                    <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {% endif %}
+                </span>
+              </div>
             </td>
           </tr>
         {% endfor %}

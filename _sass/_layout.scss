@@ -40,6 +40,32 @@ body.sticky-bottom-footer {
   }
 }
 
+.inline-icon-links {
+  i {
+    width: 1.1rem;
+    margin-left: 0.15rem;
+    text-align: center;
+    color: var(--global-text-color-light);
+  }
+}
+
+.news-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.news-icon {
+  flex: 0 0 auto;
+  width: 1rem;
+  color: var(--global-theme-color);
+  line-height: 1.6;
+}
+
+.news-copy {
+  flex: 1 1 auto;
+}
+
 // Content layout uses Bootstrap's grid system with responsive columns
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples
