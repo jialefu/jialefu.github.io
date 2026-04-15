@@ -36,6 +36,7 @@ jobs:
           python - <<'PY'
           import json
           import os
+          import sys
           import urllib.error
           import urllib.request
 
@@ -64,7 +65,7 @@ jobs:
               source = current.get("source") or {}
               print(f"Current Pages config: build_type={build_type}, source={source}")
 
-              if build_type == "workflow" and source.get("branch") == ref_name and source.get("path") == "/":
+              if build_type == "workflow":
                   print("GitHub Pages is already configured for workflow deployments.")
               else:
                   try:
@@ -93,6 +94,28 @@ jobs:
                       "::warning::Could not inspect GitHub Pages settings before deployment "
                       f"({error.code}). Response: {details}"
                   )
+
+          try:
+              _, current = request("GET")
+              build_type = current.get("build_type")
+              source = current.get("source") or {}
+              print(f"Final Pages config: build_type={build_type}, source={source}")
+          except urllib.error.HTTPError as error:
+              details = error.read().decode("utf-8", errors="replace")
+              print(
+                  "::error::Could not verify GitHub Pages configuration after the update attempt "
+                  f"({error.code}). Response: {details}"
+              )
+              sys.exit(1)
+
+          if build_type != "workflow":
+              print(
+                  "::error::GitHub Pages must use GitHub Actions for this repository. "
+                  "The built-in branch-based Pages builder uses github-pages v232 and does not "
+                  "support jekyll-scholar tags such as {% bibliography %}. "
+                  "Set Settings -> Pages -> Source to GitHub Actions, then rerun this workflow."
+              )
+              sys.exit(1)
           PY
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'

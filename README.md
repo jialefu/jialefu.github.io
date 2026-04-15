@@ -40,6 +40,7 @@ bundle exec jekyll serve --config _config.yml,_config_local.yml
 - The workflow also checks GitHub Pages mode and will try to switch the repo from branch-based `legacy` builds to `workflow`
 - If GitHub still refuses that automatic switch, set `Settings -> Pages -> Source` to `GitHub Actions`
 - Do not use the branch-based Pages builder for this repo; it does not support `jekyll-scholar` and fails on `{% bibliography %}`
+- If a Pages job logs `GitHub Pages: github-pages v232` and ends with `Unknown tag 'bibliography'`, that is the branch-based Pages builder, not this workflow build. Switch `Settings -> Pages -> Source` to `GitHub Actions` and rerun the workflow.
 
 ## Content TODOs
 
