@@ -23,7 +23,7 @@ social: true
 
 I am Jiale Fu, a Master's student at [Southeast University](https://www.seu.edu.cn/)'s [PALM Lab](https://palm.seu.edu.cn/), advised by [Prof. Xu Yang](https://yangxuntu.github.io/). My research focuses on improving the efficiency of Large Language Models.
 
-Before graduate study, I completed a bachelor's degree in mathematics at Southeast University, where I was advised by [Wenwu Yu](https://math.seu.edu.cn/yww/list.htm) and worked on complex networks.
+Before graduate study, I completed a bachelor's degree in mathematics at Southeast University, where I was advised by [Prof. Wenwu Yu](https://math.seu.edu.cn/yww/list.htm) and worked on complex networks.
 
 <p class="inline-icon-links">
   You can also find me via
