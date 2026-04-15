@@ -37,8 +37,9 @@ bundle exec jekyll serve --config _config.yml,_config_local.yml
 - GitHub Pages deployment is handled through `.github/workflows/deploy.yml`
 - The workflow builds the Jekyll site and deploys `_site` as a GitHub Pages artifact
 - The workflow is configured for `main`, `master`, and `al-folio-rebuild`
-- The workflow also checks GitHub Pages mode and will try to switch the repo from branch-based `legacy` builds to `workflow`
-- If GitHub still refuses that automatic switch, set `Settings -> Pages -> Source` to `GitHub Actions`
+- The workflow checks whether GitHub Pages is using `workflow` deployments before it builds
+- To let the workflow switch GitHub Pages from branch-based `legacy` mode to `workflow` mode automatically, add a `PAGES_ADMIN_TOKEN` secret with repository admin access
+- Without that secret, the workflow can detect a bad Pages mode but cannot change it; in that case set `Settings -> Pages -> Source` to `GitHub Actions` manually
 - Do not use the branch-based Pages builder for this repo; it does not support `jekyll-scholar` and fails on `{% bibliography %}`
 - If a Pages job logs `GitHub Pages: github-pages v232` and ends with `Unknown tag 'bibliography'`, that is the branch-based Pages builder, not this workflow build. Switch `Settings -> Pages -> Source` to `GitHub Actions` and rerun the workflow.
 

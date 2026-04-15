@@ -32,6 +32,7 @@ jobs:
         if: github.event_name != 'pull_request'
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          PAGES_ADMIN_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
         run: |
           python - <<'PY'
           import json
@@ -42,7 +43,10 @@ jobs:
 
           repo = os.environ["GITHUB_REPOSITORY"]
           ref_name = os.environ["GITHUB_REF_NAME"]
-          token = os.environ["GITHUB_TOKEN"]
+          read_token = os.environ["GITHUB_TOKEN"]
+          admin_token = os.environ.get("PAGES_ADMIN_TOKEN", "").strip()
+          token = admin_token or read_token
+          can_manage_pages = bool(admin_token)
           url = f"https://api.github.com/repos/{repo}/pages"
           headers = {
               "Accept": "application/vnd.github+json",
@@ -67,6 +71,11 @@ jobs:
 
               if build_type == "workflow":
                   print("GitHub Pages is already configured for workflow deployments.")
+              elif not can_manage_pages:
+                  print(
+                      "::notice::PAGES_ADMIN_TOKEN is not configured, so the workflow can only verify "
+                      "the current GitHub Pages mode and cannot change it automatically."
+                  )
               else:
                   try:
                       request("PUT", desired)
@@ -80,15 +89,21 @@ jobs:
           except urllib.error.HTTPError as error:
               details = error.read().decode("utf-8", errors="replace")
               if error.code == 404:
-                  try:
-                      request("POST", desired)
-                      print(f"::notice::Created a GitHub Pages site in workflow mode on branch '{ref_name}'.")
-                  except urllib.error.HTTPError as create_error:
-                      create_details = create_error.read().decode("utf-8", errors="replace")
+                  if not can_manage_pages:
                       print(
-                          "::warning::GitHub Pages is not configured yet and the workflow could not create it "
-                          f"automatically ({create_error.code}). Response: {create_details}"
+                          "::notice::GitHub Pages is not configured yet and PAGES_ADMIN_TOKEN is not "
+                          "configured, so the workflow cannot create the Pages site automatically."
                       )
+                  else:
+                      try:
+                          request("POST", desired)
+                          print(f"::notice::Created a GitHub Pages site in workflow mode on branch '{ref_name}'.")
+                      except urllib.error.HTTPError as create_error:
+                          create_details = create_error.read().decode("utf-8", errors="replace")
+                          print(
+                              "::warning::GitHub Pages is not configured yet and the workflow could not create it "
+                              f"automatically ({create_error.code}). Response: {create_details}"
+                          )
               else:
                   print(
                       "::warning::Could not inspect GitHub Pages settings before deployment "
@@ -113,7 +128,10 @@ jobs:
                   "::error::GitHub Pages must use GitHub Actions for this repository. "
                   "The built-in branch-based Pages builder uses github-pages v232 and does not "
                   "support jekyll-scholar tags such as {% bibliography %}. "
-                  "Set Settings -> Pages -> Source to GitHub Actions, then rerun this workflow."
+                  "The default GITHUB_TOKEN also cannot switch this setting by itself because the "
+                  "Pages API requires repository administration permission. Either set "
+                  "Settings -> Pages -> Source to GitHub Actions manually, or add a "
+                  "PAGES_ADMIN_TOKEN secret with repo admin access and rerun this workflow."
               )
               sys.exit(1)
           PY
