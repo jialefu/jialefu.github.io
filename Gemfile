@@ -39,3 +39,6 @@ group :other_plugins do
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll
 end
+
+# Improve file watching performance when developing on Windows.
+gem 'wdm', '>= 0.1.0', platforms: [:mingw, :x64_mingw, :mswin]
