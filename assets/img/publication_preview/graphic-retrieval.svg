@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Placeholder teaser for GraphIC paper">
+  <defs>
+    <linearGradient id="bg2" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7fbf7"/>
+      <stop offset="100%" stop-color="#e0f5ec"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg2)"/>
+  <g stroke="#1f7a4d" stroke-width="6" fill="none">
+    <path d="M182 152 346 96 492 190 430 350 248 392 126 272Z"/>
+    <path d="M492 190 664 132 812 222 714 382 522 382 430 350Z"/>
+    <path d="M346 96 664 132"/>
+    <path d="M248 392 522 382"/>
+    <path d="M126 272 430 350"/>
+  </g>
+  <g fill="#ffffff" stroke="#1f7a4d" stroke-width="8">
+    <circle cx="182" cy="152" r="28"/>
+    <circle cx="346" cy="96" r="28"/>
+    <circle cx="492" cy="190" r="28"/>
+    <circle cx="430" cy="350" r="28"/>
+    <circle cx="248" cy="392" r="28"/>
+    <circle cx="126" cy="272" r="28"/>
+    <circle cx="664" cy="132" r="28"/>
+    <circle cx="812" cy="222" r="28"/>
+    <circle cx="714" cy="382" r="28"/>
+    <circle cx="522" cy="382" r="28"/>
+  </g>
+  <text x="92" y="74" fill="#0f5132" font-family="Arial, sans-serif" font-size="38" font-weight="700">Graph-Based Retrieval</text>
+  <text x="92" y="484" fill="#2f6b4d" font-family="Arial, sans-serif" font-size="24">Placeholder teaser image. Designed to be easy to swap for a real figure.</text>
+</svg>

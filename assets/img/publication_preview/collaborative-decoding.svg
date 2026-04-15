@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Placeholder teaser for collaborative decoding paper">
+  <defs>
+    <linearGradient id="bg1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f3f8ff"/>
+      <stop offset="100%" stop-color="#dcecff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg1)"/>
+  <rect x="90" y="110" width="210" height="320" rx="28" fill="#ffffff" stroke="#d0e2ff" stroke-width="4"/>
+  <rect x="375" y="110" width="210" height="320" rx="28" fill="#ffffff" stroke="#d0e2ff" stroke-width="4"/>
+  <rect x="660" y="110" width="210" height="320" rx="28" fill="#ffffff" stroke="#d0e2ff" stroke-width="4"/>
+  <path d="M300 220h75M585 220h75" stroke="#0b5ad7" stroke-width="10" stroke-linecap="round"/>
+  <path d="M300 320h75M585 320h75" stroke="#48a7c8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="195" cy="220" r="42" fill="#0b5ad7"/>
+  <circle cx="480" cy="220" r="42" fill="#48a7c8"/>
+  <circle cx="765" cy="220" r="42" fill="#11315d"/>
+  <circle cx="195" cy="320" r="42" fill="#7cc7dd"/>
+  <circle cx="480" cy="320" r="42" fill="#0b5ad7"/>
+  <circle cx="765" cy="320" r="42" fill="#48a7c8"/>
+  <text x="90" y="72" fill="#11315d" font-family="Arial, sans-serif" font-size="38" font-weight="700">Collaborative Decoding</text>
+  <text x="90" y="484" fill="#33527a" font-family="Arial, sans-serif" font-size="24">Placeholder teaser image. Replace with a project visual anytime.</text>
+</svg>

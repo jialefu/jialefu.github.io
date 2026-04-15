@@ -1,0 +1,18 @@
+- time: 2026
+  title: GraphIC was accepted to AAAI 2026.
+  description: A new paper on graph-based in-context example retrieval for multi-step reasoning joins the publication list.
+  url: https://arxiv.org/abs/2410.02203
+- time: 2025
+  title: Collaborative Decoding via Speculation was accepted to ICML 2025.
+  description: The project studies faster LLM generation through collaborative speculative decoding.
+  url: https://kamichanw.github.io/CoS/
+- time: 2025
+  title: Mimic In-Context Learning for Multimodal Tasks was accepted to CVPR 2025.
+  description: The work explores multimodal in-context learning behavior and transfer across modalities.
+  url: https://arxiv.org/abs/2504.08851
+- time: Sept 2024
+  title: Joined Southeast University and PALM Lab as a master's student.
+  description: Began graduate research on efficient inference and reasoning for large language models.
+- time: Jun 2024
+  title: Started an internship at Shopee R&D Center.
+  description: Worked as a Multimodal AI Intern on multimodal tokenization for large multimodal model pretraining.

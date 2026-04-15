@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Placeholder teaser for multimodal paper">
+  <defs>
+    <linearGradient id="bg3" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8f2"/>
+      <stop offset="100%" stop-color="#ffe8d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg3)"/>
+  <rect x="104" y="118" width="240" height="304" rx="28" fill="#ffffff" stroke="#ffb27a" stroke-width="5"/>
+  <rect x="360" y="152" width="240" height="236" rx="28" fill="#ffffff" stroke="#ffb27a" stroke-width="5"/>
+  <rect x="616" y="186" width="240" height="168" rx="28" fill="#ffffff" stroke="#ffb27a" stroke-width="5"/>
+  <circle cx="224" cy="212" r="54" fill="#ff8f4d"/>
+  <path d="M170 310h108M170 340h108" stroke="#ff8f4d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M428 214c32-28 102-28 134 0" fill="none" stroke="#c55c1f" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="454" cy="270" r="18" fill="#c55c1f"/>
+  <circle cx="536" cy="270" r="18" fill="#c55c1f"/>
+  <path d="M674 240h124M674 272h124M674 304h84" stroke="#ff8f4d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M344 270h16M600 270h16" stroke="#c55c1f" stroke-width="10" stroke-linecap="round"/>
+  <text x="92" y="74" fill="#8b3a10" font-family="Arial, sans-serif" font-size="38" font-weight="700">Multimodal In-Context Learning</text>
+  <text x="92" y="484" fill="#9d532c" font-family="Arial, sans-serif" font-size="24">Placeholder teaser image. Replace with a figure, pipeline diagram, or sample outputs.</text>
+</svg>

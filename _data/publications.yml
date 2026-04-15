@@ -1,0 +1,37 @@
+- title: Fast Large Language Model Collaborative Decoding via Speculation
+  title_url: https://kamichanw.github.io/CoS/
+  venue: ICML 2025
+  authors: Jiale Fu*, Yuchu Jiang*, Junkai Chen, Jiaming Fan, Xin Geng, Xu Yang
+  summary: Introduces a collaborative speculative decoding strategy that accelerates large language model generation through coordinated draft-and-verify inference.
+  teaser: collaborative-decoding.svg
+  links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2502.01662
+    - label: Code
+      url: https://github.com/Kamichanw/CoS
+    - label: Video
+      url: https://www.youtube.com/watch?v=faLySXcU2DE
+    - label: Blog
+      url: https://kamichanw.github.io/publication/2025-02-01-cos
+- title: "GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning"
+  title_url: https://arxiv.org/abs/2410.02203
+  venue: AAAI 2026
+  authors: Jiale Fu, Yaqing Wang, Simeng Han, Jiaming Fan, Xu Yang
+  summary: Proposes a graph-based retrieval model that selects stronger in-context examples for multi-step reasoning tasks.
+  teaser: graphic-retrieval.svg
+  links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2410.02203
+- title: Mimic In-Context Learning for Multimodal Tasks
+  title_url: https://arxiv.org/abs/2504.08851
+  venue: CVPR 2025
+  authors: Yuchu Jiang, Jiale Fu, Chenduo Hao, Xinting Hu, Yingzhe Peng, Xin Geng, Xu Yang
+  summary: Explores how mimicking in-context learning behavior can improve multimodal task performance and cross-modal generalization.
+  teaser: mimic-multimodal.svg
+  links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2504.08851
+    - label: Code
+      url: https://github.com/Kamichanw/MimIC
+    - label: Blog
+      url: https://kamichanw.github.io/publication/2025-11-20-mimic
