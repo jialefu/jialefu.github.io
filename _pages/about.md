@@ -21,9 +21,9 @@ selected_papers: true
 social: true
 ---
 
-I am Jiale Fu, a master's student at Southeast University and PALM Lab, where I work on efficient inference for large language models. My current research taste centers on LLM efficiency, especially speculative decoding, sparse attention, and the co-design of algorithms and inference infrastructure for practical deployment.
+I am Jiale Fu, a master's student at Southeast University and PALM Lab, where I work on efficient inference for large language models. My research interests focus on LLM efficiency, particularly speculative decoding, sparse attention, and the co-design of algorithms and inference infrastructure for practical deployment.
 
-Before graduate study, I completed a bachelor's degree in mathematics at Southeast University and spent time at Baidu Research, where I became more interested in large-model systems and efficient inference.
+Before graduate study, I completed a bachelor's degree in mathematics at Southeast University.
 
 <p class="inline-icon-links">
   You can also find me via
@@ -36,12 +36,12 @@ Before graduate study, I completed a bachelor's degree in mathematics at Southea
 ### Research
 
 - Efficient inference for large language models
-- Speculative decoding and sparse attention
-- Algorithm and infrastructure co-design for LLM serving
+- Speculative decoding
+- Sparse attention
 
 ### Experience
 
-- **Southeast University** - Master's Student, Sept 2024-Present. Conducting research in the School of Computer Science and Engineering and PALM Lab on efficient LLM inference, sparse attention, and system-aware deployment.
+- **Southeast University** - Master's Student, Sept 2024-Present. Conducting research in the School of Computer Science and Engineering and PALM Lab.
 - **Shopee R&D Center** - Multimodal AI Intern, Jun 2024-Sept 2024. Worked on multimodal tokenization for large multimodal model pretraining.
 - **Baidu Research** - Research Intern, Nov 2023-May 2024. Focused on reasoning and in-context learning for large language models.
-- **Southeast University** - Bachelor's Student in Mathematics, Sept 2020-Jun 2024. Built a mathematics foundation before transitioning into LLM and multimodal research.
+- **Southeast University** - Bachelor's Student in Mathematics, Sept 2020-Jun 2024.

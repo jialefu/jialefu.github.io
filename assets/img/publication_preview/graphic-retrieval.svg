@@ -1,0 +1,63 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #fbfaf6; }
+      .frame { fill: #fffdf8; stroke: #d9d4c7; stroke-width: 2; }
+      .soft { fill: #f2efe7; }
+      .ink { fill: #24313d; }
+      .muted { fill: #66707a; }
+      .navy { fill: #234e70; }
+      .teal { fill: #2c7a7b; }
+      .gold { fill: #d69e2e; }
+      .coral { fill: #dd6b5f; }
+      .line { stroke: #24313d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { stroke: #c9c1b0; stroke-width: 2; stroke-dasharray: 6 8; }
+      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    </style>
+    <marker id="arrow-mid" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#24313d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="800" height="600" rx="28"/>
+  <rect x="28" y="28" width="744" height="544" rx="24" class="frame"/>
+  <path d="M90 120H710" class="dash"/>
+
+  <text x="92" y="86" font-size="18" font-weight="700" class="muted">Graph-based example retrieval</text>
+
+  <rect x="82" y="174" width="180" height="164" rx="20" class="soft"/>
+  <text x="106" y="214" font-size="26" font-weight="700" class="ink">Query</text>
+  <rect x="106" y="238" width="122" height="22" rx="11" fill="#d6e4f0"/>
+  <rect x="106" y="272" width="94" height="22" rx="11" fill="#c1d7ea"/>
+  <rect x="106" y="306" width="136" height="22" rx="11" fill="#dcebc7"/>
+
+  <circle cx="408" cy="212" r="14" class="navy"/>
+  <circle cx="478" cy="172" r="14" class="teal"/>
+  <circle cx="548" cy="226" r="14" class="gold"/>
+  <circle cx="432" cy="300" r="14" class="coral"/>
+  <circle cx="520" cy="326" r="14" class="navy"/>
+  <circle cx="604" cy="286" r="14" class="teal"/>
+  <circle cx="468" cy="404" r="14" class="gold"/>
+  <circle cx="574" cy="398" r="14" class="coral"/>
+
+  <path d="M408 212L478 172L548 226L520 326L432 300L408 212Z" class="line"/>
+  <path d="M432 300L468 404L574 398L604 286L520 326" class="line"/>
+  <path d="M478 172L604 286" class="line"/>
+  <path d="M432 300L548 226" stroke="#d69e2e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M548 226L604 286" stroke="#d69e2e" stroke-width="7" stroke-linecap="round"/>
+
+  <path d="M262 256C310 256 320 238 360 228" class="line" marker-end="url(#arrow-mid)"/>
+  <path d="M620 310C660 310 670 284 708 250" class="line" marker-end="url(#arrow-mid)"/>
+
+  <rect x="618" y="166" width="112" height="72" rx="16" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
+  <rect x="618" y="254" width="112" height="72" rx="16" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
+  <rect x="618" y="342" width="112" height="72" rx="16" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
+  <rect x="642" y="188" width="64" height="14" rx="7" class="navy"/>
+  <rect x="642" y="276" width="48" height="14" rx="7" class="teal"/>
+  <rect x="642" y="364" width="72" height="14" rx="7" class="gold"/>
+  <circle cx="632" cy="202" r="9" class="gold"/>
+  <circle cx="632" cy="290" r="9" class="coral"/>
+  <circle cx="632" cy="378" r="9" class="navy"/>
+  <rect x="322" y="472" width="196" height="46" rx="23" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
+  <text x="352" y="501" font-size="22" font-weight="700" class="ink">reasoning graph path</text>
+</svg>
