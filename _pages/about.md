@@ -9,7 +9,6 @@ profile:
   image: jiale-fu.jpg
   image_circular: false
   more_info: >
-    <p>Southeast University / PALM Lab</p>
     <p>Nanjing, China</p>
 
 announcements:

@@ -62,13 +62,16 @@ body.sticky-bottom-footer {
   line-height: 1.6;
 
   .fa-party-horn {
-    font-style: normal;
-    font-family: inherit;
-    font-size: 0.95rem;
-    line-height: 1;
+    display: inline-block;
+    width: 0.95rem;
+    height: 0.95rem;
+    vertical-align: -0.05rem;
+    background-color: currentColor;
+    mask: url("/assets/img/icons/party-horn.svg") center / contain no-repeat;
+    -webkit-mask: url("/assets/img/icons/party-horn.svg") center / contain no-repeat;
 
     &::before {
-      content: "\1F389";
+      content: "";
     }
   }
 }
