@@ -38,7 +38,7 @@ My research interests focus on LLM efficiency, particularly:
 
 - speculative decoding
 - sparse attention
-- the co-design of algorithms and inference infrastructure
+- co-design of algorithms and inference infrastructure
 
 ### Experience
 
