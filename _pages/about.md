@@ -43,6 +43,7 @@ My research interests focus on LLM efficiency, particularly:
 ### Experience
 
 - **Southeast University** - Master's Student, Sept 2024-Present. Conducting research in the School of Computer Science and Engineering and PALM Lab.
+- **[EAGLE CORP](https://eagle.ai/)** - Aug 2025-Present. Working on EAGLE-4, responsible for architecture design and training systems, algorithms, and workflow design. Mentored by [Hongyang Zhang](https://hongyanz.github.io/).
 - **Shopee R&D Center** - Multimodal AI Intern, Jun 2024-Sept 2024. Worked on multimodal tokenization for large multimodal model pretraining.
 - **Baidu Research** - Research Intern, Nov 2023-May 2024. Mentored by [Yaqing Wang](https://wangyaqing.github.io/) and focused on reasoning and in-context learning for large language models.
 - **Southeast University** - Bachelor's Student in Mathematics, Sept 2020-Jun 2024.
