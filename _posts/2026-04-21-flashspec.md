@@ -133,3 +133,8 @@ This process is designed with two key efficiency principles:
 2.  **Minimal Triggering**: In speculative decoding, we only need to resample for the **first rejected token** in a sequence. This means that for the vast majority of steps (the accepted ones), no recomputation occurs. Even on a "bad" step, we only perform this for a single token, making the overhead nearly invisible.
 
 *(For a deeper look at the implementation, see the FlashSpec-Resample Kernel section below.)*
+
+
+## FlashSpec-Verify & Resample
+
+Stay tuned!
