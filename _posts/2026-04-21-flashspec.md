@@ -47,3 +47,14 @@ To eliminate these memory I/O bottlenecks, we introduce **FlashSpec**. Through S
 
 # FlashSpec
 
+To completely shatter the memory bandwidth wall, FlashSpec deeply refactors every stage of Speculative Decoding (SD). Before diving into our method, let's briefly review a key mathematical concept: the Gumbel-Max Trick.
+
+**a. Prerequisite: Efficient Sampling via Gumbel Noise**
+
+In standard sampling pipelines, we typically apply a Softmax operation over the logits to obtain a normalized probability distribution, and then perform multinomial sampling. Given the logits $x_i$, the standard approach computes the Softmax probabilities $p_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$.
+
+However, by utilizing the **Gumbel-Max Trick**, we can perform equivalent sampling directly from the **unnormalized** logits. Specifically, we add independent and identically distributed Gumbel noise $g_i \sim \text{Gumbel}(0, 1)$ to each logit $x_i$, and simply take the `argmax` of the resulting array:
+
+$$k = \arg\max_i (x_i + g_i)$$
+
+This trick is crucial because it allows us to draw a sample without ever computing the partition function (the denominator $\sum_j \exp(x_j)$).
