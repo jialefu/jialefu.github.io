@@ -5,6 +5,11 @@ window.MathJax = {
       ["$", "$"],
       ["\\(", "\\)"],
     ],
+    displayMath: [
+      ["$$", "$$"],
+      ["\\[", "\\]"],
+    ],
+    processEscapes: true,
   },
   options: {
     renderActions: {

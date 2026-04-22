@@ -49,7 +49,7 @@ To eliminate these memory I/O bottlenecks, we introduce **FlashSpec**. Through S
 
 To completely shatter the memory bandwidth wall, FlashSpec deeply refactors every stage of Speculative Decoding (SD). Before diving into our method, let's briefly review a key mathematical concept: the Gumbel-Max Trick.
 
-**a. Prerequisite: Efficient Sampling via Gumbel Noise**
+## Prerequisite: Efficient Sampling via Gumbel Noise
 
 In standard sampling pipelines, we typically apply a Softmax operation over the logits to obtain a normalized probability distribution, and then perform multinomial sampling. Given the logits $x_i$, the standard approach computes the Softmax probabilities $p_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$.
 
@@ -58,3 +58,69 @@ However, by utilizing the **Gumbel-Max Trick**, we can perform equivalent sampli
 $$k = \arg\max_i (x_i + g_i)$$
 
 This trick is crucial because it allows us to draw a sample without ever computing the partition function (the denominator $\sum_j \exp(x_j)$).
+
+## Draft Stage: FlashSampling-style Lazy Draft
+
+During the draft stage, the draft model consecutively generates $\gamma$ tokens. In traditional SD implementations, it is common practice to instantiate the full logits and probs tensors for each step. But do we really need the full `probs` tensor?
+
+If we break down the SD pipeline, the draft `probs` tensor is only used in three places:
+1. **Draft Stage**: To sample the draft tokens.
+2. **Verify Stage**: In the acceptance criterion, to calculate the ratio $P_{\text{target}}(x) / P_{\text{draft}}(x)$.
+3. **Resample Stage**: If a token is rejected, to compute the residual distribution $\text{norm}(\max(P_{\text{target}} - P_{\text{draft}}, 0))$ for resampling.
+
+However, generating and preserving the full `probs` tensor is extremely wasteful:
+1. As demonstrated by the Gumbel-Max trick (and similar to the FlashSampling approach), we can sample without materializing the logits and probs at all.
+2. In the Verify stage, out of that massive $V$-dimensional `probs` vector, **only the probability of the sampled draft token (exactly 1 scalar value)** is used. The remaining $V-1$ values are completely ignored.
+3. In the Resample stage, the probability distribution of **at most one** draft step is needed. If all draft tokens are accepted, this tensor is never used. Even if a rejection occurs, we only need the distribution corresponding to the *first* rejected token. Computing the full distributions for all $\gamma$ steps upfront wastes a massive amount of memory I/O.
+
+Based on these insights, we designed an **SD-specific Lazy Draft Kernel** in FlashSpec. It introduces two core improvements:
+
+**1. Fused Sampling with Metadata Extraction**
+
+We implemented a FlashSampling-style fused kernel that reads directly from the Hidden States. Inside the GPU SRAM, it performs chunked matrix multiplications, adds Gumbel noise, and finds the local maximum. 
+The key difference from standard FlashSampling is that **our kernel returns two extra critical scalars: the raw `logit` of the selected token and the local `LogSumExp (LSE)` of the current step.** With these two scalars, we can effortlessly compute the exact generation probability of that token during the verify stage ($\log P = \text{logit} - \text{LSE}$) at zero cost.
+
+The pseudo-code for the algorithm is as follows:
+
+```python
+# Pseudo-code: FlashSpec Draft Kernel (Tile-level in SRAM)
+def flashspec_lazy_draft_kernel(hidden_state, LM_head):
+    global_best_score = -inf
+    global_best_token = -1
+    global_max = -inf
+    global_sumexp = 0.0
+    global_selected_logit = 0.0
+
+    # Split the massive vocabulary into tiles; all operations stay in ultra-fast SRAM
+    for tile_W in split_into_tiles(LM_head):
+        # 1. Compute local logits
+        logits_tile = dot(hidden_state, tile_W) 
+        
+        # 2. Local LSE statistics (for later reuse)
+        local_max = max(logits_tile)
+        local_sumexp = sum(exp(logits_tile - local_max))
+        global_sumexp = global_sumexp * exp(global_max - max(global_max, local_max)) + \
+                        local_sumexp * exp(local_max - max(global_max, local_max))
+        global_max = max(global_max, local_max)
+
+        # 3. Local Gumbel-Max Sampling
+        noise_tile = generate_gumbel_noise()
+        scores_tile = logits_tile + noise_tile
+        tile_best_score, tile_best_token = max(scores_tile)
+
+        # 4. Maintain global optimum
+        if tile_best_score > global_best_score:
+            global_best_score = tile_best_score
+            global_best_token = tile_best_token
+            global_selected_logit = logits_tile[tile_best_token]
+
+    # Finalize global LSE
+    global_lse = log(global_sumexp) + global_max
+
+    # Only write 3 lightweight scalars back to HBM, completely avoiding [V]-dimensional I/O!
+    return global_best_token, global_selected_logit, global_lse
+```
+
+**2. Lazy Recompute for Resample**
+
+Because the draft stage does not materialize the full logits, we adopt a "Lazy Recompute" strategy for rejections. Specifically, when the resample stage requires the full probability distribution, we perform a lightweight matrix multiplication using the saved hidden state to recompute the logits *solely* for the specific step that was rejected. This trades a negligible amount of compute for a massive reduction in memory bandwidth.
