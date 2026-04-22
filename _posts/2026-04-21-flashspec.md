@@ -45,80 +45,91 @@ To eliminate these memory I/O bottlenecks, we introduce **FlashSpec**. Through S
 
 # FlashSpec
 
-To completely shatter the memory bandwidth wall, FlashSpec deeply refactors every stage of Speculative Decoding (SD). Before diving into our method, let's briefly review a key mathematical concept: the Gumbel-Max Trick.
+To overcome the memory I/O bottleneck, FlashSpec systematically re-architects the speculative sampling process. To understand how we eliminate redundant tensor materialization, let's briefly review a key mathematical concept: the Gumbel-Max Trick.
 
 ## Prerequisite: Efficient Sampling via Gumbel Noise
 
 In standard sampling pipelines, we typically apply a Softmax operation over the logits to obtain a normalized probability distribution, and then perform multinomial sampling. Given the logits $x_i$, the standard approach computes the Softmax probabilities $p_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$.
 
-However, by utilizing the **Gumbel-Max Trick**, we can perform equivalent sampling directly from the **unnormalized** logits. Specifically, we add independent and identically distributed Gumbel noise $g_i \sim \text{Gumbel}(0, 1)$ to each logit $x_i$, and simply take the `argmax` of the resulting array:
+However, by utilizing the **Gumbel-Max Trick**, we can perform equivalent sampling directly from the logits. Specifically, we add independent and identically distributed Gumbel noise $g_i \sim \text{Gumbel}(0, 1)$ to each logit $x_i$, and simply take the `argmax` of the resulting array:
 
 $$k = \arg\max_i (x_i + g_i)$$
 
 This trick is crucial because it allows us to draw a sample without ever computing the partition function (the denominator $\sum_j \exp(x_j)$).
 
-## Draft Stage: FlashSampling-style Lazy Draft
+## FlashSpec-Draft: A FlashSampling-style Metadata-Aware Fused Kernel
 
-During the draft stage, the draft model consecutively generates $\gamma$ tokens. In traditional SD implementations, it is common practice to instantiate the full logits and probs tensors for each step. But do we really need the full `probs` tensor?
+During the drafting phase, the model autoregressively generates a sequence of $\gamma$ candidate tokens. Conventional implementations typically materialize the full $V$-dimensional logit and probability tensors for every single step. But is this high-resolution view of the entire vocabulary truly necessary?
 
-If we break down the SD pipeline, the draft `probs` tensor is only used in three places:
-1. **Draft Stage**: To sample the draft tokens.
-2. **Verify Stage**: In the acceptance criterion, to calculate the ratio $P_{\text{target}}(x) / P_{\text{draft}}(x)$.
-3. **Resample Stage**: If a token is rejected, to compute the residual distribution $\text{norm}(\max(P_{\text{target}} - P_{\text{draft}}, 0))$ for resampling.
+If we break down the SD pipeline, the draft logits and probability tensor are only used in three places:
+1. **Draft Stage**: To sample the next draft token.
+2. **Verify Stage**: To retrieve the probability of the specific drafted token, $P_{\text{draft}}(x)$, for the acceptance check.
+3. **Resample Stage**: To compute the residual distribution $\text{norm}(\max(P_{\text{target}} - P_{\text{draft}}, 0))$ if a rejection occurs.
 
-However, generating and preserving the full `probs` tensor is extremely wasteful:
+However, generating and preserving these full $O(V)$ tensors is extremely wasteful:
 1. As demonstrated by the Gumbel-Max trick (and similar to the FlashSampling approach), we can sample without materializing the logits and probs at all.
 2. In the Verify stage, out of that massive $V$-dimensional `probs` vector, **only the probability of the sampled draft token (exactly 1 scalar value)** is used. The remaining $V-1$ values are completely ignored.
 3. In the Resample stage, the probability distribution of **at most one** draft step is needed. If all draft tokens are accepted, this tensor is never used. Even if a rejection occurs, we only need the distribution corresponding to the *first* rejected token. Computing the full distributions for all $\gamma$ steps upfront wastes a massive amount of memory I/O.
 
-Based on these insights, we designed an **SD-specific Lazy Draft Kernel** in FlashSpec. It introduces two core improvements:
+Based on these insights, we developed the **FlashSpec-Draft Kernel**. It introduces two core improvements:
 
 **1. Fused Sampling with Metadata Extraction**
 
-We implemented a FlashSampling-style fused kernel that reads directly from the Hidden States. Inside the GPU SRAM, it performs chunked matrix multiplications, adds Gumbel noise, and finds the local maximum. 
-The key difference from standard FlashSampling is that **our kernel returns two extra critical scalars: the raw `logit` of the selected token and the local `LogSumExp (LSE)` of the current step.** With these two scalars, we can effortlessly compute the exact generation probability of that token during the verify stage ($\log P = \text{logit} - \text{LSE}$) at zero cost.
+**FlashSpec-Draft** fuses hidden state projection, Gumbel noise injection, and max-tracking into a single SRAM-resident kernel. Unlike standard FlashSampling, it specifically retains the **selected logit** and the **LogSumExp (LSE)** for each step. This minimal metadata allows the subsequent Verify stage to reconstruct **exact probabilities** ($\log P = \text{logit} - \text{LSE}$) with zero additional I/O, bypassing the need to store or re-access the massive $O(V)$ logit tensors.
 
-The pseudo-code for the algorithm is as follows:
+The implementation logic of the **FlashSpec-Draft** kernel is outlined below:
 
 ```python
-# Pseudo-code: FlashSpec Draft Kernel (Tile-level in SRAM)
-def flashspec_lazy_draft_kernel(hidden_state, LM_head):
-    global_best_score = -inf
-    global_best_token = -1
-    global_max = -inf
-    global_sumexp = 0.0
-    global_selected_logit = 0.0
+# Pseudo-code: FlashSpec-Draft Kernel (Metadata-Aware Fused Sampling)
+def flashspec_draft_kernel(hidden_state, LM_head):
+    # Register-level accumulators
+    selected_id = -1
+    selected_score = -inf
+    selected_logit = 0.0
+    
+    # Online LSE statistics for numerical stability
+    curr_max = -inf
+    curr_sumexp = 0.0
 
-    # Split the massive vocabulary into tiles; all operations stay in ultra-fast SRAM
-    for tile_W in split_into_tiles(LM_head):
-        # 1. Compute local logits
-        logits_tile = dot(hidden_state, tile_W) 
+    # Iterate through vocabulary tiles (all intermediate steps stay in SRAM)
+    for tile_W in tiles(LM_head):
+        # 1. On-the-fly Projection: Compute logits for the current tile
+        logits_tile = matmul(hidden_state, tile_W) 
         
-        # 2. Local LSE statistics (for later reuse)
-        local_max = max(logits_tile)
-        local_sumexp = sum(exp(logits_tile - local_max))
-        global_sumexp = global_sumexp * exp(global_max - max(global_max, local_max)) + \
-                        local_sumexp * exp(local_max - max(global_max, local_max))
-        global_max = max(global_max, local_max)
+        # 2. Online LSE Update: Maintains global partition function without full materialization
+        tile_max = max(logits_tile)
+        new_max = max(curr_max, tile_max)
+        curr_sumexp = curr_sumexp * exp(curr_max - new_max) + \
+                      sum(exp(logits_tile - new_max))
+        curr_max = new_max
 
-        # 3. Local Gumbel-Max Sampling
-        noise_tile = generate_gumbel_noise()
-        scores_tile = logits_tile + noise_tile
-        tile_best_score, tile_best_token = max(scores_tile)
+        # 3. Fused Gumbel-Max: Sampling integrated into the tile-loop
+        scores_tile = logits_tile + generate_gumbel_noise(tile_W.shape)
+        tile_best_score, tile_best_idx = max_with_index(scores_tile)
 
-        # 4. Maintain global optimum
-        if tile_best_score > global_best_score:
-            global_best_score = tile_best_score
-            global_best_token = tile_best_token
-            global_selected_logit = logits_tile[tile_best_token]
+        # 4. Global Reduction: Update the winning token and its raw logit
+        if tile_best_score > selected_score:
+            selected_score = tile_best_score
+            selected_id = global_index(tile_best_idx)
+            selected_logit = logits_tile[tile_best_idx]
 
-    # Finalize global LSE
-    global_lse = log(global_sumexp) + global_max
+    # Finalize Metadata: Combine max and sumexp into a single LSE scalar
+    lse = log(curr_sumexp) + curr_max
 
-    # Only write 3 lightweight scalars back to HBM, completely avoiding [V]-dimensional I/O!
-    return global_best_token, global_selected_logit, global_lse
+    # I/O Efficiency: Write only 3 scalars back to HBM (O(1) vs O(V))
+    return selected_id, selected_logit, lse
 ```
 
 **2. Lazy Recompute for Resample**
 
-Because the draft stage does not materialize the full logits, we adopt a "Lazy Recompute" strategy for rejections. Specifically, when the resample stage requires the full probability distribution, we perform a lightweight matrix multiplication using the saved hidden state to recompute the logits *solely* for the specific step that was rejected. This trades a negligible amount of compute for a massive reduction in memory bandwidth.
+Since the **FlashSpec-Draft** kernel avoids materializing full logits to save I/O, a natural question arises: what happens if the Resample stage actually needs the full distribution?
+
+To resolve this, we adopt a **Lazy Recompute** strategy. If a draft token is rejected, instead of fetching a massive $O(V)$ tensor from HBM (which was never stored anyway), we re-trigger a lightweight projection using the preserved hidden state. 
+
+This process is designed with two key efficiency principles:
+
+1.  **Compute-for-I/O Trade-off**: The recomputation is fused directly within our Resample kernel. The logits are generated and consumed entirely within **SRAM** for immediate resampling; they are never explicitly written back to HBM. This turns a slow memory-bound task into a fast compute-bound one.
+
+2.  **Minimal Triggering**: In speculative decoding, we only need to resample for the **first rejected token** in a sequence. This means that for the vast majority of steps (the accepted ones), no recomputation occurs. Even on a "bad" step, we only perform this for a single token, making the overhead nearly invisible.
+
+*(For a deeper look at the implementation, see the FlashSpec-Resample Kernel section below.)*
