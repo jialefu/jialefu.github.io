@@ -135,6 +135,10 @@ This process is designed with two key efficiency principles:
 *(For a deeper look at the implementation, see the FlashSpec-Resample Kernel section below.)*
 
 
-## FlashSpec-Verify & Resample
+## FlashSpec-Verify
+
+Durring the verify stage
+
+## FlashSpec-Resample
 
 Stay tuned!
