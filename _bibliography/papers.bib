@@ -1,3 +1,17 @@
+@inproceedings{fu2026me,
+  title = {Rethinking LLM Ensembling from the Perspective of Mixture Models},
+  author = {Jiale Fu and Yuchu Jiang and Peijun Wu and Chonghan Liu and Joey Tianyi Zhou and Xu Yang},
+  booktitle = {International Conference on Machine Learning},
+  year = {2026},
+  abbr = {ICML},
+  note = {Reframes LLM ensembling as mixture-model sampling, preserving ensemble behavior while requiring only one model invocation per decoding step.},
+  abstract = {Conventional LLM ensembling improves generation quality by averaging the output distributions of multiple models, but it is expensive because each decoding step requires a forward pass for every model in the ensemble. This paper reinterprets LLM ensembling as sampling from a mixture model: at each step, it randomly selects one model according to the ensemble weights and samples the next token from that model. The resulting Mixture-model-like Ensemble matches the target ensemble distribution while running at close to single-model cost, and it also reveals a close connection between LLM ensembling and token-level routing.},
+  preview = {mixture-model-ensemble.svg},
+  award = {Accepted as an **ICML 2026 Spotlight** paper. Preprint coming soon.},
+  award_name = {Spotlight},
+  selected = {true}
+}
+
 @inproceedings{fu2025cos,
   title = {Fast Large Language Model Collaborative Decoding via Speculation},
   author = {Jiale Fu* and Yuchu Jiang* and Junkai Chen and Jiaming Fan and Xin Geng and Xu Yang},

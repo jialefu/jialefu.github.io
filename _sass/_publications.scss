@@ -1,3 +1,4 @@
+@use "sass:color";
 /*******************************************************************************
  * Publication and bibliography styles
  ******************************************************************************/
@@ -184,7 +185,17 @@
           }
         }
         a.award.btn {
-          border-color: var(--global-highlight-color);
+          color: color.scale(v.$purple-color, $lightness: -18%, $saturation: -8%);
+          border-color: color.scale(v.$purple-color, $lightness: 16%, $saturation: -12%);
+          background-color: rgba(v.$purple-color, 0.1);
+          box-shadow: 0 6px 16px rgba(v.$purple-color, 0.12);
+          font-weight: 700;
+
+          &:hover {
+            color: color.scale(v.$purple-color, $lightness: -24%, $saturation: -10%);
+            border-color: color.scale(v.$purple-color, $lightness: 6%, $saturation: -14%);
+            background-color: rgba(v.$purple-color, 0.16);
+          }
         }
       }
 

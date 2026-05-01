@@ -20,11 +20,21 @@ bundle install
 
 3. Start the local preview:
 
+On Windows:
+
 ```powershell
 .\preview.ps1
 ```
 
-Or run Jekyll directly:
+On macOS:
+
+```bash
+./preview.sh
+```
+
+The macOS preview script writes the generated site to a temporary directory by default to avoid OneDrive sync issues. You can override it with `PREVIEW_DEST=/your/path ./preview.sh`.
+
+Or run Jekyll directly on any platform:
 
 ```bash
 bundle exec jekyll serve --config _config.yml,_config_local.yml
