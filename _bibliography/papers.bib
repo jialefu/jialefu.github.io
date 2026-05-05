@@ -5,9 +5,10 @@
   year = {2026},
   abbr = {ICML},
   note = {Reframes LLM ensembling as mixture-model sampling, preserving ensemble behavior while requiring only one model invocation per decoding step.},
-  abstract = {Conventional LLM ensembling improves generation quality by averaging the output distributions of multiple models, but it is expensive because each decoding step requires a forward pass for every model in the ensemble. This paper reinterprets LLM ensembling as sampling from a mixture model: at each step, it randomly selects one model according to the ensemble weights and samples the next token from that model. The resulting Mixture-model-like Ensemble matches the target ensemble distribution while running at close to single-model cost, and it also reveals a close connection between LLM ensembling and token-level routing.},
   preview = {mixture-model-ensemble.svg},
-  award = {Accepted as an **ICML 2026 Spotlight** paper. Preprint coming soon.},
+  pdf = {https://arxiv.org/pdf/2605.00419},
+  website = {https://arxiv.org/abs/2605.00419},
+  award = {Accepted as an **ICML 2026 Spotlight** paper.},
   award_name = {Spotlight},
   selected = {true}
 }
