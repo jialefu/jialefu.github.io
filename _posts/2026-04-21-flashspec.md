@@ -1,144 +1,313 @@
 ---
 layout: post
-title: "FlashSpec: Exact speculative sampling without materialized draft/target probability tensors"
-date: 2026-04-21 10:00:00+0800
-description: A series of specialized kernels designed to accelerate the speculative sampling process.
-tags: [speculative-decoding, sampling]
+title: "FlashSpec Part 1: One-Pass Verify-and-Resample for Greedy Drafts without Materialized Logits or Probs"
+date: 2026-05-14 10:00:00+0800
+description: A one-pass verify-and-resample path for greedy draft speculative decoding that avoids materializing logits, probabilities, and residual distributions.
+tags: [speculative-decoding, sampling, vllm, flashspec]
 categories: [blog]
 related_posts: false
 giscus_comments: false
+pretty_table: true
 ---
 
-# The Memory I/O Bottleneck in SD
+# The Memory I/O Bottleneck in Speculative Decoding
 
-Speculative Decoding has gained widespread popularity because it can significantly accelerate LLM inference without losing any output quality. However, when the model's vocabulary size is large, the expected speedup drops significantly.
+Speculative Decoding accelerates LLM inference by letting a lightweight drafter propose several future tokens, and then asking the target model to verify them in one forward pass. When the draft is mostly accepted, one target step can produce multiple output tokens.
 
-This is mainly because a large vocabulary introduces a huge memory I/O (read/write) burden. Specifically, traditional frameworks suffer from severe inefficiencies in two main areas:
+However, the practical speedup is often limited by work outside the transformer backbone. Standard implementations still materialize vocabulary-sized tensors in the draft and verify/resample stages: logits, probabilities, masked probabilities, residual distributions, and sampling buffers. For vocabularies with 128k, 150k, or 250k tokens, these $O(V)$ reads and writes become a real HBM bottleneck.
 
-**1. The Costly Materialization of Logits and Probs (Draft & Verify Stages)**
+FlashSpec asks whether this materialization is necessary: can we verify draft tokens and recover from rejection without writing full logits or probabilities to memory? In Part 1, we study the most structured case, **greedy draft speculative decoding**, where the draft model is greedy while the target model can still sample from its own distribution.
 
-In both the draft and verify stages, standard speculative sampling explicitly computes the full `logits` and `probabilities (probs)` tensors. Take generating a single token in the draft stage as an example, the resulting memory access pattern is as follows:
+# Greedy Draft Speculative Decoding
 
-```python
-# Traditional Draft Sampling (High Memory Traffic)
-logits = matmul(hidden_states, LM_head)  # WRITE [V] to GPU Memory (HBM)
-probs = softmax(logits)                  # READ [V], WRITE [V] to HBM
-token_id = multinomial(probs)            # READ [V], WRITE [1] to HBM
-```
-For modern models with large vocabularies (like 128k or 256k), repeatedly reading and writing these massive $O(V)$ tensors back and forth creates a severe latency overhead.
+In this post, "greedy" only refers to the **draft model**. The target model is still allowed to sample. This is the setting used by many practical speculative decoding systems, for example:
 
-**2. The Fragmented Residual Sampling (Resample Stage)**
+1. **Prompt lookup / n-gram speculative decoding**
+2. **MTP draft models**
+3. **EAGLE-style draft models**
 
-When a draft token is rejected by the target model, we must resample from a modified probability distribution: `norm(max(P - Q, 0))`. The underlying implementation entails a highly fragmented memory access pattern:
+A conventional greedy draft step looks like this:
 
 ```python
-# Traditional Residual Sampling (Severe Kernel Fragmentation)
-diff = P - Q                                  # READ P [V], Q [V], WRITE [V] to HBM
-truncated = max(diff, 0)                      # READ [V], WRITE [V] to HBM
-residual_probs = truncated / sum(truncated)   # READ [V] (x2), WRITE [V] to HBM
-token_id = multinomial(residual_probs)        # READ [V], WRITE [1] to HBM
+# Standard greedy draft step
+def standard_greedy_draft(hidden, lm_head):
+    logits = hidden @ lm_head.T        # WRITE [V]
+    token = argmax(logits)             # READ [V]
+    return token
 ```
 
-Consistent with the first point, these redundant $O(V)$ memory transfers incur substantial latency overhead.
-
-To eliminate these memory I/O bottlenecks, we introduce **FlashSpec**. Through SD-specific kernel simplification, metadata reuse, and kernel fusion, FlashSpec largely avoids explicitly reading and writing these large tensors to the GPU memory.
-
-# FlashSpec
-
-To overcome the memory I/O bottleneck, FlashSpec systematically re-architects the speculative sampling process. To understand how we eliminate redundant tensor materialization, let's briefly review a key mathematical concept: the Gumbel-Max Trick.
-
-## Prerequisite: Efficient Sampling via Gumbel Noise
-
-In standard sampling pipelines, we typically apply a Softmax operation over the logits to obtain a normalized probability distribution, and then perform multinomial sampling. Given the logits $x_i$, the standard approach computes the Softmax probabilities $p_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$.
-
-However, by utilizing the **Gumbel-Max Trick**, we can perform equivalent sampling directly from the logits. Specifically, we add independent and identically distributed Gumbel noise $g_i \sim \text{Gumbel}(0, 1)$ to each logit $x_i$, and simply take the `argmax` of the resulting array:
-
-$$k = \arg\max_i (x_i + g_i)$$
-
-This trick is crucial because it allows us to draw a sample without ever computing the partition function (the denominator $\sum_j \exp(x_j)$).
-
-## FlashSpec-Draft: A FlashSampling-style Metadata-Aware Fused Kernel
-
-During the drafting phase, the model autoregressively generates a sequence of $\gamma$ candidate tokens. Conventional implementations typically materialize the full $V$-dimensional logit and probability tensors for every single step. But is this high-resolution view of the entire vocabulary truly necessary?
-
-If we break down the SD pipeline, the draft logits and probability tensor are only used in three places:
-1. **Draft Stage**: To sample the next draft token.
-2. **Verify Stage**: To retrieve the probability of the specific drafted token, $P_{\text{draft}}(x)$, for the acceptance check.
-3. **Resample Stage**: To compute the residual distribution $\text{norm}(\max(P_{\text{target}} - P_{\text{draft}}, 0))$ if a rejection occurs.
-
-However, generating and preserving these full $O(V)$ tensors is extremely wasteful:
-1. As demonstrated by the Gumbel-Max trick (and similar to the FlashSampling approach), we can sample without materializing the logits and probs at all.
-2. In the Verify stage, out of that massive $V$-dimensional `probs` vector, **only the probability of the sampled draft token (exactly 1 scalar value)** is used. The remaining $V-1$ values are completely ignored.
-3. In the Resample stage, the probability distribution of **at most one** draft step is needed. If all draft tokens are accepted, this tensor is never used. Even if a rejection occurs, we only need the distribution corresponding to the *first* rejected token. Computing the full distributions for all $\gamma$ steps upfront wastes a massive amount of memory I/O.
-
-Based on these insights, we developed the **FlashSpec-Draft Kernel**. It introduces two core improvements:
-
-**1. Fused Sampling with Metadata Extraction**
-
-**FlashSpec-Draft** fuses hidden state projection, Gumbel noise injection, and max-tracking into a single SRAM-resident kernel. Unlike standard FlashSampling, it specifically retains the **selected logit** and the **LogSumExp (LSE)** for each step. This minimal metadata allows the subsequent Verify stage to reconstruct **exact probabilities** ($\log P = \text{logit} - \text{LSE}$) with zero additional I/O, bypassing the need to store or re-access the massive $O(V)$ logit tensors.
-
-The implementation logic of the **FlashSpec-Draft** kernel is outlined below:
+A conventional verify/resample stage then computes target probabilities and checks whether each proposed token should be accepted:
 
 ```python
-# Pseudo-code: FlashSpec-Draft Kernel (Metadata-Aware Fused Sampling)
-def flashspec_draft_kernel(hidden_state, LM_head):
-    # Register-level accumulators
-    selected_id = -1
-    selected_score = -inf
-    selected_logit = 0.0
-    
-    # Online LSE statistics for numerical stability
-    curr_max = -inf
-    curr_sumexp = 0.0
+# Standard greedy-draft verify/resample
+def standard_greedy_draft_verify(target_hidden, target_lm_head, draft_tokens, uniforms):
+    target_logits = target_hidden @ target_lm_head.T     # WRITE [gamma, V]
+    target_probs = softmax(target_logits)                # READ/WRITE [gamma, V]
 
-    # Iterate through vocabulary tiles (all intermediate steps stay in SRAM)
-    for tile_W in tiles(LM_head):
-        # 1. On-the-fly Projection: Compute logits for the current tile
-        logits_tile = matmul(hidden_state, tile_W) 
-        
-        # 2. Online LSE Update: Maintains global partition function without full materialization
-        tile_max = max(logits_tile)
-        new_max = max(curr_max, tile_max)
-        curr_sumexp = curr_sumexp * exp(curr_max - new_max) + \
-                      sum(exp(logits_tile - new_max))
-        curr_max = new_max
+    for i in range(gamma):
+        x = draft_tokens[i]
 
-        # 3. Fused Gumbel-Max: Sampling integrated into the tile-loop
-        scores_tile = logits_tile + generate_gumbel_noise(tile_W.shape)
-        tile_best_score, tile_best_idx = max_with_index(scores_tile)
+        # Since q(x) = 1, the acceptance probability is p(x).
+        accept_prob = target_probs[i, x]
 
-        # 4. Global Reduction: Update the winning token and its raw logit
-        if tile_best_score > selected_score:
-            selected_score = tile_best_score
-            selected_id = global_index(tile_best_idx)
-            selected_logit = logits_tile[tile_best_idx]
+        if uniforms[i] <= accept_prob:
+            output.append(x)
+        else:
+            residual_probs = target_probs[i].clone()     # READ/WRITE [V]
+            residual_probs[x] = 0
+            residual_probs /= residual_probs.sum()
+            recovered = sample(residual_probs)           # READ [V]
+            output.append(recovered)
+            break
 
-    # Finalize Metadata: Combine max and sumexp into a single LSE scalar
-    lse = log(curr_sumexp) + curr_max
-
-    # I/O Efficiency: Write only 3 scalars back to HBM (O(1) vs O(V))
-    return selected_id, selected_logit, lse
+    return output
 ```
 
-**2. Lazy Recompute for Resample**
+This standard implementation is inefficient in two ways. First, both the draft and target stages materialize vocabulary-sized logits and probability tensors. Second, when a token is rejected, we need to construct a residual distribution and sample from it. This adds another round of $[V]$ reads and writes, and also fragments the GPU execution into extra sampling and normalization kernels.
 
-Since the **FlashSpec-Draft** kernel avoids materializing full logits to save I/O, a natural question arises: what happens if the Resample stage actually needs the full distribution?
+FlashSpec targets these materializations directly. For greedy drafts, both verification and recovery can be implemented as one scan over the target vocabulary, without writing full logits, probabilities, or residual probabilities to HBM.
 
-To resolve this, we adopt a **Lazy Recompute** strategy. If a draft token is rejected, instead of fetching a massive $O(V)$ tensor from HBM (which was never stored anyway), we re-trigger a lightweight projection using the preserved hidden state. 
+# FlashSpec-Draft: Greedy Argmax without Writing Logits
 
-This process is designed with two key efficiency principles:
+The draft side is straightforward. Instead of writing full logits to HBM, FlashSpec scans the vocabulary in tiles and keeps only the current maximum token.
 
-1.  **Compute-for-I/O Trade-off**: The recomputation is fused directly within our Resample kernel. The logits are generated and consumed entirely within **SRAM** for immediate resampling; they are never explicitly written back to HBM. This turns a slow memory-bound task into a fast compute-bound one.
+```python
+# FlashSpec greedy draft
+def flashspec_greedy_draft(hidden, lm_head):
+    best_token = -1
+    best_logit = -inf
 
-2.  **Minimal Triggering**: In speculative decoding, we only need to resample for the **first rejected token** in a sequence. This means that for the vast majority of steps (the accepted ones), no recomputation occurs. Even on a "bad" step, we only perform this for a single token, making the overhead nearly invisible.
+    for W_tile, token_range in tiles(lm_head):
+        logits = hidden @ W_tile.T       # stays in SRAM/registers
+        tile_token, tile_logit = max(logits)
 
-*(For a deeper look at the implementation, see the FlashSpec-Resample Kernel section below.)*
+        if tile_logit > best_logit:
+            best_logit = tile_logit
+            best_token = global_id(tile_token, token_range)
 
+    return best_token                    # WRITE O(1)
+```
 
-## FlashSpec-Verify
+This removes the full $[V]$ logits write from the draft stage.
 
-Durring the verify stage
+# FlashSpec-Verify: Acceptance Needs Only One Probability
 
-## FlashSpec-Resample
+For a drafted token $x$, the speculative acceptance probability is:
 
-Stay tuned!
+$$
+\alpha(x) = \min\!\left(1, \frac{p(x)}{q(x)}\right).
+$$
+
+For greedy drafts, $q(x)=1$, so the rule reduces to:
+
+$$
+\alpha(x) = p(x).
+$$
+
+The target probability of the drafted token is:
+
+$$
+p(x) = \frac{\exp(\ell_x)}{\sum_j \exp(\ell_j)}.
+$$
+
+A standard implementation computes the full softmax vector. FlashSpec only needs two values:
+
+1. the target logit of the drafted token, $\ell_x$
+2. the row log-sum-exp, $\mathrm{LSE} = \log \sum_j \exp(\ell_j)$
+
+Then:
+
+$$
+\log p(x) = \ell_x - \mathrm{LSE}.
+$$
+
+During the target vocabulary scan, FlashSpec records the drafted token's logit and maintains an online LSE accumulator:
+
+```python
+# Target summary needed for acceptance
+for W_tile, token_range in tiles(target_lm_head):
+    logits = target_hidden @ W_tile.T
+
+    # Online LSE over the full vocabulary.
+    update_lse(logits)
+
+    # Save only the drafted token's target logit.
+    if draft_token in token_range:
+        selected_logit = logits[draft_token]
+
+accept_prob = exp(selected_logit - lse)
+```
+
+This gives the exact acceptance probability without writing target logits or target probabilities to HBM.
+
+# One-Pass Residual Sampling with Gumbel-Max
+
+There is still one challenge. If the drafted token is rejected, we need to sample from the residual distribution.
+
+In the greedy-draft case, the residual distribution is simply the target distribution with the drafted token removed and renormalized:
+
+$$
+p_{\mathrm{res}}(i) \propto
+\begin{cases}
+p(i), & i \ne x, \\
+0, & i = x.
+\end{cases}
+$$
+
+Naively, this seems to require materializing the full target probability vector. FlashSpec avoids this with the Gumbel-Max trick.
+
+Sampling from a categorical distribution with logits $\ell_i$ is equivalent to:
+
+$$
+y = \arg\max_i(\ell_i + g_i),
+\qquad
+g_i \sim \mathrm{Gumbel}(0, 1).
+$$
+
+Therefore, while scanning the logits for LSE and $\ell_x$, we can also maintain:
+
+$$
+y_{\mathrm{recovered}} = \arg\max_{i \ne x}(\ell_i + g_i).
+$$
+
+This gives the token that would be sampled from the residual distribution, again without materializing logits, probabilities, or residual probabilities.
+
+# FlashSpec One-Pass Verify-and-Resample
+
+The complete greedy-draft FlashSpec verify/resample kernel looks like this:
+
+```python
+# FlashSpec one-pass verify-and-resample for greedy drafts
+def flashspec_greedy_draft_verify_resample(
+    target_hidden,
+    target_lm_head,
+    draft_tokens,
+    uniforms,
+):
+    output = []
+
+    for pos in range(gamma):
+        x = draft_tokens[pos]
+        h = target_hidden[pos]
+
+        selected_logit = -inf
+
+        lse_max = -inf
+        lse_sum = 0.0
+
+        recovered_token = -1
+        recovered_score = -inf
+
+        for W_tile, token_range in tiles(target_lm_head):
+            logits = h @ W_tile.T
+
+            # 1. Online LSE for the denominator of p(x).
+            lse_max, lse_sum = online_lse_update(lse_max, lse_sum, logits)
+
+            # 2. Record the target logit at the drafted token x.
+            if x in token_range:
+                selected_logit = logits[x]
+
+            # 3. In the same scan, sample from target excluding x.
+            gumbels = gumbel_noise(token_range)
+            scores = logits + gumbels
+
+            if x in token_range:
+                scores[x] = -inf
+
+            tile_token, tile_score = max(scores)
+
+            if tile_score > recovered_score:
+                recovered_score = tile_score
+                recovered_token = global_id(tile_token, token_range)
+
+        lse = log(lse_sum) + lse_max
+        accept_prob = exp(selected_logit - lse)
+
+        if uniforms[pos] <= accept_prob:
+            output.append(x)
+        else:
+            output.append(recovered_token)
+            break
+
+    return output
+```
+
+The important point is that verify and resample are no longer two separate memory-heavy stages. FlashSpec performs both in a **single vocabulary scan**:
+
+1. compute $p(x)$ for acceptance,
+2. prepare the recovered token in case of rejection,
+3. emit either the draft token or the recovered token with a simple branch.
+
+In practice, the bonus token for the all-accepted case can be fused into the same target-side kernel as well. We omit it from the pseudocode here to keep the core idea clean.
+
+# Experiments
+
+We integrated FlashSpec into vLLM's greedy-draft speculative decoding paths and evaluated three representative settings: n-gram, MTP, and EAGLE3. All runs use target sampling with `temperature=1.0`, `top_p=1.0`, batch size 1, and CUDA graph decode-only mode.
+
+Representative results:
+
+<div class="table-responsive">
+  <table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th style="text-align: right;">Stock tok/s</th>
+        <th style="text-align: right;">FlashSpec tok/s</th>
+        <th style="text-align: right;">Improvement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Qwen3.5-9B n-gram</td>
+        <td style="text-align: right;">198.7</td>
+        <td style="text-align: right;">217.4</td>
+        <td style="text-align: right;">+9.5%</td>
+      </tr>
+      <tr>
+        <td>Qwen3.5-9B MTP6 decode512</td>
+        <td style="text-align: right;">292.8</td>
+        <td style="text-align: right;">312.7</td>
+        <td style="text-align: right;">+6.9%</td>
+      </tr>
+      <tr>
+        <td>Qwen3.5-9B MTP8 decode256</td>
+        <td style="text-align: right;">261.0</td>
+        <td style="text-align: right;">278.8</td>
+        <td style="text-align: right;">+6.9%</td>
+      </tr>
+      <tr>
+        <td>Llama-3.1-8B EAGLE3 k=3 decode256</td>
+        <td style="text-align: right;">310.5</td>
+        <td style="text-align: right;">330.8</td>
+        <td style="text-align: right;">+6.5%</td>
+      </tr>
+      <tr>
+        <td>Llama-3.1-8B EAGLE3 k=4 decode512</td>
+        <td style="text-align: right;">326.7</td>
+        <td style="text-align: right;">340.4</td>
+        <td style="text-align: right;">+4.2%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+The speedup does not come from changing the model, the acceptance rule, or the output distribution. FlashSpec preserves the greedy-draft speculative decoding semantics. The gain comes from avoiding unnecessary vocabulary-sized memory traffic and fusing verify/resample into one pass.
+
+# Takeaway
+
+For greedy draft speculative decoding, the draft distribution is a delta distribution:
+
+$$
+q(x)=1.
+$$
+
+This makes the acceptance rule especially simple:
+
+$$
+\alpha(x)=p(x).
+$$
+
+FlashSpec exploits this structure. During one scan over the target vocabulary, it computes the drafted token's acceptance probability and simultaneously prepares the recovered token for rejection. No full logits tensor, probability tensor, or residual distribution needs to be materialized.
+
+This gives a practical fast path for n-gram, MTP, and EAGLE-style speculative decoding. In Part 2, we will move beyond delta drafts and discuss top-k draft distributions, where the draft distribution is no longer a single token but is still sparse enough to avoid full probability materialization.
