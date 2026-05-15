@@ -63,9 +63,9 @@ def standard_greedy_draft_verify(target_hidden, target_lm_head, draft_tokens, un
     return output
 ```
 
-This standard implementation is inefficient in two ways. First, both the draft and target stages materialize vocabulary-sized logits and probability tensors. Second, when a token is rejected, we need to construct a residual distribution and sample from it. This adds another round of $[V]$ reads and writes, and also fragments the GPU execution into extra sampling and normalization kernels.
+This standard implementation is inefficient in two ways. First, both the draft and target stages materialize vocabulary-sized logits and probability tensors. Second, when a token is rejected, we need to construct a residual distribution and sample from it. This requires another pass over a $[V]$-sized vector for masking, renormalization, and sampling, usually through extra GPU kernels.
 
-FlashSpec targets these materializations directly. For greedy drafts, both verification and recovery can be implemented as one scan over the target vocabulary, without writing full logits, probabilities, or residual probabilities to HBM.
+FlashSpec targets these materializations directly. For greedy drafts, both verification and recovery can be implemented as a single pass over the target vocabulary, without writing full logits, probabilities, or residual probabilities to HBM.
 
 # FlashSpec-Draft: Greedy Argmax without Writing Logits
 
@@ -121,7 +121,7 @@ $$
 \log p(x) = \ell_x - \mathrm{LSE}.
 $$
 
-During the target vocabulary scan, FlashSpec records the drafted token's logit and maintains an online LSE accumulator:
+During one pass over the target vocabulary, FlashSpec records the drafted token's logit and maintains an online LSE accumulator:
 
 ```python
 # Target summary needed for acceptance
@@ -233,7 +233,7 @@ def flashspec_greedy_draft_verify_resample(
     return output
 ```
 
-The important point is that verify and resample are no longer two separate memory-heavy stages. FlashSpec performs both in a **single vocabulary scan**:
+The important point is that verify and resample are no longer two separate memory-heavy stages. FlashSpec performs both in a **single pass over the vocabulary**:
 
 1. compute $p(x)$ for acceptance,
 2. prepare the recovered token in case of rejection,
@@ -308,6 +308,6 @@ $$
 \alpha(x)=p(x).
 $$
 
-FlashSpec exploits this structure. During one scan over the target vocabulary, it computes the drafted token's acceptance probability and simultaneously prepares the recovered token for rejection. No full logits tensor, probability tensor, or residual distribution needs to be materialized.
+FlashSpec exploits this structure. During a single pass over the target vocabulary, it computes the drafted token's acceptance probability and simultaneously prepares the recovered token for rejection. No full logits tensor, probability tensor, or residual distribution needs to be materialized.
 
 This gives a practical fast path for n-gram, MTP, and EAGLE-style speculative decoding. In Part 2, we will move beyond delta drafts and discuss top-k draft distributions, where the draft distribution is no longer a single token but is still sparse enough to avoid full probability materialization.
