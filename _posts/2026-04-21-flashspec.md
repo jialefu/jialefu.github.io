@@ -456,8 +456,32 @@ _styles: |
     fill: color-mix(in srgb, #f28e2b 76%, var(--global-code-bg-color));
   }
 
+  .flashspec-svg .score-fill {
+    fill: color-mix(in srgb, var(--global-theme-color) 54%, #f28e2b);
+  }
+
   .flashspec-svg .masked-fill {
     fill: color-mix(in srgb, var(--global-text-color-light) 24%, var(--global-code-bg-color));
+  }
+
+  .flashspec-svg .heat-1 {
+    opacity: 0.38;
+  }
+
+  .flashspec-svg .heat-2 {
+    opacity: 0.52;
+  }
+
+  .flashspec-svg .heat-3 {
+    opacity: 0.68;
+  }
+
+  .flashspec-svg .heat-4 {
+    opacity: 0.82;
+  }
+
+  .flashspec-svg .heat-5 {
+    opacity: 1;
   }
 
   .flashspec-svg .register-fill {
@@ -1244,48 +1268,57 @@ This gives the token that would be sampled from the residual distribution, again
           </marker>
         </defs>
         <text class="muted" x="48" y="44" font-size="12">logits over vocabulary</text>
-        <rect class="soft-box" x="48" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="soft-box" x="232" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="accent-box" x="416" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="soft-box" x="600" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="48" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="soft-box" x="232" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="accent-box" x="416" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="soft-box" x="600" y="58" width="176" height="70" rx="9"></rect>
         <g>
-          <rect class="logit-fill" x="72" y="100" width="15" height="22" rx="3"></rect>
-          <rect class="logit-fill" x="96" y="86" width="15" height="36" rx="3"></rect>
-          <rect class="logit-fill" x="120" y="74" width="15" height="48" rx="3"></rect>
-          <rect class="logit-fill" x="144" y="94" width="15" height="28" rx="3"></rect>
-          <rect class="logit-fill" x="168" y="82" width="15" height="40" rx="3"></rect>
-          <rect class="logit-fill" x="192" y="106" width="15" height="16" rx="3"></rect>
-          <rect class="logit-fill" x="256" y="90" width="15" height="32" rx="3"></rect>
-          <rect class="logit-fill" x="280" y="72" width="15" height="50" rx="3"></rect>
-          <rect class="logit-fill" x="304" y="98" width="15" height="24" rx="3"></rect>
-          <rect class="logit-fill" x="328" y="82" width="15" height="40" rx="3"></rect>
-          <rect class="logit-fill" x="352" y="108" width="15" height="14" rx="3"></rect>
-          <rect class="logit-fill" x="376" y="88" width="15" height="34" rx="3"></rect>
-          <rect class="logit-fill" x="440" y="96" width="15" height="26" rx="3"></rect>
-          <rect class="logit-fill" x="464" y="78" width="15" height="44" rx="3"></rect>
-          <rect class="logit-fill" x="488" y="68" width="15" height="54" rx="3"></rect>
-          <rect class="logit-fill" x="512" y="92" width="15" height="30" rx="3"></rect>
-          <rect class="logit-fill" x="536" y="74" width="15" height="48" rx="3"></rect>
-          <rect class="logit-fill" x="560" y="102" width="15" height="20" rx="3"></rect>
-          <rect class="logit-fill" x="624" y="88" width="15" height="34" rx="3"></rect>
-          <rect class="logit-fill" x="648" y="80" width="15" height="42" rx="3"></rect>
-          <rect class="logit-fill" x="672" y="104" width="15" height="18" rx="3"></rect>
-          <rect class="logit-fill" x="696" y="76" width="15" height="46" rx="3"></rect>
-          <rect class="logit-fill" x="720" y="94" width="15" height="28" rx="3"></rect>
-          <rect class="logit-fill" x="744" y="84" width="15" height="38" rx="3"></rect>
+          <rect class="logit-fill heat-1" x="72" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="96" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="120" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="144" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="168" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="192" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="256" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="280" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="304" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="328" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="352" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="376" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="440" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="464" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="488" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="512" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="536" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="560" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="624" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="648" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="672" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="696" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="720" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="744" y="84" width="18" height="18" rx="4"></rect>
         </g>
-        <text x="136" y="154" text-anchor="middle" font-size="11">tile 0</text>
-        <text x="320" y="154" text-anchor="middle" font-size="11">tile 1</text>
-        <text x="504" y="154" text-anchor="middle" font-size="11">current tile</text>
-        <text x="688" y="154" text-anchor="middle" font-size="11">tile 3</text>
+        <text x="136" y="146" text-anchor="middle" font-size="11">tile 0</text>
+        <text x="320" y="146" text-anchor="middle" font-size="11">tile 1</text>
+        <text x="504" y="146" text-anchor="middle" font-size="11">current tile</text>
+        <text x="688" y="146" text-anchor="middle" font-size="11">tile 3</text>
 
-        <path class="accent-line" d="M504 142 C504 172, 504 180, 504 210" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <rect class="register-fill" x="354" y="220" width="300" height="66" rx="12"></rect>
-        <text x="504" y="248" text-anchor="middle" font-size="19">log-sum-exp</text>
-        <text class="muted" x="504" y="272" text-anchor="middle" font-size="12">update compact LSE summary</text>
-        <path class="accent-line" d="M662 253 C694 253, 700 253, 732 253" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <rect class="box" x="742" y="226" width="86" height="54" rx="9"></rect>
-        <text x="785" y="258" text-anchor="middle" font-size="13">tile_lse</text>
+        <path class="accent-line" d="M504 136 C504 154, 504 160, 504 178" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="register-fill" x="402" y="188" width="204" height="48" rx="10"></rect>
+        <text x="504" y="217" text-anchor="middle" font-size="16">local log-sum-exp</text>
+        <path class="accent-line" d="M608 212 C636 212, 642 212, 670 212" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="box" x="682" y="188" width="104" height="48" rx="9"></rect>
+        <text x="734" y="217" text-anchor="middle" font-size="13">tile_lse</text>
+
+        <rect class="box" x="62" y="258" width="128" height="48" rx="9"></rect>
+        <text x="126" y="286" text-anchor="middle" font-size="13">global LSE</text>
+        <path class="line" d="M198 282 C230 282, 238 282, 270 282" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <path class="accent-line" d="M734 240 C682 250, 584 266, 530 282" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="register-fill" x="282" y="258" width="238" height="48" rx="10"></rect>
+        <text x="401" y="286" text-anchor="middle" font-size="15">update global LSE</text>
+        <path class="accent-line" d="M528 282 C560 282, 568 282, 600 282" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="box" x="612" y="258" width="150" height="48" rx="9"></rect>
+        <text x="687" y="286" text-anchor="middle" font-size="13">new global LSE</text>
       </svg>
       <div class="flashspec-tab-note">The highlighted tile is reduced immediately into an LSE summary; the full softmax vector is never written.</div>
     </div>
@@ -1299,40 +1332,42 @@ This gives the token that would be sampled from the residual distribution, again
           </marker>
         </defs>
         <text class="muted" x="48" y="44" font-size="12">logits over vocabulary</text>
-        <rect class="soft-box" x="48" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="soft-box" x="232" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="accent-box" x="416" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="soft-box" x="600" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="48" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="soft-box" x="232" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="accent-box" x="416" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="soft-box" x="600" y="58" width="176" height="70" rx="9"></rect>
         <g>
-          <rect class="logit-fill" x="72" y="100" width="15" height="22" rx="3"></rect>
-          <rect class="logit-fill" x="96" y="86" width="15" height="36" rx="3"></rect>
-          <rect class="logit-fill" x="120" y="74" width="15" height="48" rx="3"></rect>
-          <rect class="logit-fill" x="144" y="94" width="15" height="28" rx="3"></rect>
-          <rect class="logit-fill" x="168" y="82" width="15" height="40" rx="3"></rect>
-          <rect class="logit-fill" x="192" y="106" width="15" height="16" rx="3"></rect>
-          <rect class="logit-fill" x="256" y="90" width="15" height="32" rx="3"></rect>
-          <rect class="logit-fill" x="280" y="72" width="15" height="50" rx="3"></rect>
-          <rect class="logit-fill" x="304" y="98" width="15" height="24" rx="3"></rect>
-          <rect class="logit-fill" x="328" y="82" width="15" height="40" rx="3"></rect>
-          <rect class="logit-fill" x="352" y="108" width="15" height="14" rx="3"></rect>
-          <rect class="logit-fill" x="376" y="88" width="15" height="34" rx="3"></rect>
-          <rect class="logit-fill" x="440" y="96" width="15" height="26" rx="3"></rect>
-          <rect class="logit-fill" x="464" y="78" width="15" height="44" rx="3"></rect>
-          <rect class="accent-box" x="488" y="68" width="15" height="54" rx="3"></rect>
-          <rect class="logit-fill" x="512" y="92" width="15" height="30" rx="3"></rect>
-          <rect class="logit-fill" x="536" y="74" width="15" height="48" rx="3"></rect>
-          <rect class="logit-fill" x="560" y="102" width="15" height="20" rx="3"></rect>
-          <rect class="logit-fill" x="624" y="88" width="15" height="34" rx="3"></rect>
-          <rect class="logit-fill" x="648" y="80" width="15" height="42" rx="3"></rect>
-          <rect class="logit-fill" x="672" y="104" width="15" height="18" rx="3"></rect>
-          <rect class="logit-fill" x="696" y="76" width="15" height="46" rx="3"></rect>
-          <rect class="logit-fill" x="720" y="94" width="15" height="28" rx="3"></rect>
-          <rect class="logit-fill" x="744" y="84" width="15" height="38" rx="3"></rect>
+          <rect class="logit-fill heat-1" x="72" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="96" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="120" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="144" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="168" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="192" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="256" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="280" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="304" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="328" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="352" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="376" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="440" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="464" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="accent-box" x="488" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="512" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="536" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="560" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="624" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="648" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="672" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="696" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="720" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="744" y="84" width="18" height="18" rx="4"></rect>
         </g>
-        <rect class="draft-band" x="482" y="52" width="28" height="88" rx="6"></rect>
-        <text x="496" y="154" text-anchor="middle" font-size="11">x</text>
+        <rect class="draft-band" x="481" y="77" width="32" height="32" rx="7"></rect>
+        <circle class="accent-line" cx="497" cy="93" r="24"></circle>
+        <path class="accent-line" d="M514 110 L536 132"></path>
+        <text x="497" y="146" text-anchor="middle" font-size="11">x</text>
 
-        <path class="accent-line" d="M504 142 C504 172, 504 180, 504 210" marker-end="url(#flashspec-selected-arrowhead)"></path>
+        <path class="accent-line" d="M504 136 C504 164, 504 178, 504 210" marker-end="url(#flashspec-selected-arrowhead)"></path>
         <rect class="register-fill" x="330" y="220" width="240" height="66" rx="12"></rect>
         <text x="450" y="248" text-anchor="middle" font-size="18">if x in tile</text>
         <text class="muted" x="450" y="272" text-anchor="middle" font-size="12">copy exactly one logit</text>
@@ -1352,54 +1387,92 @@ This gives the token that would be sampled from the residual distribution, again
           </marker>
         </defs>
         <text class="muted" x="48" y="44" font-size="12">logits over vocabulary</text>
-        <rect class="soft-box" x="48" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="soft-box" x="232" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="accent-box" x="416" y="58" width="176" height="76" rx="9"></rect>
-        <rect class="soft-box" x="600" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="48" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="soft-box" x="232" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="accent-box" x="416" y="58" width="176" height="70" rx="9"></rect>
+        <rect class="soft-box" x="600" y="58" width="176" height="70" rx="9"></rect>
         <g>
-          <rect class="logit-fill" x="72" y="100" width="15" height="22" rx="3"></rect>
-          <rect class="logit-fill" x="96" y="86" width="15" height="36" rx="3"></rect>
-          <rect class="logit-fill" x="120" y="74" width="15" height="48" rx="3"></rect>
-          <rect class="logit-fill" x="144" y="94" width="15" height="28" rx="3"></rect>
-          <rect class="logit-fill" x="168" y="82" width="15" height="40" rx="3"></rect>
-          <rect class="logit-fill" x="192" y="106" width="15" height="16" rx="3"></rect>
-          <rect class="logit-fill" x="256" y="90" width="15" height="32" rx="3"></rect>
-          <rect class="logit-fill" x="280" y="72" width="15" height="50" rx="3"></rect>
-          <rect class="logit-fill" x="304" y="98" width="15" height="24" rx="3"></rect>
-          <rect class="logit-fill" x="328" y="82" width="15" height="40" rx="3"></rect>
-          <rect class="logit-fill" x="352" y="108" width="15" height="14" rx="3"></rect>
-          <rect class="logit-fill" x="376" y="88" width="15" height="34" rx="3"></rect>
-          <rect class="logit-fill" x="440" y="96" width="15" height="26" rx="3"></rect>
-          <rect class="logit-fill" x="464" y="78" width="15" height="44" rx="3"></rect>
-          <rect class="masked-fill" x="488" y="68" width="15" height="54" rx="3"></rect>
-          <rect class="logit-fill" x="512" y="92" width="15" height="30" rx="3"></rect>
-          <rect class="logit-fill" x="536" y="74" width="15" height="48" rx="3"></rect>
-          <rect class="logit-fill" x="560" y="102" width="15" height="20" rx="3"></rect>
-          <rect class="logit-fill" x="624" y="88" width="15" height="34" rx="3"></rect>
-          <rect class="logit-fill" x="648" y="80" width="15" height="42" rx="3"></rect>
-          <rect class="logit-fill" x="672" y="104" width="15" height="18" rx="3"></rect>
-          <rect class="logit-fill" x="696" y="76" width="15" height="46" rx="3"></rect>
-          <rect class="logit-fill" x="720" y="94" width="15" height="28" rx="3"></rect>
-          <rect class="logit-fill" x="744" y="84" width="15" height="38" rx="3"></rect>
+          <rect class="logit-fill heat-1" x="72" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="96" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="120" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="144" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="168" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="192" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="256" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="280" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="304" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="328" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="352" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="376" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="440" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="464" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="488" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="512" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="536" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="560" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="624" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="648" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="672" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-5" x="696" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="720" y="84" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-3" x="744" y="84" width="18" height="18" rx="4"></rect>
         </g>
 
-        <path class="accent-line" d="M504 142 C504 162, 504 166, 504 186" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="soft-box" x="416" y="196" width="176" height="52" rx="9"></rect>
-        <text class="muted" x="402" y="226" text-anchor="end" font-size="12">gumbel</text>
+        <path class="accent-line" d="M504 136 C504 148, 504 150, 504 162" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="soft-box" x="326" y="168" width="176" height="38" rx="8"></rect>
+        <text class="muted" x="312" y="192" text-anchor="end" font-size="12">logits</text>
         <g>
-          <rect class="noise-fill" x="440" y="218" width="15" height="18" rx="3"></rect>
-          <rect class="noise-fill" x="464" y="206" width="15" height="30" rx="3"></rect>
-          <rect class="masked-fill" x="488" y="202" width="15" height="34" rx="3"></rect>
-          <rect class="noise-fill" x="512" y="212" width="15" height="24" rx="3"></rect>
-          <rect class="noise-fill" x="536" y="198" width="15" height="38" rx="3"></rect>
-          <rect class="noise-fill" x="560" y="222" width="15" height="14" rx="3"></rect>
+          <rect class="logit-fill heat-2" x="350" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="374" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="398" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="422" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="446" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="470" y="178" width="18" height="18" rx="4"></rect>
         </g>
-        <path class="thin-line" d="M504 254 V274"></path>
-        <rect class="register-fill" x="348" y="274" width="214" height="44" rx="10"></rect>
-        <text x="455" y="301" text-anchor="middle" font-size="15">argmax over i != x</text>
-        <path class="accent-line" d="M572 296 C610 296, 618 296, 656 296" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="box" x="668" y="270" width="132" height="52" rx="9"></rect>
-        <text x="734" y="301" text-anchor="middle" font-size="13">update candidate</text>
+
+        <rect class="register-fill" x="68" y="210" width="120" height="58" rx="12"></rect>
+        <rect class="box" x="90" y="224" width="30" height="30" rx="6"></rect>
+        <circle cx="99" cy="233" r="2"></circle>
+        <circle cx="111" cy="245" r="2"></circle>
+        <circle cx="111" cy="233" r="2"></circle>
+        <text x="146" y="244" text-anchor="middle" font-size="12">Gumbel</text>
+        <text x="146" y="260" text-anchor="middle" font-size="12">RNG</text>
+        <path class="accent-line" d="M198 239 C242 239, 254 239, 298 239" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="soft-box" x="326" y="220" width="176" height="38" rx="8"></rect>
+        <text class="muted" x="312" y="244" text-anchor="end" font-size="12">noise</text>
+        <g>
+          <rect class="noise-fill heat-2" x="350" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-4" x="374" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="398" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-3" x="422" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-5" x="446" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-1" x="470" y="230" width="18" height="18" rx="4"></rect>
+        </g>
+
+        <circle class="accent-box" cx="538" cy="213" r="18"></circle>
+        <text x="538" y="219" text-anchor="middle" font-size="20">+</text>
+        <path class="line" d="M508 187 C520 187, 522 200, 524 207" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <path class="line" d="M508 239 C520 239, 522 226, 524 219" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <path class="accent-line" d="M558 213 C576 213, 582 213, 600 213" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+
+        <rect class="soft-box" x="612" y="184" width="176" height="58" rx="9"></rect>
+        <text class="muted" x="700" y="174" text-anchor="middle" font-size="12">scores</text>
+        <g>
+          <rect class="score-fill heat-3" x="636" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-5" x="660" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="684" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-3" x="708" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-5" x="732" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-2" x="756" y="204" width="18" height="18" rx="4"></rect>
+        </g>
+
+        <path class="accent-line" d="M700 246 C700 258, 700 260, 700 272" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="register-fill" x="604" y="278" width="128" height="40" rx="10"></rect>
+        <text x="668" y="303" text-anchor="middle" font-size="13">argmax i != x</text>
+        <path class="accent-line" d="M738 298 C760 298, 766 298, 788 298" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="box" x="798" y="274" width="48" height="48" rx="9"></rect>
+        <text x="822" y="293" text-anchor="middle" font-size="11">global</text>
+        <text x="822" y="309" text-anchor="middle" font-size="11">max</text>
       </svg>
       <div class="flashspec-tab-note">Gumbel-Max turns residual sampling into a max reduction; the drafted token is masked before the winner is kept.</div>
     </div>
