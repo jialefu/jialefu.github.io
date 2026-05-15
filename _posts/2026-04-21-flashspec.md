@@ -104,13 +104,15 @@ $$
 \alpha(x) = p(x).
 $$
 
-The target probability of the drafted token is:
+In a standard verify implementation, the system applies softmax over the complete vocabulary and then indexes the drafted token to obtain $p(x)$. This softmax is itself a multi-pass operation over the vocabulary: one pass to compute the normalization term, and another pass to write the normalized probabilities.
+
+However, verify only needs $p(x)$. It does not use the target probabilities of the other tokens. This means we can avoid materializing the full probability vector and compute the needed scalar directly. Specifically, the target probability of the drafted token is:
 
 $$
 p(x) = \frac{\exp(\ell_x)}{\sum_j \exp(\ell_j)}.
 $$
 
-A standard implementation computes the full softmax vector. FlashSpec only needs two values:
+Therefore, during a single pass over the target vocabulary, FlashSpec only needs to record two values:
 
 1. the target logit of the drafted token, $\ell_x$
 2. the row log-sum-exp, $\mathrm{LSE} = \log \sum_j \exp(\ell_j)$
@@ -121,7 +123,7 @@ $$
 \log p(x) = \ell_x - \mathrm{LSE}.
 $$
 
-During one pass over the target vocabulary, FlashSpec records the drafted token's logit and maintains an online LSE accumulator:
+Concretely, FlashSpec records the drafted token's logit and maintains an online LSE accumulator:
 
 ```python
 # Target summary needed for acceptance
