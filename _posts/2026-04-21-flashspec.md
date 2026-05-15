@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "FlashSpec Part 1: One-Pass Verify-and-Resample for Greedy Drafts without Materialized Logits or Probs"
+title: "FlashSpec (Part I): One-Pass Verify-and-Resample for Greedy Drafts"
 date: 2026-05-14 10:00:00+0800
-description: A one-pass verify-and-resample path for greedy draft speculative decoding that avoids materializing logits, probabilities, and residual distributions.
+description: A one-pass verify-and-resample for greedy draft speculative decoding that avoids materializing logits, probabilities, and residual distributions.
 tags: [speculative-decoding, sampling, vllm, flashspec]
 categories: [blog]
 related_posts: false
@@ -12,9 +12,9 @@ pretty_table: true
 
 # The Memory I/O Bottleneck in Speculative Decoding
 
-Speculative Decoding accelerates LLM inference by letting a lightweight drafter propose several future tokens, and then asking the target model to verify them in one forward pass. When the draft is mostly accepted, one target step can produce multiple output tokens.
+Speculative Decoding accelerates LLM inference by using a lightweight drafter to propose several future tokens, followed by one target-model forward pass to verify them. When the draft is mostly accepted, one target step can produce multiple output tokens.
 
-However, the practical speedup is often limited by work outside the transformer backbone. Standard implementations still materialize vocabulary-sized tensors in the draft and verify/resample stages: logits, probabilities, masked probabilities, residual distributions, and sampling buffers. For vocabularies with 128k, 150k, or 250k tokens, these $O(V)$ reads and writes become a real HBM bottleneck.
+However, standard implementations still materialize vocabulary-sized tensors in the draft and verify/resample stages: logits, probabilities, and residual distributions. For vocabularies with 128k, 150k, or 250k tokens, these $O(V)$ reads and writes become a real HBM bottleneck.
 
 FlashSpec asks whether this materialization is necessary: can we verify draft tokens and recover from rejection without writing full logits or probabilities to memory? In Part 1, we study the most structured case, **greedy draft speculative decoding**, where the draft model is greedy while the target model can still sample from its own distribution.
 

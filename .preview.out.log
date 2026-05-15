@@ -1,0 +1,1980 @@
+Configuration file: D:/OneDrive/MyFiles/codes/jialefu.github.io/_config.yml
+Configuration file: D:/OneDrive/MyFiles/codes/jialefu.github.io/_config_local.yml
+            Source: D:/OneDrive/MyFiles/codes/jialefu.github.io
+       Destination: D:/OneDrive/MyFiles/codes/jialefu.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    done in 9.891 seconds.
+ Auto-regeneration: enabled for 'D:/OneDrive/MyFiles/codes/jialefu.github.io'
+LiveReload address: http://127.0.0.1:35729
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+        LiveReload: Browser connected
+[2026-05-14 20:16:32] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-14 23:31:39
+                    _backup/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.8678725 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:32:37
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.02828 seconds.
+                    
+[2026-05-14 23:32:54] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+[2026-05-14 23:33:13] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-14 23:38:01
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.6115956 seconds.
+                    
+[2026-05-14 23:38:24] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:7 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-14 23:41:07
+                    _backup/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.8043311 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:41:16
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.1380478 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:41:30
+                    output/playwright/flashspec-polish.png
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.1069322 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:41:58
+                    output/playwright/flashspec-polish-full.png
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.5272239 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:42:05
+                    output/playwright/flashspec-polish.png
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.1758357 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:42:30
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.6133438 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:42:43
+                    output/playwright/flashspec-polish-full.png
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.2907928 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:42:51
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+[2026-05-14 23:42:53] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:25 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+                    ...done in 6.9273324 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2026-05-14 23:43:05
+                    .preview.out.log
+                    _posts/2026-04-21-flashspec.md
+                    _backup/2026-04-21-flashspec.md
+                    output/playwright/flashspec-polish-full.png
+                    output/playwright/flashspec-polish.png
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.0406294 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:46:13
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.1933526 seconds.
+                    
+[2026-05-14 23:46:31] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-14 23:46:41
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.712539 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:49:29
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.8214815 seconds.
+                    
+[2026-05-14 23:49:46] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-14 23:49:54
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.018457 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-14 23:51:47
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.9210635 seconds.
+                    
+[2026-05-14 23:52:03] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:7 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-14 23:52:12
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.4483062 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:04:01
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.8062026 seconds.
+                    
+[2026-05-15 00:04:21] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:7 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-15 00:04:28
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.0838974 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:04:38
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.7528305 seconds.
+                    
+[2026-05-15 00:04:59] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:14 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-15 00:05:25
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.3570368 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:13:05
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.8222128 seconds.
+                    
+[2026-05-15 00:13:26] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:11 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+[2026-05-15 00:13:41] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:11 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-15 00:13:51
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 7.6662531 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:13:59
+                    _posts/2026-04-21-flashspec.md
+[2026-05-15 00:13:59] ERROR Errno::ECONNABORTED: An established connection was aborted by the software in your host machine. @ io_fillbuf - fd:13 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.7773608 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:14:21
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.4856858 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:14:28
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.5668125 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:15:08
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 5.9503097 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:18:19
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.9715213 seconds.
+                    
+[2026-05-15 00:18:45] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:7 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-15 00:19:07
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.611309 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:19:45
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.4057367 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:19:56
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.7393073 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:20:02
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.268293 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:20:18
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.4204296 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:20:24
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.903661 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:20:58
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.505127 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:21:42
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.456277 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:22:34
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.9322484 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:37:30
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.1454412 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:37:39
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.0250654 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:37:46
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.2852439 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 00:38:26
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.2106241 seconds.
+                    
+[2026-05-15 09:29:06] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+[2026-05-15 09:36:30] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-05-15 09:42:45
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.6957177 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 09:43:37
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.5726324 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 09:43:51
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.6065692 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 09:43:58
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.5145278 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 09:44:54
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.3846958 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 10:00:51
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.6091568 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-05-15 10:01:15
+                    _posts/2026-04-21-flashspec.md
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/bibsearch.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/calendar-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/chartjs-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/common.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/copy_code.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/diff2html-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/overrides.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/template.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/distillpub/transforms.v2.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/echarts-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/highlight-search-term.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/jupyter_new_tab.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/leaflet-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/masonry.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mathjax-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/mermaid-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/newsletter.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/no_defer.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/plotly-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/progress-bar.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/pseudocode-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/search-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/shortcut-key.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/theme.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/tooltips-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/typograms.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/vega-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/venobox-setup.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/wechat.js
+Terser: Minifying D:/OneDrive/MyFiles/codes/jialefu.github.io/assets/js/zoom.js
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Disabled in site.config.
+       Imagemagick: Disabled in site.config
+                    ...done in 6.0571111 seconds.
+                    
+[2026-05-15 10:02:03] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:5 
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	D:/OneDrive/MyFiles/codes/jialefu.github.io/vendor/bundle/ruby/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
