@@ -435,6 +435,10 @@ _styles: |
     stroke-width: 1.7;
   }
 
+  .flashspec-svg .arrow-head {
+    fill: var(--global-text-color);
+  }
+
   .flashspec-svg .thin-line {
     fill: none;
     stroke: var(--global-divider-color);
@@ -1409,7 +1413,8 @@ This gives the token that would be sampled from the residual distribution, again
           <rect class="logit-fill heat-3" x="744" y="84" width="18" height="18" rx="4"></rect>
         </g>
 
-        <path class="accent-line" d="M504 136 C504 148, 338 148, 338 162" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <path class="accent-line" d="M504 136 C504 144, 338 142, 338 160"></path>
+        <path class="arrow-head" d="M331 159 L345 159 L338 170 Z"></path>
         <rect class="soft-box" x="250" y="168" width="176" height="38" rx="8"></rect>
         <text class="muted" x="250" y="164" text-anchor="start" font-size="12">logits</text>
         <g>
@@ -1430,7 +1435,7 @@ This gives the token that would be sampled from the residual distribution, again
         <text x="145" y="260" text-anchor="middle" font-size="12">RNG</text>
         <path class="accent-line" d="M194 240 C216 240, 220 240, 242 240" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
         <rect class="soft-box" x="250" y="220" width="176" height="38" rx="8"></rect>
-        <text class="muted" x="338" y="216" text-anchor="middle" font-size="12">noise</text>
+        <text class="muted" x="250" y="218" text-anchor="start" font-size="12">noise</text>
         <g>
           <rect class="noise-fill heat-2" x="274" y="230" width="18" height="18" rx="4"></rect>
           <rect class="noise-fill heat-4" x="298" y="230" width="18" height="18" rx="4"></rect>
@@ -1457,7 +1462,7 @@ This gives the token that would be sampled from the residual distribution, again
           <rect class="score-fill heat-2" x="676" y="204" width="18" height="18" rx="4"></rect>
         </g>
 
-        <path class="accent-line" d="M620 246 C620 258, 590 258, 590 272" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <path class="accent-line" d="M620 246 C620 254, 590 252, 590 270 L590 272" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
         <rect class="register-fill" x="520" y="278" width="140" height="40" rx="10"></rect>
         <text x="590" y="303" text-anchor="middle" font-size="13">argmax i != x</text>
         <path class="accent-line" d="M666 298 C690 298, 696 298, 720 298" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
