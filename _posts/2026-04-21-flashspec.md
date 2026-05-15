@@ -8,6 +8,236 @@ categories: [blog]
 related_posts: false
 giscus_comments: false
 pretty_table: true
+toc:
+  sidebar: left
+_styles: |
+  @media (min-width: 992px) {
+    .container[role="main"] {
+      max-width: 1180px;
+    }
+
+    .container[role="main"] > .row > .col-sm-3 {
+      flex: 0 0 22%;
+      max-width: 22%;
+    }
+
+    .container[role="main"] > .row > .col-sm-9 {
+      flex: 0 0 78%;
+      max-width: 78%;
+    }
+  }
+
+  #toc-sidebar {
+    top: 5rem;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    padding: 0.75rem 0 0.75rem 0.25rem;
+    border-left: 1px solid var(--global-divider-color);
+  }
+
+  #toc-sidebar::before {
+    content: "Contents";
+    display: block;
+    margin: 0 0 0.65rem 1.15rem;
+    color: var(--global-text-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  #toc-sidebar .nav > li > a {
+    padding-top: 0.28rem;
+    padding-bottom: 0.28rem;
+    color: var(--global-text-color-light);
+    font-size: 0.86rem;
+    line-height: 1.35;
+  }
+
+  #toc-sidebar .nav-link.active,
+  #toc-sidebar .nav-link.active:focus,
+  #toc-sidebar .nav-link.active:hover {
+    color: var(--global-theme-color);
+    border-left-color: var(--global-theme-color);
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  footer.fixed-bottom {
+    position: static !important;
+    margin-top: 3rem;
+  }
+
+  .post {
+    max-width: 880px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .post-header {
+    margin-bottom: 2.25rem;
+    padding-bottom: 1.35rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .post-title {
+    max-width: 820px;
+    margin-bottom: 0.85rem;
+    font-size: 2.35rem;
+    font-weight: 500;
+    line-height: 1.14;
+  }
+
+  .post-meta,
+  .post-tags {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .post-tags a {
+    white-space: nowrap;
+  }
+
+  #markdown-content {
+    font-size: 1.02rem;
+    line-height: 1.74;
+  }
+
+  #markdown-content p {
+    margin-bottom: 1.05rem;
+  }
+
+  #markdown-content ol,
+  #markdown-content ul {
+    margin-bottom: 1.25rem;
+  }
+
+  #markdown-content li {
+    margin-bottom: 0.35rem;
+  }
+
+  #markdown-content > h1 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--global-divider-color);
+    font-size: 1.72rem;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  #markdown-content > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  #markdown-content > h2 {
+    margin-top: 2.2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.32rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  #markdown-content blockquote {
+    margin: 1.4rem 0;
+    padding: 0.8rem 1.1rem;
+    border-left: 4px solid var(--global-theme-color);
+    color: var(--global-text-color);
+    background: var(--global-code-bg-color);
+  }
+
+  #markdown-content :not(pre) > code {
+    padding: 0.1rem 0.28rem;
+    border-radius: 4px;
+    color: var(--global-theme-color);
+    background: var(--global-code-bg-color);
+    font-size: 0.92em;
+  }
+
+  #markdown-content div.highlighter-rouge,
+  #markdown-content figure.highlight {
+    margin: 1.45rem 0;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background: var(--global-code-bg-color);
+    overflow: hidden;
+  }
+
+  #markdown-content div.highlighter-rouge .highlight,
+  #markdown-content figure.highlight .highlight {
+    margin: 0;
+    background: transparent;
+  }
+
+  #markdown-content div.highlighter-rouge pre,
+  #markdown-content figure.highlight pre {
+    margin: 0;
+    padding: 1rem 1.1rem;
+    border: 0;
+    background: transparent;
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+
+  #markdown-content .mjx-container[jax="CHTML"][display="true"] {
+    margin: 1.25rem 0;
+  }
+
+  #markdown-content .table-responsive {
+    margin: 1.5rem 0 1.8rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  #markdown-content table.table {
+    margin-bottom: 0;
+    font-size: 0.94rem;
+  }
+
+  #markdown-content table.table thead th {
+    border-bottom: 1px solid var(--global-divider-color);
+    background: var(--global-code-bg-color);
+    font-weight: 600;
+  }
+
+  #markdown-content table.table td,
+  #markdown-content table.table th {
+    padding: 0.72rem 0.85rem;
+    vertical-align: middle;
+  }
+
+  #markdown-content table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--global-bg-color);
+  }
+
+  @media (max-width: 767px) {
+    #toc-sidebar {
+      max-height: none;
+      margin-bottom: 1.5rem;
+      padding: 0.85rem 0;
+      border-left: 0;
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+
+    #toc-sidebar::before {
+      margin-left: 0;
+    }
+
+    .post-title {
+      font-size: 2rem;
+    }
+
+    #markdown-content {
+      font-size: 1rem;
+    }
+
+    #markdown-content > h1 {
+      font-size: 1.52rem;
+    }
+  }
 ---
 
 # The Memory I/O Bottleneck in Speculative Decoding
