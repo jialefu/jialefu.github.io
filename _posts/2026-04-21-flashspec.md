@@ -435,6 +435,54 @@ _styles: |
     stroke-width: 1.7;
   }
 
+  .flashspec-svg .thin-line {
+    fill: none;
+    stroke: var(--global-divider-color);
+    stroke-width: 1.1;
+  }
+
+  .flashspec-svg .dash-line {
+    fill: none;
+    stroke: var(--global-text-color-light);
+    stroke-dasharray: 5 5;
+    stroke-width: 1.15;
+  }
+
+  .flashspec-svg .logit-fill {
+    fill: color-mix(in srgb, #4c78a8 74%, var(--global-code-bg-color));
+  }
+
+  .flashspec-svg .noise-fill {
+    fill: color-mix(in srgb, #f28e2b 76%, var(--global-code-bg-color));
+  }
+
+  .flashspec-svg .masked-fill {
+    fill: color-mix(in srgb, var(--global-text-color-light) 24%, var(--global-code-bg-color));
+  }
+
+  .flashspec-svg .register-fill {
+    fill: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color));
+    stroke: var(--global-theme-color);
+    stroke-width: 1.25;
+  }
+
+  .flashspec-svg .winner-ring {
+    fill: none;
+    stroke: #2f9e44;
+    stroke-linejoin: round;
+    stroke-width: 2.4;
+  }
+
+  .flashspec-svg .draft-band {
+    fill: color-mix(in srgb, var(--global-theme-color) 13%, transparent);
+    stroke: var(--global-theme-color);
+    stroke-width: 1.2;
+  }
+
+  .flashspec-svg .faded {
+    opacity: 0.42;
+  }
+
   .flashspec-button-row {
     display: flex;
     flex-wrap: wrap;
@@ -778,7 +826,7 @@ _styles: |
     }
 
     .flashspec-svg {
-      min-width: 620px;
+      min-width: 0;
     }
 
     .flashspec-gumbel-row {
@@ -1189,107 +1237,171 @@ This gives the token that would be sampled from the residual distribution, again
 
     <div class="flashspec-tab-panel" id="flashspec-tab-lse" role="tabpanel" data-verify-panel="lse" hidden>
       <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-lse-svg-title">
-        <title id="flashspec-lse-svg-title">Online LSE maintains a running maximum and sum across vocabulary tiles.</title>
+        <title id="flashspec-lse-svg-title">A long tiled logits vector sends the current tile into a log-sum-exp update.</title>
         <defs>
           <marker id="flashspec-lse-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
             <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
           </marker>
         </defs>
-        <rect class="soft-box" x="30" y="92" width="150" height="64" rx="8"></rect>
-        <text x="105" y="118" text-anchor="middle" font-size="13">tile logits</text>
-        <text class="muted" x="105" y="138" text-anchor="middle" font-size="12">l_tile</text>
-        <rect class="soft-box" x="30" y="174" width="150" height="64" rx="8"></rect>
-        <text x="105" y="200" text-anchor="middle" font-size="13">local summary</text>
-        <text class="muted" x="105" y="220" text-anchor="middle" font-size="12">m_t, s_t</text>
+        <text class="muted" x="48" y="44" font-size="12">logits over vocabulary</text>
+        <rect class="soft-box" x="48" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="232" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="accent-box" x="416" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="600" y="58" width="176" height="76" rx="9"></rect>
+        <g>
+          <rect class="logit-fill" x="72" y="100" width="15" height="22" rx="3"></rect>
+          <rect class="logit-fill" x="96" y="86" width="15" height="36" rx="3"></rect>
+          <rect class="logit-fill" x="120" y="74" width="15" height="48" rx="3"></rect>
+          <rect class="logit-fill" x="144" y="94" width="15" height="28" rx="3"></rect>
+          <rect class="logit-fill" x="168" y="82" width="15" height="40" rx="3"></rect>
+          <rect class="logit-fill" x="192" y="106" width="15" height="16" rx="3"></rect>
+          <rect class="logit-fill" x="256" y="90" width="15" height="32" rx="3"></rect>
+          <rect class="logit-fill" x="280" y="72" width="15" height="50" rx="3"></rect>
+          <rect class="logit-fill" x="304" y="98" width="15" height="24" rx="3"></rect>
+          <rect class="logit-fill" x="328" y="82" width="15" height="40" rx="3"></rect>
+          <rect class="logit-fill" x="352" y="108" width="15" height="14" rx="3"></rect>
+          <rect class="logit-fill" x="376" y="88" width="15" height="34" rx="3"></rect>
+          <rect class="logit-fill" x="440" y="96" width="15" height="26" rx="3"></rect>
+          <rect class="logit-fill" x="464" y="78" width="15" height="44" rx="3"></rect>
+          <rect class="logit-fill" x="488" y="68" width="15" height="54" rx="3"></rect>
+          <rect class="logit-fill" x="512" y="92" width="15" height="30" rx="3"></rect>
+          <rect class="logit-fill" x="536" y="74" width="15" height="48" rx="3"></rect>
+          <rect class="logit-fill" x="560" y="102" width="15" height="20" rx="3"></rect>
+          <rect class="logit-fill" x="624" y="88" width="15" height="34" rx="3"></rect>
+          <rect class="logit-fill" x="648" y="80" width="15" height="42" rx="3"></rect>
+          <rect class="logit-fill" x="672" y="104" width="15" height="18" rx="3"></rect>
+          <rect class="logit-fill" x="696" y="76" width="15" height="46" rx="3"></rect>
+          <rect class="logit-fill" x="720" y="94" width="15" height="28" rx="3"></rect>
+          <rect class="logit-fill" x="744" y="84" width="15" height="38" rx="3"></rect>
+        </g>
+        <text x="136" y="154" text-anchor="middle" font-size="11">tile 0</text>
+        <text x="320" y="154" text-anchor="middle" font-size="11">tile 1</text>
+        <text x="504" y="154" text-anchor="middle" font-size="11">current tile</text>
+        <text x="688" y="154" text-anchor="middle" font-size="11">tile 3</text>
 
-        <path class="line" d="M190 124 C224 124, 230 124, 264 124" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <path class="line" d="M190 206 C224 206, 230 206, 264 206" marker-end="url(#flashspec-lse-arrowhead)"></path>
-
-        <rect class="accent-box" x="276" y="62" width="286" height="206" rx="9"></rect>
-        <text x="419" y="94" text-anchor="middle" font-size="15">online update</text>
-        <text x="419" y="132" text-anchor="middle" font-size="13">m' = max(m, m_t)</text>
-        <text x="419" y="168" text-anchor="middle" font-size="13">s' = s exp(m - m') + s_t exp(m_t - m')</text>
-        <text x="419" y="210" text-anchor="middle" font-size="13">LSE = m' + log(s')</text>
-        <text class="muted" x="419" y="240" text-anchor="middle" font-size="12">no probability vector is written</text>
-
-        <path class="accent-line" d="M574 164 C616 164, 626 164, 668 164" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <rect class="box" x="682" y="116" width="148" height="96" rx="8"></rect>
-        <text x="756" y="150" text-anchor="middle" font-size="14">row LSE</text>
-        <text class="muted" x="756" y="174" text-anchor="middle" font-size="12">one scalar per row</text>
+        <path class="accent-line" d="M504 142 C504 172, 504 180, 504 210" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="register-fill" x="354" y="220" width="300" height="66" rx="12"></rect>
+        <text x="504" y="248" text-anchor="middle" font-size="19">log-sum-exp</text>
+        <text class="muted" x="504" y="272" text-anchor="middle" font-size="12">update compact LSE summary</text>
+        <path class="accent-line" d="M662 253 C694 253, 700 253, 732 253" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="box" x="742" y="226" width="86" height="54" rx="9"></rect>
+        <text x="785" y="258" text-anchor="middle" font-size="13">tile_lse</text>
       </svg>
-      <div class="flashspec-equation-row">
-        <div class="flashspec-equation-pill">p(x) denominator = exp(LSE)</div>
-        <div class="flashspec-equation-pill">log p(x) = l_x - LSE</div>
-      </div>
+      <div class="flashspec-tab-note">The highlighted tile is reduced immediately into an LSE summary; the full softmax vector is never written.</div>
     </div>
 
     <div class="flashspec-tab-panel" id="flashspec-tab-selected" role="tabpanel" data-verify-panel="selected" hidden>
       <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-selected-svg-title">
-        <title id="flashspec-selected-svg-title">Only the logit at the drafted token is recorded while other logits stream through the tile scan.</title>
+        <title id="flashspec-selected-svg-title">A long tiled logits vector checks whether the current tile contains the drafted token.</title>
         <defs>
           <marker id="flashspec-selected-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
             <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
           </marker>
         </defs>
-        <rect class="box" x="28" y="132" width="128" height="66" rx="8"></rect>
-        <text x="92" y="158" text-anchor="middle" font-size="13">draft token</text>
-        <text x="92" y="180" text-anchor="middle" font-size="13">x = tok_4</text>
-        <path class="line" d="M166 165 C202 165, 210 165, 246 165" marker-end="url(#flashspec-selected-arrowhead)"></path>
-
-        <rect class="soft-box" x="258" y="56" width="330" height="218" rx="9"></rect>
-        <text x="423" y="88" text-anchor="middle" font-size="15">current tile logits</text>
+        <text class="muted" x="48" y="44" font-size="12">logits over vocabulary</text>
+        <rect class="soft-box" x="48" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="232" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="accent-box" x="416" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="600" y="58" width="176" height="76" rx="9"></rect>
         <g>
-          <rect class="box" x="298" y="122" width="44" height="84" rx="5"></rect>
-          <rect class="box" x="350" y="100" width="44" height="106" rx="5"></rect>
-          <rect class="box" x="402" y="142" width="44" height="64" rx="5"></rect>
-          <rect class="accent-box" x="454" y="76" width="44" height="130" rx="5"></rect>
-          <rect class="box" x="506" y="116" width="44" height="90" rx="5"></rect>
-          <text class="muted" x="320" y="230" text-anchor="middle" font-size="11">tok_1</text>
-          <text class="muted" x="372" y="230" text-anchor="middle" font-size="11">tok_2</text>
-          <text class="muted" x="424" y="230" text-anchor="middle" font-size="11">tok_3</text>
-          <text x="476" y="230" text-anchor="middle" font-size="11">tok_4</text>
-          <text class="muted" x="528" y="230" text-anchor="middle" font-size="11">tok_5</text>
+          <rect class="logit-fill" x="72" y="100" width="15" height="22" rx="3"></rect>
+          <rect class="logit-fill" x="96" y="86" width="15" height="36" rx="3"></rect>
+          <rect class="logit-fill" x="120" y="74" width="15" height="48" rx="3"></rect>
+          <rect class="logit-fill" x="144" y="94" width="15" height="28" rx="3"></rect>
+          <rect class="logit-fill" x="168" y="82" width="15" height="40" rx="3"></rect>
+          <rect class="logit-fill" x="192" y="106" width="15" height="16" rx="3"></rect>
+          <rect class="logit-fill" x="256" y="90" width="15" height="32" rx="3"></rect>
+          <rect class="logit-fill" x="280" y="72" width="15" height="50" rx="3"></rect>
+          <rect class="logit-fill" x="304" y="98" width="15" height="24" rx="3"></rect>
+          <rect class="logit-fill" x="328" y="82" width="15" height="40" rx="3"></rect>
+          <rect class="logit-fill" x="352" y="108" width="15" height="14" rx="3"></rect>
+          <rect class="logit-fill" x="376" y="88" width="15" height="34" rx="3"></rect>
+          <rect class="logit-fill" x="440" y="96" width="15" height="26" rx="3"></rect>
+          <rect class="logit-fill" x="464" y="78" width="15" height="44" rx="3"></rect>
+          <rect class="accent-box" x="488" y="68" width="15" height="54" rx="3"></rect>
+          <rect class="logit-fill" x="512" y="92" width="15" height="30" rx="3"></rect>
+          <rect class="logit-fill" x="536" y="74" width="15" height="48" rx="3"></rect>
+          <rect class="logit-fill" x="560" y="102" width="15" height="20" rx="3"></rect>
+          <rect class="logit-fill" x="624" y="88" width="15" height="34" rx="3"></rect>
+          <rect class="logit-fill" x="648" y="80" width="15" height="42" rx="3"></rect>
+          <rect class="logit-fill" x="672" y="104" width="15" height="18" rx="3"></rect>
+          <rect class="logit-fill" x="696" y="76" width="15" height="46" rx="3"></rect>
+          <rect class="logit-fill" x="720" y="94" width="15" height="28" rx="3"></rect>
+          <rect class="logit-fill" x="744" y="84" width="15" height="38" rx="3"></rect>
         </g>
+        <rect class="draft-band" x="482" y="52" width="28" height="88" rx="6"></rect>
+        <text x="496" y="154" text-anchor="middle" font-size="11">x</text>
 
-        <path class="accent-line" d="M598 142 C636 142, 644 142, 682 142" marker-end="url(#flashspec-selected-arrowhead)"></path>
-        <rect class="accent-box" x="696" y="96" width="136" height="92" rx="8"></rect>
-        <text x="764" y="128" text-anchor="middle" font-size="13">record l_x</text>
-        <text class="muted" x="764" y="152" text-anchor="middle" font-size="12">one scalar</text>
-        <text class="muted" x="764" y="172" text-anchor="middle" font-size="12">not [V]</text>
+        <path class="accent-line" d="M504 142 C504 172, 504 180, 504 210" marker-end="url(#flashspec-selected-arrowhead)"></path>
+        <rect class="register-fill" x="330" y="220" width="240" height="66" rx="12"></rect>
+        <text x="450" y="248" text-anchor="middle" font-size="18">if x in tile</text>
+        <text class="muted" x="450" y="272" text-anchor="middle" font-size="12">copy exactly one logit</text>
+        <path class="accent-line" d="M580 253 C620 253, 628 253, 668 253" marker-end="url(#flashspec-selected-arrowhead)"></path>
+        <rect class="box" x="680" y="226" width="112" height="54" rx="9"></rect>
+        <text x="736" y="258" text-anchor="middle" font-size="18">l_x</text>
       </svg>
-      <div class="flashspec-tab-note">The tile still contributes to LSE and Gumbel-Max, but only one logit value is saved for acceptance.</div>
+      <div class="flashspec-tab-note">The tile is still scanned, but only the drafted token's logit is copied out for acceptance.</div>
     </div>
 
     <div class="flashspec-tab-panel" id="flashspec-tab-gumbel" role="tabpanel" data-verify-panel="gumbel" hidden>
       <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-gumbel-svg-title">
-        <title id="flashspec-gumbel-svg-title">Residual Gumbel-Max masks the drafted token, adds Gumbel noise, and keeps tile and global winners.</title>
+        <title id="flashspec-gumbel-svg-title">A long tiled logits vector combines the current tile with Gumbel noise before argmax update.</title>
         <defs>
           <marker id="flashspec-gumbel-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
             <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
           </marker>
         </defs>
-        <rect class="soft-box" x="26" y="72" width="178" height="186" rx="9"></rect>
-        <text x="115" y="104" text-anchor="middle" font-size="15">tile scores</text>
-        <text x="115" y="140" text-anchor="middle" font-size="13">score_i = l_i + g_i</text>
-        <text x="115" y="178" text-anchor="middle" font-size="13">if i == x:</text>
-        <text x="115" y="202" text-anchor="middle" font-size="13">score_i = -inf</text>
-        <text class="muted" x="115" y="232" text-anchor="middle" font-size="12">exclude draft token</text>
+        <text class="muted" x="48" y="44" font-size="12">logits over vocabulary</text>
+        <rect class="soft-box" x="48" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="232" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="accent-box" x="416" y="58" width="176" height="76" rx="9"></rect>
+        <rect class="soft-box" x="600" y="58" width="176" height="76" rx="9"></rect>
+        <g>
+          <rect class="logit-fill" x="72" y="100" width="15" height="22" rx="3"></rect>
+          <rect class="logit-fill" x="96" y="86" width="15" height="36" rx="3"></rect>
+          <rect class="logit-fill" x="120" y="74" width="15" height="48" rx="3"></rect>
+          <rect class="logit-fill" x="144" y="94" width="15" height="28" rx="3"></rect>
+          <rect class="logit-fill" x="168" y="82" width="15" height="40" rx="3"></rect>
+          <rect class="logit-fill" x="192" y="106" width="15" height="16" rx="3"></rect>
+          <rect class="logit-fill" x="256" y="90" width="15" height="32" rx="3"></rect>
+          <rect class="logit-fill" x="280" y="72" width="15" height="50" rx="3"></rect>
+          <rect class="logit-fill" x="304" y="98" width="15" height="24" rx="3"></rect>
+          <rect class="logit-fill" x="328" y="82" width="15" height="40" rx="3"></rect>
+          <rect class="logit-fill" x="352" y="108" width="15" height="14" rx="3"></rect>
+          <rect class="logit-fill" x="376" y="88" width="15" height="34" rx="3"></rect>
+          <rect class="logit-fill" x="440" y="96" width="15" height="26" rx="3"></rect>
+          <rect class="logit-fill" x="464" y="78" width="15" height="44" rx="3"></rect>
+          <rect class="masked-fill" x="488" y="68" width="15" height="54" rx="3"></rect>
+          <rect class="logit-fill" x="512" y="92" width="15" height="30" rx="3"></rect>
+          <rect class="logit-fill" x="536" y="74" width="15" height="48" rx="3"></rect>
+          <rect class="logit-fill" x="560" y="102" width="15" height="20" rx="3"></rect>
+          <rect class="logit-fill" x="624" y="88" width="15" height="34" rx="3"></rect>
+          <rect class="logit-fill" x="648" y="80" width="15" height="42" rx="3"></rect>
+          <rect class="logit-fill" x="672" y="104" width="15" height="18" rx="3"></rect>
+          <rect class="logit-fill" x="696" y="76" width="15" height="46" rx="3"></rect>
+          <rect class="logit-fill" x="720" y="94" width="15" height="28" rx="3"></rect>
+          <rect class="logit-fill" x="744" y="84" width="15" height="38" rx="3"></rect>
+        </g>
 
-        <path class="line" d="M216 165 C250 165, 258 165, 292 165" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="accent-box" x="306" y="72" width="194" height="186" rx="9"></rect>
-        <text x="403" y="104" text-anchor="middle" font-size="15">tile argmax</text>
-        <text x="403" y="142" text-anchor="middle" font-size="13">candidate =</text>
-        <text x="403" y="168" text-anchor="middle" font-size="13">max_with_index(scores)</text>
-        <text class="muted" x="403" y="208" text-anchor="middle" font-size="12">token id + noisy score</text>
-
-        <path class="accent-line" d="M512 165 C546 165, 554 165, 588 165" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="box" x="602" y="72" width="228" height="186" rx="9"></rect>
-        <text x="716" y="104" text-anchor="middle" font-size="15">global reduce</text>
-        <text x="716" y="142" text-anchor="middle" font-size="13">reduce_max(candidates)</text>
-        <text class="muted" x="716" y="178" text-anchor="middle" font-size="12">returns recovered_token</text>
-        <text class="muted" x="716" y="204" text-anchor="middle" font-size="12">only used on rejection</text>
+        <path class="accent-line" d="M504 142 C504 162, 504 166, 504 186" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="soft-box" x="416" y="196" width="176" height="52" rx="9"></rect>
+        <text class="muted" x="402" y="226" text-anchor="end" font-size="12">gumbel</text>
+        <g>
+          <rect class="noise-fill" x="440" y="218" width="15" height="18" rx="3"></rect>
+          <rect class="noise-fill" x="464" y="206" width="15" height="30" rx="3"></rect>
+          <rect class="masked-fill" x="488" y="202" width="15" height="34" rx="3"></rect>
+          <rect class="noise-fill" x="512" y="212" width="15" height="24" rx="3"></rect>
+          <rect class="noise-fill" x="536" y="198" width="15" height="38" rx="3"></rect>
+          <rect class="noise-fill" x="560" y="222" width="15" height="14" rx="3"></rect>
+        </g>
+        <path class="thin-line" d="M504 254 V274"></path>
+        <rect class="register-fill" x="348" y="274" width="214" height="44" rx="10"></rect>
+        <text x="455" y="301" text-anchor="middle" font-size="15">argmax over i != x</text>
+        <path class="accent-line" d="M572 296 C610 296, 618 296, 656 296" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="box" x="668" y="270" width="132" height="52" rx="9"></rect>
+        <text x="734" y="301" text-anchor="middle" font-size="13">update candidate</text>
       </svg>
-      <div class="flashspec-tab-note">The recovered token is prepared speculatively during the same scan. If the draft is accepted, this candidate is simply unused.</div>
+      <div class="flashspec-tab-note">Gumbel-Max turns residual sampling into a max reduction; the drafted token is masked before the winner is kept.</div>
     </div>
   </div>
 
