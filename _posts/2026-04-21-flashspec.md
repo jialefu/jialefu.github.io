@@ -1306,19 +1306,10 @@ This gives the token that would be sampled from the residual distribution, again
         <path class="accent-line" d="M504 136 C504 154, 504 160, 504 178" marker-end="url(#flashspec-lse-arrowhead)"></path>
         <rect class="register-fill" x="402" y="188" width="204" height="48" rx="10"></rect>
         <text x="504" y="217" text-anchor="middle" font-size="16">local log-sum-exp</text>
-        <path class="accent-line" d="M608 212 C636 212, 642 212, 670 212" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <rect class="box" x="682" y="188" width="104" height="48" rx="9"></rect>
-        <text x="734" y="217" text-anchor="middle" font-size="13">tile_lse</text>
-
-        <rect class="box" x="62" y="258" width="128" height="48" rx="9"></rect>
-        <text x="126" y="286" text-anchor="middle" font-size="13">global LSE</text>
-        <path class="line" d="M198 282 C230 282, 238 282, 270 282" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <path class="accent-line" d="M734 240 C682 250, 584 266, 530 282" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <rect class="register-fill" x="282" y="258" width="238" height="48" rx="10"></rect>
-        <text x="401" y="286" text-anchor="middle" font-size="15">update global LSE</text>
-        <path class="accent-line" d="M528 282 C560 282, 568 282, 600 282" marker-end="url(#flashspec-lse-arrowhead)"></path>
-        <rect class="box" x="612" y="258" width="150" height="48" rx="9"></rect>
-        <text x="687" y="286" text-anchor="middle" font-size="13">new global LSE</text>
+        <text class="muted" x="650" y="202" text-anchor="middle" font-size="12">update</text>
+        <path class="accent-line" d="M612 212 C642 212, 650 212, 680 212" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="box" x="694" y="188" width="116" height="48" rx="9"></rect>
+        <text x="752" y="217" text-anchor="middle" font-size="13">global LSE</text>
       </svg>
       <div class="flashspec-tab-note">The highlighted tile is reduced immediately into an LSE summary; the full softmax vector is never written.</div>
     </div>
@@ -1418,61 +1409,61 @@ This gives the token that would be sampled from the residual distribution, again
           <rect class="logit-fill heat-3" x="744" y="84" width="18" height="18" rx="4"></rect>
         </g>
 
-        <path class="accent-line" d="M504 136 C504 148, 504 150, 504 162" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="soft-box" x="326" y="168" width="176" height="38" rx="8"></rect>
-        <text class="muted" x="312" y="192" text-anchor="end" font-size="12">logits</text>
+        <path class="accent-line" d="M504 136 C504 148, 338 148, 338 162" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="soft-box" x="250" y="168" width="176" height="38" rx="8"></rect>
+        <text class="muted" x="250" y="164" text-anchor="start" font-size="12">logits</text>
         <g>
-          <rect class="logit-fill heat-2" x="350" y="178" width="18" height="18" rx="4"></rect>
-          <rect class="logit-fill heat-4" x="374" y="178" width="18" height="18" rx="4"></rect>
-          <rect class="masked-fill" x="398" y="178" width="18" height="18" rx="4"></rect>
-          <rect class="logit-fill heat-2" x="422" y="178" width="18" height="18" rx="4"></rect>
-          <rect class="logit-fill heat-4" x="446" y="178" width="18" height="18" rx="4"></rect>
-          <rect class="logit-fill heat-1" x="470" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="274" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="298" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="322" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-2" x="346" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-4" x="370" y="178" width="18" height="18" rx="4"></rect>
+          <rect class="logit-fill heat-1" x="394" y="178" width="18" height="18" rx="4"></rect>
         </g>
 
-        <rect class="register-fill" x="68" y="210" width="120" height="58" rx="12"></rect>
-        <rect class="box" x="90" y="224" width="30" height="30" rx="6"></rect>
-        <circle cx="99" cy="233" r="2"></circle>
-        <circle cx="111" cy="245" r="2"></circle>
-        <circle cx="111" cy="233" r="2"></circle>
-        <text x="146" y="244" text-anchor="middle" font-size="12">Gumbel</text>
-        <text x="146" y="260" text-anchor="middle" font-size="12">RNG</text>
-        <path class="accent-line" d="M198 239 C242 239, 254 239, 298 239" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="soft-box" x="326" y="220" width="176" height="38" rx="8"></rect>
-        <text class="muted" x="312" y="244" text-anchor="end" font-size="12">noise</text>
+        <rect class="register-fill" x="72" y="212" width="114" height="56" rx="12"></rect>
+        <rect class="box" x="94" y="225" width="30" height="30" rx="6"></rect>
+        <circle cx="103" cy="234" r="2"></circle>
+        <circle cx="115" cy="246" r="2"></circle>
+        <circle cx="115" cy="234" r="2"></circle>
+        <text x="145" y="244" text-anchor="middle" font-size="12">Gumbel</text>
+        <text x="145" y="260" text-anchor="middle" font-size="12">RNG</text>
+        <path class="accent-line" d="M194 240 C216 240, 220 240, 242 240" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="soft-box" x="250" y="220" width="176" height="38" rx="8"></rect>
+        <text class="muted" x="338" y="216" text-anchor="middle" font-size="12">noise</text>
         <g>
-          <rect class="noise-fill heat-2" x="350" y="230" width="18" height="18" rx="4"></rect>
-          <rect class="noise-fill heat-4" x="374" y="230" width="18" height="18" rx="4"></rect>
-          <rect class="masked-fill" x="398" y="230" width="18" height="18" rx="4"></rect>
-          <rect class="noise-fill heat-3" x="422" y="230" width="18" height="18" rx="4"></rect>
-          <rect class="noise-fill heat-5" x="446" y="230" width="18" height="18" rx="4"></rect>
-          <rect class="noise-fill heat-1" x="470" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-2" x="274" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-4" x="298" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="322" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-3" x="346" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-5" x="370" y="230" width="18" height="18" rx="4"></rect>
+          <rect class="noise-fill heat-1" x="394" y="230" width="18" height="18" rx="4"></rect>
         </g>
 
-        <circle class="accent-box" cx="538" cy="213" r="18"></circle>
-        <text x="538" y="219" text-anchor="middle" font-size="20">+</text>
-        <path class="line" d="M508 187 C520 187, 522 200, 524 207" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <path class="line" d="M508 239 C520 239, 522 226, 524 219" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <path class="accent-line" d="M558 213 C576 213, 582 213, 600 213" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <circle class="accent-box" cx="466" cy="213" r="18"></circle>
+        <text x="466" y="219" text-anchor="middle" font-size="20">+</text>
+        <path class="line" d="M432 187 C444 190, 448 198, 450 202"></path>
+        <path class="line" d="M432 239 C444 236, 448 228, 450 224"></path>
+        <path class="accent-line" d="M488 213 C502 213, 506 213, 520 213" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
 
-        <rect class="soft-box" x="612" y="184" width="176" height="58" rx="9"></rect>
-        <text class="muted" x="700" y="174" text-anchor="middle" font-size="12">scores</text>
+        <rect class="soft-box" x="532" y="184" width="176" height="58" rx="9"></rect>
+        <text class="muted" x="620" y="174" text-anchor="middle" font-size="12">scores</text>
         <g>
-          <rect class="score-fill heat-3" x="636" y="204" width="18" height="18" rx="4"></rect>
-          <rect class="score-fill heat-5" x="660" y="204" width="18" height="18" rx="4"></rect>
-          <rect class="masked-fill" x="684" y="204" width="18" height="18" rx="4"></rect>
-          <rect class="score-fill heat-3" x="708" y="204" width="18" height="18" rx="4"></rect>
-          <rect class="score-fill heat-5" x="732" y="204" width="18" height="18" rx="4"></rect>
-          <rect class="score-fill heat-2" x="756" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-3" x="556" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-5" x="580" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="masked-fill" x="604" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-3" x="628" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-5" x="652" y="204" width="18" height="18" rx="4"></rect>
+          <rect class="score-fill heat-2" x="676" y="204" width="18" height="18" rx="4"></rect>
         </g>
 
-        <path class="accent-line" d="M700 246 C700 258, 700 260, 700 272" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="register-fill" x="604" y="278" width="128" height="40" rx="10"></rect>
-        <text x="668" y="303" text-anchor="middle" font-size="13">argmax i != x</text>
-        <path class="accent-line" d="M738 298 C760 298, 766 298, 788 298" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
-        <rect class="box" x="798" y="274" width="48" height="48" rx="9"></rect>
-        <text x="822" y="293" text-anchor="middle" font-size="11">global</text>
-        <text x="822" y="309" text-anchor="middle" font-size="11">max</text>
+        <path class="accent-line" d="M620 246 C620 258, 590 258, 590 272" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="register-fill" x="520" y="278" width="140" height="40" rx="10"></rect>
+        <text x="590" y="303" text-anchor="middle" font-size="13">argmax i != x</text>
+        <path class="accent-line" d="M666 298 C690 298, 696 298, 720 298" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="box" x="732" y="274" width="72" height="48" rx="8"></rect>
+        <text x="768" y="293" text-anchor="middle" font-size="13">global</text>
+        <text x="768" y="310" text-anchor="middle" font-size="13">max</text>
       </svg>
       <div class="flashspec-tab-note">Gumbel-Max turns residual sampling into a max reduction; the drafted token is masked before the winner is kept.</div>
     </div>
