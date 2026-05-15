@@ -213,6 +213,61 @@ _styles: |
     background-color: var(--global-bg-color);
   }
 
+  #markdown-content table.flashspec-results-table {
+    font-size: 0.9rem;
+  }
+
+  #markdown-content table.flashspec-results-table thead th {
+    padding: 0.58rem 0.72rem;
+    color: var(--global-text-color);
+  }
+
+  #markdown-content table.flashspec-results-table thead th:last-child {
+    color: var(--global-theme-color);
+    background: color-mix(in srgb, var(--global-theme-color) 10%, var(--global-code-bg-color));
+  }
+
+  #markdown-content table.flashspec-results-table td,
+  #markdown-content table.flashspec-results-table th {
+    padding: 0.44rem 0.72rem;
+    border-top-color: color-mix(in srgb, var(--global-divider-color) 72%, transparent);
+  }
+
+  #markdown-content table.flashspec-results-table td {
+    white-space: nowrap;
+  }
+
+  #markdown-content table.flashspec-results-table td:first-child {
+    color: var(--global-text-color);
+    font-weight: 650;
+  }
+
+  #markdown-content table.flashspec-results-table td:first-child::before {
+    content: "";
+    display: inline-block;
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-right: 0.48rem;
+    border-radius: 999px;
+    background: var(--global-theme-color);
+    vertical-align: 0.08rem;
+  }
+
+  #markdown-content table.flashspec-results-table td:last-child {
+    color: var(--global-theme-color);
+    font-weight: 750;
+  }
+
+  #markdown-content table.flashspec-results-table td:last-child span {
+    display: inline-flex;
+    justify-content: center;
+    min-width: 4.1rem;
+    padding: 0.16rem 0.42rem;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 40%, var(--global-divider-color));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--global-theme-color) 9%, var(--global-bg-color));
+  }
+
   .flashspec-figure {
     margin: 1.8rem 0 2.1rem;
     padding: 1.05rem;
@@ -1542,7 +1597,7 @@ We integrated FlashSpec into vLLM's greedy-draft speculative decoding paths and 
 Representative results:
 
 <div class="table-responsive">
-  <table class="table table-sm table-striped">
+  <table class="table table-sm table-striped flashspec-results-table">
     <thead>
       <tr>
         <th>Setting</th>
@@ -1556,31 +1611,31 @@ Representative results:
         <td>Qwen3.5-9B n-gram</td>
         <td style="text-align: center;">198.7</td>
         <td style="text-align: center;">217.4</td>
-        <td style="text-align: center;">+9.5%</td>
+        <td style="text-align: center;"><span>+9.5%</span></td>
       </tr>
       <tr>
         <td>Qwen3.5-9B MTP6 decode512</td>
         <td style="text-align: center;">292.8</td>
         <td style="text-align: center;">312.7</td>
-        <td style="text-align: center;">+6.9%</td>
+        <td style="text-align: center;"><span>+6.9%</span></td>
       </tr>
       <tr>
         <td>Qwen3.5-9B MTP8 decode256</td>
         <td style="text-align: center;">261.0</td>
         <td style="text-align: center;">278.8</td>
-        <td style="text-align: center;">+6.9%</td>
+        <td style="text-align: center;"><span>+6.9%</span></td>
       </tr>
       <tr>
         <td>Llama-3.1-8B EAGLE3 k=3 decode256</td>
         <td style="text-align: center;">310.5</td>
         <td style="text-align: center;">330.8</td>
-        <td style="text-align: center;">+6.5%</td>
+        <td style="text-align: center;"><span>+6.5%</span></td>
       </tr>
       <tr>
         <td>Llama-3.1-8B EAGLE3 k=4 decode512</td>
         <td style="text-align: center;">326.7</td>
         <td style="text-align: center;">340.4</td>
-        <td style="text-align: center;">+4.2%</td>
+        <td style="text-align: center;"><span>+4.2%</span></td>
       </tr>
     </tbody>
   </table>
