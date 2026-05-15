@@ -174,7 +174,7 @@ $$
 
 This gives the token that would be sampled from the residual distribution, again without materializing logits, probabilities, or residual probabilities.
 
-# FlashSpec One-Pass Verify-and-Resample
+# FlashSpec: One-Pass Verify-and-Resample
 
 The complete greedy-draft FlashSpec verify/resample kernel looks like this:
 
@@ -186,45 +186,40 @@ def flashspec_greedy_draft_verify_resample(
     draft_tokens,
     uniforms,
 ):
-    output = []
-
+    # Stage 1: fused LM-head summary.
+    # Parallel over draft positions and vocabulary tiles.
     for pos in range(gamma):
         x = draft_tokens[pos]
         h = target_hidden[pos]
 
-        selected_logit = -inf
-
-        lse_max = -inf
-        lse_sum = 0.0
-
-        recovered_token = -1
-        recovered_score = -inf
-
-        for W_tile, token_range in tiles(target_lm_head):
+        for tile_id, (W_tile, token_range) in enumerate(tiles(target_lm_head)):
             logits = h @ W_tile.T
 
-            # 1. Online LSE for the denominator of p(x).
-            lse_max, lse_sum = online_lse_update(lse_max, lse_sum, logits)
+            # 1. For acceptance: keep a tile-level LSE summary.
+            tile_lse[pos, tile_id] = online_lse_summary(logits)
 
-            # 2. Record the target logit at the drafted token x.
+            # 2. Also keep the target logit at the drafted token x.
             if x in token_range:
-                selected_logit = logits[x]
+                selected_logit[pos] = logits[x]
 
-            # 3. In the same scan, sample from target excluding x.
+            # 3. For rejection: keep a residual Gumbel-Max candidate.
             gumbels = gumbel_noise(token_range)
             scores = logits + gumbels
 
             if x in token_range:
                 scores[x] = -inf
 
-            tile_token, tile_score = max(scores)
+            recovered_candidate[pos, tile_id] = max_with_index(scores, token_range)
 
-            if tile_score > recovered_score:
-                recovered_score = tile_score
-                recovered_token = global_id(tile_token, token_range)
+    # Stage 2: tiny finalizer over compact summaries.
+    # This is the only sequential prefix logic.
+    output = []
 
-        lse = log(lse_sum) + lse_max
-        accept_prob = exp(selected_logit - lse)
+    for pos in range(gamma):
+        x = draft_tokens[pos]
+        lse = reduce_lse(tile_lse[pos])
+        recovered_token = reduce_max(recovered_candidate[pos])
+        accept_prob = exp(selected_logit[pos] - lse)
 
         if uniforms[pos] <= accept_prob:
             output.append(x)
@@ -235,11 +230,7 @@ def flashspec_greedy_draft_verify_resample(
     return output
 ```
 
-The important point is that verify and resample are no longer two separate memory-heavy stages. FlashSpec performs both in a **single pass over the vocabulary**:
-
-1. compute $p(x)$ for acceptance,
-2. prepare the recovered token in case of rejection,
-3. emit either the draft token or the recovered token with a simple branch.
+This bypasses the large tensor reads and writes in the standard path. The vocabulary pass directly returns compact summaries for acceptance and recovery, instead of materializing full logits, probabilities, or residual probabilities.
 
 In practice, the bonus token for the all-accepted case can be fused into the same target-side kernel as well. We omit it from the pseudocode here to keep the core idea clean.
 
@@ -254,62 +245,44 @@ Representative results:
     <thead>
       <tr>
         <th>Setting</th>
-        <th style="text-align: right;">Stock tok/s</th>
-        <th style="text-align: right;">FlashSpec tok/s</th>
-        <th style="text-align: right;">Improvement</th>
+        <th style="text-align: center;">Stock tok/s</th>
+        <th style="text-align: center;">FlashSpec tok/s</th>
+        <th style="text-align: center;">Improvement</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Qwen3.5-9B n-gram</td>
-        <td style="text-align: right;">198.7</td>
-        <td style="text-align: right;">217.4</td>
-        <td style="text-align: right;">+9.5%</td>
+        <td style="text-align: center;">198.7</td>
+        <td style="text-align: center;">217.4</td>
+        <td style="text-align: center;">+9.5%</td>
       </tr>
       <tr>
         <td>Qwen3.5-9B MTP6 decode512</td>
-        <td style="text-align: right;">292.8</td>
-        <td style="text-align: right;">312.7</td>
-        <td style="text-align: right;">+6.9%</td>
+        <td style="text-align: center;">292.8</td>
+        <td style="text-align: center;">312.7</td>
+        <td style="text-align: center;">+6.9%</td>
       </tr>
       <tr>
         <td>Qwen3.5-9B MTP8 decode256</td>
-        <td style="text-align: right;">261.0</td>
-        <td style="text-align: right;">278.8</td>
-        <td style="text-align: right;">+6.9%</td>
+        <td style="text-align: center;">261.0</td>
+        <td style="text-align: center;">278.8</td>
+        <td style="text-align: center;">+6.9%</td>
       </tr>
       <tr>
         <td>Llama-3.1-8B EAGLE3 k=3 decode256</td>
-        <td style="text-align: right;">310.5</td>
-        <td style="text-align: right;">330.8</td>
-        <td style="text-align: right;">+6.5%</td>
+        <td style="text-align: center;">310.5</td>
+        <td style="text-align: center;">330.8</td>
+        <td style="text-align: center;">+6.5%</td>
       </tr>
       <tr>
         <td>Llama-3.1-8B EAGLE3 k=4 decode512</td>
-        <td style="text-align: right;">326.7</td>
-        <td style="text-align: right;">340.4</td>
-        <td style="text-align: right;">+4.2%</td>
+        <td style="text-align: center;">326.7</td>
+        <td style="text-align: center;">340.4</td>
+        <td style="text-align: center;">+4.2%</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 The speedup does not come from changing the model, the acceptance rule, or the output distribution. FlashSpec preserves the greedy-draft speculative decoding semantics. The gain comes from avoiding unnecessary vocabulary-sized memory traffic and fusing verify/resample into one pass.
-
-# Takeaway
-
-For greedy draft speculative decoding, the draft distribution is a delta distribution:
-
-$$
-q(x)=1.
-$$
-
-This makes the acceptance rule especially simple:
-
-$$
-\alpha(x)=p(x).
-$$
-
-FlashSpec exploits this structure. During a single pass over the target vocabulary, it computes the drafted token's acceptance probability and simultaneously prepares the recovered token for rejection. No full logits tensor, probability tensor, or residual distribution needs to be materialized.
-
-This gives a practical fast path for n-gram, MTP, and EAGLE-style speculative decoding. In Part 2, we will move beyond delta drafts and discuss top-k draft distributions, where the draft distribution is no longer a single token but is still sparse enough to avoid full probability materialization.
