@@ -353,55 +353,41 @@ _styles: |
     font-size: 0.85rem;
   }
 
-  .flashspec-meter {
-    margin-top: 0.75rem;
-  }
-
-  .flashspec-meter-track {
-    height: 0.56rem;
-    border-radius: 999px;
-    background: var(--global-code-bg-color);
-    overflow: hidden;
-  }
-
-  .flashspec-meter-fill {
-    width: var(--flashspec-meter, 100%);
-    height: 100%;
-    border-radius: inherit;
-    background: var(--global-theme-color);
-    transition: width 160ms ease;
-  }
-
-  .flashspec-meter-fill.is-muted {
-    background: color-mix(in srgb, var(--global-theme-color) 38%, var(--global-divider-color));
-  }
-
-  .flashspec-metrics {
+  .flashspec-formula-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.45rem;
-    margin-top: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
   }
 
-  .flashspec-metric {
-    padding: 0.5rem;
+  .flashspec-formula-card {
+    padding: 0.8rem;
     border: 1px solid var(--global-divider-color);
+    border-radius: 7px;
+    background: var(--global-bg-color);
+  }
+
+  .flashspec-formula-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 0.45rem;
     border-radius: 6px;
     background: var(--global-code-bg-color);
   }
 
-  .flashspec-metric-label {
-    color: var(--global-text-color-light);
-    font-size: 0.68rem;
-    line-height: 1.25;
+  .flashspec-formula-svg text {
+    fill: var(--global-text-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   }
 
-  .flashspec-metric-value {
-    margin-top: 0.22rem;
-    color: var(--global-text-color);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    font-size: 0.84rem;
-    font-weight: 650;
+  .flashspec-formula-svg .muted {
+    fill: var(--global-text-color-light);
+  }
+
+  .flashspec-formula-svg .accent {
+    fill: var(--global-theme-color);
+    font-weight: 700;
   }
 
   .flashspec-svg {
@@ -476,6 +462,193 @@ _styles: |
     border-color: var(--global-theme-color);
     color: var(--global-theme-color);
     background: color-mix(in srgb, var(--global-theme-color) 9%, var(--global-bg-color));
+  }
+
+  .flashspec-gumbel-board {
+    display: grid;
+    gap: 0.8rem;
+    padding-bottom: 0.15rem;
+  }
+
+  .flashspec-gumbel-row {
+    display: grid;
+    grid-template-columns: 7.15rem minmax(0, 1fr);
+    gap: 0.45rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flashspec-gumbel-label {
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.25;
+  }
+
+  .flashspec-gumbel-label span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--global-text-color-light);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+  }
+
+  .flashspec-gumbel-bars {
+    display: grid;
+    grid-template-columns: repeat(17, minmax(0, 1fr));
+    align-items: end;
+    gap: 0.12rem;
+    min-height: 7.8rem;
+  }
+
+  .flashspec-gumbel-cell {
+    display: grid;
+    grid-template-rows: 6.3rem auto;
+    gap: 0.24rem;
+    min-width: 0;
+    color: var(--global-text-color-light);
+    font-size: 0.68rem;
+    text-align: center;
+  }
+
+  .flashspec-gumbel-bar {
+    align-self: end;
+    justify-self: center;
+    width: 84%;
+    height: var(--flashspec-bar, 45%);
+    min-height: 0.3rem;
+    border-radius: 4px 4px 2px 2px;
+    background: color-mix(in srgb, #4c78a8 72%, var(--global-code-bg-color));
+  }
+
+  .flashspec-gumbel-bar.is-noise {
+    background: color-mix(in srgb, #f28e2b 74%, var(--global-code-bg-color));
+  }
+
+  .flashspec-gumbel-bar.is-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--global-text-color-light) 18%, transparent);
+  }
+
+  .flashspec-gumbel-stack-logit {
+    width: 100%;
+    flex: 0 0 var(--flashspec-logit-part, 50%);
+    background: color-mix(in srgb, #4c78a8 72%, var(--global-code-bg-color));
+  }
+
+  .flashspec-gumbel-stack-noise {
+    width: 100%;
+    flex: 0 0 var(--flashspec-noise-part, 50%);
+    background: color-mix(in srgb, #f28e2b 74%, var(--global-code-bg-color));
+  }
+
+  .flashspec-gumbel-cell.is-draft .flashspec-gumbel-bar,
+  .flashspec-gumbel-cell.is-masked .flashspec-gumbel-bar {
+    background: color-mix(in srgb, var(--global-text-color-light) 28%, var(--global-code-bg-color));
+  }
+
+  .flashspec-gumbel-cell.is-masked .flashspec-gumbel-stack-logit,
+  .flashspec-gumbel-cell.is-masked .flashspec-gumbel-stack-noise {
+    background: color-mix(in srgb, var(--global-text-color-light) 24%, var(--global-code-bg-color));
+  }
+
+  .flashspec-gumbel-cell.is-sampled .flashspec-gumbel-bar {
+    outline: 2px solid #2f9e44;
+    outline-offset: 2px;
+  }
+
+  .flashspec-gumbel-token {
+    overflow: hidden;
+    color: var(--global-text-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .flashspec-token-id-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.75rem;
+  }
+
+  .flashspec-token-id {
+    padding: 0.42rem 0.62rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    background: var(--global-code-bg-color);
+    font-size: 0.9rem;
+    font-weight: 650;
+  }
+
+  .flashspec-token-id strong {
+    color: var(--global-theme-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  }
+
+  .flashspec-icon-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+  }
+
+  .flashspec-icon-button svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    fill: none;
+  }
+
+  .flashspec-icon-button circle {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  .flashspec-tabs {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .flashspec-tab-panel[hidden] {
+    display: none;
+  }
+
+  .flashspec-tab-panel {
+    padding: 0.9rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 7px;
+    background: var(--global-bg-color);
+  }
+
+  .flashspec-tab-note {
+    margin-top: 0.7rem;
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .flashspec-equation-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.75rem;
+  }
+
+  .flashspec-equation-pill {
+    padding: 0.36rem 0.5rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    color: var(--global-text-color);
+    background: var(--global-code-bg-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: 0.76rem;
   }
 
   .flashspec-token-bars {
@@ -590,6 +763,7 @@ _styles: |
     .flashspec-figure-header,
     .flashspec-compare-grid,
     .flashspec-inspector-grid,
+    .flashspec-formula-grid,
     .flashspec-control-row {
       grid-template-columns: 1fr;
     }
@@ -607,8 +781,28 @@ _styles: |
       min-width: 620px;
     }
 
-    .flashspec-metrics {
-      grid-template-columns: 1fr;
+    .flashspec-gumbel-row {
+      grid-template-columns: 5.8rem minmax(0, 1fr);
+      gap: 0.32rem;
+    }
+
+    .flashspec-gumbel-bars {
+      min-width: 0;
+      gap: 0.06rem;
+      min-height: 6.5rem;
+    }
+
+    .flashspec-gumbel-cell {
+      grid-template-rows: 5.2rem;
+      font-size: 0.6rem;
+    }
+
+    .flashspec-gumbel-bar {
+      width: 88%;
+    }
+
+    .flashspec-gumbel-token {
+      display: none;
     }
 
     .flashspec-token-bars {
@@ -623,7 +817,6 @@ _styles: |
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .flashspec-meter-fill,
     .flashspec-token-bar {
       transition: none;
     }
@@ -644,7 +837,7 @@ FlashSpec asks whether this materialization is necessary: can we verify draft to
       <div class="flashspec-kicker">Interactive sketch</div>
       <div class="flashspec-figure-title" id="flashspec-memory-title">Where the vocabulary-sized traffic appears</div>
     </div>
-    <div class="flashspec-badge" aria-live="polite"><span data-memory-ratio>4,675x</span> fewer materialized values</div>
+    <div class="flashspec-badge" aria-live="polite"><span data-memory-ratio>90,000x</span> fewer values</div>
   </div>
 
   <div class="flashspec-control-row">
@@ -658,77 +851,28 @@ FlashSpec asks whether this materialization is necessary: can we verify draft to
     </label>
   </div>
 
-  <div class="flashspec-compare-grid">
-    <div class="flashspec-panel">
-      <div class="flashspec-panel-title">Standard path</div>
-      <div class="flashspec-pipeline" aria-hidden="true">
-        <div class="flashspec-pipeline-row">
-          <div class="flashspec-node is-hot">draft logits<br>[V]</div>
-          <div class="flashspec-arrow">-&gt;</div>
-          <div class="flashspec-node is-hot">target logits<br>[gamma,V]</div>
-        </div>
-        <div class="flashspec-pipeline-row">
-          <div class="flashspec-node is-hot">target probs<br>[gamma,V]</div>
-          <div class="flashspec-arrow">-&gt;</div>
-          <div class="flashspec-node is-hot">residual probs<br>[V]</div>
-        </div>
-      </div>
-      <div class="flashspec-meter" aria-hidden="true">
-        <div class="flashspec-meter-track"><div class="flashspec-meter-fill" data-memory-standard-bar></div></div>
-      </div>
-      <div class="flashspec-metrics">
-        <div class="flashspec-metric">
-          <div class="flashspec-metric-label">Full-vector values</div>
-          <div class="flashspec-metric-value" data-memory-standard-values>1.80M</div>
-        </div>
-        <div class="flashspec-metric">
-          <div class="flashspec-metric-label">Approx. bytes</div>
-          <div class="flashspec-metric-value" data-memory-standard-bytes>3.4 MB</div>
-        </div>
-        <div class="flashspec-metric">
-          <div class="flashspec-metric-label">Large tensors</div>
-          <div class="flashspec-metric-value" data-memory-standard-tensors>12</div>
-        </div>
-      </div>
+  <div class="flashspec-formula-grid">
+    <div class="flashspec-formula-card">
+      <div class="flashspec-panel-title">Standard materialization</div>
+      <svg class="flashspec-formula-svg" viewBox="0 0 440 168" role="img" aria-label="Standard materialized values formula">
+        <text x="24" y="42" font-size="21">V + γV + γV + V</text>
+        <text class="muted" x="24" y="78" font-size="17">= (2γ + 2) V</text>
+        <text x="24" y="124" font-size="22">=</text>
+        <text class="accent" x="58" y="124" font-size="30" data-memory-standard-values>1.80M</text>
+      </svg>
     </div>
-
-    <div class="flashspec-panel">
-      <div class="flashspec-panel-title">FlashSpec path</div>
-      <div class="flashspec-pipeline" aria-hidden="true">
-        <div class="flashspec-pipeline-row">
-          <div class="flashspec-node">tile LSE</div>
-          <div class="flashspec-arrow">+</div>
-          <div class="flashspec-node">selected logit</div>
-          <div class="flashspec-arrow">+</div>
-          <div class="flashspec-node">Gumbel max</div>
-        </div>
-        <div class="flashspec-pipeline-row">
-          <div class="flashspec-node is-hot">compact summaries</div>
-          <div class="flashspec-arrow">-&gt;</div>
-          <div class="flashspec-node is-hot">one output token</div>
-        </div>
-      </div>
-      <div class="flashspec-meter" aria-hidden="true">
-        <div class="flashspec-meter-track"><div class="flashspec-meter-fill is-muted" data-memory-flashspec-bar></div></div>
-      </div>
-      <div class="flashspec-metrics">
-        <div class="flashspec-metric">
-          <div class="flashspec-metric-label">Summary values</div>
-          <div class="flashspec-metric-value" data-memory-flashspec-values>385</div>
-        </div>
-        <div class="flashspec-metric">
-          <div class="flashspec-metric-label">Approx. payload</div>
-          <div class="flashspec-metric-value" data-memory-flashspec-bytes>3.0 KB</div>
-        </div>
-        <div class="flashspec-metric">
-          <div class="flashspec-metric-label">Full tensors</div>
-          <div class="flashspec-metric-value">0</div>
-        </div>
-      </div>
+    <div class="flashspec-formula-card">
+      <div class="flashspec-panel-title">FlashSpec summaries</div>
+      <svg class="flashspec-formula-svg" viewBox="0 0 440 168" role="img" aria-label="FlashSpec materialized values formula">
+        <text x="24" y="46" font-size="22">4γ</text>
+        <text class="muted" x="24" y="82" font-size="17">one compact record per draft position</text>
+        <text x="24" y="124" font-size="22">=</text>
+        <text class="accent" x="58" y="124" font-size="30" data-memory-flashspec-values>20</text>
+      </svg>
     </div>
   </div>
 
-  <p class="flashspec-caption">This is a schematic accounting, not a benchmark model. The point is the shape of the work: the standard path repeatedly writes vectors with one entry per vocabulary token, while FlashSpec returns only tile-level summaries and the few scalars needed downstream.</p>
+  <p class="flashspec-caption">Counting only values materialized to HBM; the tiled vocabulary scan stays inside the fused kernel.</p>
 </div>
 
 # Greedy Draft Speculative Decoding
@@ -912,54 +1056,6 @@ accept_prob = exp(selected_logit - lse)
 
 This gives the exact acceptance probability without writing target logits or target probabilities to HBM.
 
-<div class="flashspec-figure flashspec-interactive" id="flashspec-one-pass-inspector" aria-labelledby="flashspec-inspector-title">
-  <div class="flashspec-figure-header">
-    <div>
-      <div class="flashspec-kicker">One-pass inspector</div>
-      <div class="flashspec-figure-title" id="flashspec-inspector-title">The same vocabulary pass prepares acceptance and recovery</div>
-    </div>
-    <div class="flashspec-badge" aria-live="polite">decision: <span data-inspector-decision>accept</span></div>
-  </div>
-
-  <div class="flashspec-button-row" role="group" aria-label="Inspector mode">
-    <button class="flashspec-button is-active" type="button" data-inspector-mode="acceptance" aria-pressed="true">Acceptance view</button>
-    <button class="flashspec-button" type="button" data-inspector-mode="recovery" aria-pressed="false">Recovery view</button>
-    <button class="flashspec-button" type="button" data-inspector-resample aria-label="Resample Gumbel noise">Resample Gumbels</button>
-  </div>
-
-  <div class="flashspec-control-row">
-    <label class="flashspec-control">
-      Uniform threshold <span>u = <output data-inspector-uniform>0.18</output></span>
-      <input type="range" min="0" max="0.95" step="0.01" value="0.18" aria-label="Uniform threshold" data-inspector-uniform-input>
-    </label>
-    <div class="flashspec-panel">
-      <div class="flashspec-panel-title">Draft token</div>
-      <div class="flashspec-summary-row"><span>x</span><strong data-inspector-draft-token>tok_4</strong></div>
-    </div>
-  </div>
-
-  <div class="flashspec-inspector-grid">
-    <div class="flashspec-panel">
-      <div class="flashspec-panel-title" data-inspector-bars-title>Toy target logits</div>
-      <div class="flashspec-token-bars" data-inspector-bars aria-label="Toy vocabulary token bars"></div>
-      <div class="flashspec-panel-note">Blue marks the drafted token. Green marks the residual Gumbel-Max winner when recovery is shown.</div>
-    </div>
-
-    <div class="flashspec-panel">
-      <div class="flashspec-panel-title">Compact summaries</div>
-      <div class="flashspec-summary-list">
-        <div class="flashspec-summary-row"><span>selected_logit</span><strong data-inspector-selected-logit>2.00</strong></div>
-        <div class="flashspec-summary-row"><span>LSE</span><strong data-inspector-lse>3.42</strong></div>
-        <div class="flashspec-summary-row"><span>p(x)</span><strong data-inspector-prob>0.24</strong></div>
-        <div class="flashspec-summary-row"><span>uniform u</span><strong data-inspector-uniform-summary>0.18</strong></div>
-        <div class="flashspec-summary-row"><span>recovered token</span><strong data-inspector-recovered>tok_6</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <p class="flashspec-caption">Acceptance uses only the selected logit and the row LSE. If the token is rejected, the residual sample has already been prepared by the Gumbel-Max candidate that excluded the drafted token.</p>
-</div>
-
 # One-Pass Residual Sampling with Gumbel-Max
 
 There is still one challenge. If the drafted token is rejected, we need to sample from the residual distribution.
@@ -992,55 +1088,212 @@ $$
 
 This gives the token that would be sampled from the residual distribution, again without materializing logits, probabilities, or residual probabilities.
 
-# FlashSpec: One-Pass Verify-and-Resample
-
-<div class="flashspec-figure" aria-labelledby="flashspec-stage-title">
+<div class="flashspec-figure flashspec-interactive" id="flashspec-gumbel-inspector" aria-labelledby="flashspec-gumbel-title">
   <div class="flashspec-figure-header">
     <div>
-      <div class="flashspec-kicker">Kernel structure</div>
-      <div class="flashspec-figure-title" id="flashspec-stage-title">A wide parallel summary pass followed by a tiny prefix finalizer</div>
+      <div class="flashspec-kicker">Gumbel-Max relation</div>
+      <div class="flashspec-figure-title" id="flashspec-gumbel-title">Target logits, noise, and the recovered token in one view</div>
     </div>
   </div>
 
-  <svg class="flashspec-svg" viewBox="0 0 860 260" role="img" aria-labelledby="flashspec-stage-svg-title">
-    <title id="flashspec-stage-svg-title">Stage 1 scans positions and vocabulary tiles in parallel, emits compact summaries, and Stage 2 reduces them to produce the accepted prefix or recovered token.</title>
-    <defs>
-      <marker id="flashspec-stage-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-        <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
-      </marker>
-    </defs>
-    <rect class="accent-box" x="26" y="58" width="210" height="132" rx="9"></rect>
-    <text x="131" y="88" text-anchor="middle" font-size="15">Stage 1</text>
-    <text class="muted" x="131" y="113" text-anchor="middle" font-size="12">parallel over</text>
-    <text class="muted" x="131" y="133" text-anchor="middle" font-size="12">positions x tiles</text>
-    <text x="131" y="164" text-anchor="middle" font-size="13">LM-head scan</text>
+  <div class="flashspec-button-row">
+    <button class="flashspec-button flashspec-icon-button is-active" type="button" data-gumbel-resample aria-label="Resample Gumbel noise">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+        <circle cx="8.5" cy="8.5" r="1"></circle>
+        <circle cx="15.5" cy="8.5" r="1"></circle>
+        <circle cx="12" cy="12" r="1"></circle>
+        <circle cx="8.5" cy="15.5" r="1"></circle>
+        <circle cx="15.5" cy="15.5" r="1"></circle>
+      </svg>
+      Resample Gumbels
+    </button>
+  </div>
 
-    <path class="accent-line" d="M248 124 C280 124, 296 124, 328 124" marker-end="url(#flashspec-stage-arrowhead)"></path>
+  <div class="flashspec-panel">
+    <div class="flashspec-gumbel-board" data-gumbel-board aria-label="Gumbel-Max toy vocabulary">
+      <div class="flashspec-panel-note">Loading toy logits...</div>
+    </div>
+    <div class="flashspec-token-id-row">
+      <div class="flashspec-token-id">draft token id: <strong data-gumbel-draft>tok_4</strong></div>
+      <div class="flashspec-token-id">recovered token id: <strong data-gumbel-sampled>tok_6</strong></div>
+    </div>
+  </div>
 
-    <rect class="box" x="340" y="32" width="196" height="64" rx="8"></rect>
-    <text x="438" y="58" text-anchor="middle" font-size="13">tile_lse</text>
-    <text class="muted" x="438" y="78" text-anchor="middle" font-size="12">for acceptance</text>
+  <p class="flashspec-caption">Stacked bars show logit plus Gumbel noise; the draft column is masked before taking argmax.</p>
+</div>
 
-    <rect class="box" x="340" y="104" width="196" height="64" rx="8"></rect>
-    <text x="438" y="130" text-anchor="middle" font-size="13">selected_logit</text>
-    <text class="muted" x="438" y="150" text-anchor="middle" font-size="12">only at draft token</text>
+# FlashSpec: One-Pass Verify-and-Resample
 
-    <rect class="box" x="340" y="176" width="196" height="64" rx="8"></rect>
-    <text x="438" y="202" text-anchor="middle" font-size="13">recovered_candidate</text>
-    <text class="muted" x="438" y="222" text-anchor="middle" font-size="12">Gumbel-Max per tile</text>
+<div class="flashspec-figure flashspec-interactive" id="flashspec-verify-tabs" aria-labelledby="flashspec-stage-title">
+  <div class="flashspec-figure-header">
+    <div>
+      <div class="flashspec-kicker">Verify flow</div>
+      <div class="flashspec-figure-title" id="flashspec-stage-title">One vocabulary scan, three compact summaries</div>
+    </div>
+  </div>
 
-    <path class="line" d="M548 64 C590 64, 590 124, 632 124" marker-end="url(#flashspec-stage-arrowhead)"></path>
-    <path class="line" d="M548 136 C590 136, 590 124, 632 124" marker-end="url(#flashspec-stage-arrowhead)"></path>
-    <path class="line" d="M548 208 C590 208, 590 124, 632 124" marker-end="url(#flashspec-stage-arrowhead)"></path>
+  <div class="flashspec-tabs">
+    <div class="flashspec-button-row" role="tablist" aria-label="FlashSpec verify flow tabs">
+      <button class="flashspec-button is-active" type="button" role="tab" aria-selected="true" aria-controls="flashspec-tab-overview" data-verify-tab="overview">Overview</button>
+      <button class="flashspec-button" type="button" role="tab" aria-selected="false" aria-controls="flashspec-tab-lse" data-verify-tab="lse">Online LSE</button>
+      <button class="flashspec-button" type="button" role="tab" aria-selected="false" aria-controls="flashspec-tab-selected" data-verify-tab="selected">Selected logit</button>
+      <button class="flashspec-button" type="button" role="tab" aria-selected="false" aria-controls="flashspec-tab-gumbel" data-verify-tab="gumbel">Gumbel argmax</button>
+    </div>
 
-    <rect class="accent-box" x="644" y="58" width="190" height="132" rx="9"></rect>
-    <text x="739" y="88" text-anchor="middle" font-size="15">Stage 2</text>
-    <text class="muted" x="739" y="113" text-anchor="middle" font-size="12">compact reductions</text>
-    <text class="muted" x="739" y="133" text-anchor="middle" font-size="12">and prefix decision</text>
-    <text x="739" y="164" text-anchor="middle" font-size="13">emit draft or recovered</text>
-  </svg>
+    <div class="flashspec-tab-panel" id="flashspec-tab-overview" role="tabpanel" data-verify-panel="overview">
+      <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-overview-svg-title">
+        <title id="flashspec-overview-svg-title">The target hidden state scans vocabulary tiles once and emits LSE summaries, the selected drafted-token logit, and Gumbel-Max candidates.</title>
+        <defs>
+          <marker id="flashspec-overview-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
+          </marker>
+        </defs>
+        <rect class="box" x="24" y="128" width="120" height="72" rx="8"></rect>
+        <text x="84" y="158" text-anchor="middle" font-size="15">target h</text>
+        <text class="muted" x="84" y="181" text-anchor="middle" font-size="12">one position</text>
 
-  <p class="flashspec-caption">The heavy part is the parallel vocabulary scan. The sequential prefix logic only touches compact summaries, not vocabulary-sized probability vectors.</p>
+        <path class="accent-line" d="M154 164 C190 164, 198 164, 232 164" marker-end="url(#flashspec-overview-arrowhead)"></path>
+        <rect class="accent-box" x="244" y="72" width="176" height="184" rx="9"></rect>
+        <text x="332" y="104" text-anchor="middle" font-size="15">vocab tile scan</text>
+        <text class="muted" x="332" y="129" text-anchor="middle" font-size="12">logits stay local</text>
+        <text x="332" y="165" text-anchor="middle" font-size="13">for W_tile in tiles</text>
+        <text class="muted" x="332" y="194" text-anchor="middle" font-size="12">compute h @ W_tile.T</text>
+        <text class="muted" x="332" y="218" text-anchor="middle" font-size="12">write summaries only</text>
+
+        <path class="line" d="M430 124 C470 124, 476 70, 516 70" marker-end="url(#flashspec-overview-arrowhead)"></path>
+        <path class="line" d="M430 164 C470 164, 476 164, 516 164" marker-end="url(#flashspec-overview-arrowhead)"></path>
+        <path class="line" d="M430 204 C470 204, 476 258, 516 258" marker-end="url(#flashspec-overview-arrowhead)"></path>
+
+        <rect class="box" x="528" y="38" width="170" height="64" rx="8"></rect>
+        <text x="613" y="64" text-anchor="middle" font-size="13">tile_lse</text>
+        <text class="muted" x="613" y="84" text-anchor="middle" font-size="12">denominator for p(x)</text>
+
+        <rect class="box" x="528" y="132" width="170" height="64" rx="8"></rect>
+        <text x="613" y="158" text-anchor="middle" font-size="13">selected_logit</text>
+        <text class="muted" x="613" y="178" text-anchor="middle" font-size="12">only if tile contains x</text>
+
+        <rect class="box" x="528" y="226" width="170" height="64" rx="8"></rect>
+        <text x="613" y="252" text-anchor="middle" font-size="13">gumbel_candidate</text>
+        <text class="muted" x="613" y="272" text-anchor="middle" font-size="12">argmax over i != x</text>
+
+        <path class="accent-line" d="M710 70 C742 70, 748 164, 780 164" marker-end="url(#flashspec-overview-arrowhead)"></path>
+        <path class="accent-line" d="M710 164 C742 164, 748 164, 780 164" marker-end="url(#flashspec-overview-arrowhead)"></path>
+        <path class="accent-line" d="M710 258 C742 258, 748 164, 780 164" marker-end="url(#flashspec-overview-arrowhead)"></path>
+        <rect class="accent-box" x="790" y="126" width="46" height="76" rx="8"></rect>
+        <text x="813" y="158" text-anchor="middle" font-size="12">tiny</text>
+        <text x="813" y="177" text-anchor="middle" font-size="12">final</text>
+      </svg>
+      <div class="flashspec-tab-note">The overview is the key fusion: one LM-head vocabulary scan produces all summaries needed for both acceptance and recovery.</div>
+    </div>
+
+    <div class="flashspec-tab-panel" id="flashspec-tab-lse" role="tabpanel" data-verify-panel="lse" hidden>
+      <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-lse-svg-title">
+        <title id="flashspec-lse-svg-title">Online LSE maintains a running maximum and sum across vocabulary tiles.</title>
+        <defs>
+          <marker id="flashspec-lse-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
+          </marker>
+        </defs>
+        <rect class="soft-box" x="30" y="92" width="150" height="64" rx="8"></rect>
+        <text x="105" y="118" text-anchor="middle" font-size="13">tile logits</text>
+        <text class="muted" x="105" y="138" text-anchor="middle" font-size="12">l_tile</text>
+        <rect class="soft-box" x="30" y="174" width="150" height="64" rx="8"></rect>
+        <text x="105" y="200" text-anchor="middle" font-size="13">local summary</text>
+        <text class="muted" x="105" y="220" text-anchor="middle" font-size="12">m_t, s_t</text>
+
+        <path class="line" d="M190 124 C224 124, 230 124, 264 124" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <path class="line" d="M190 206 C224 206, 230 206, 264 206" marker-end="url(#flashspec-lse-arrowhead)"></path>
+
+        <rect class="accent-box" x="276" y="62" width="286" height="206" rx="9"></rect>
+        <text x="419" y="94" text-anchor="middle" font-size="15">online update</text>
+        <text x="419" y="132" text-anchor="middle" font-size="13">m' = max(m, m_t)</text>
+        <text x="419" y="168" text-anchor="middle" font-size="13">s' = s exp(m - m') + s_t exp(m_t - m')</text>
+        <text x="419" y="210" text-anchor="middle" font-size="13">LSE = m' + log(s')</text>
+        <text class="muted" x="419" y="240" text-anchor="middle" font-size="12">no probability vector is written</text>
+
+        <path class="accent-line" d="M574 164 C616 164, 626 164, 668 164" marker-end="url(#flashspec-lse-arrowhead)"></path>
+        <rect class="box" x="682" y="116" width="148" height="96" rx="8"></rect>
+        <text x="756" y="150" text-anchor="middle" font-size="14">row LSE</text>
+        <text class="muted" x="756" y="174" text-anchor="middle" font-size="12">one scalar per row</text>
+      </svg>
+      <div class="flashspec-equation-row">
+        <div class="flashspec-equation-pill">p(x) denominator = exp(LSE)</div>
+        <div class="flashspec-equation-pill">log p(x) = l_x - LSE</div>
+      </div>
+    </div>
+
+    <div class="flashspec-tab-panel" id="flashspec-tab-selected" role="tabpanel" data-verify-panel="selected" hidden>
+      <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-selected-svg-title">
+        <title id="flashspec-selected-svg-title">Only the logit at the drafted token is recorded while other logits stream through the tile scan.</title>
+        <defs>
+          <marker id="flashspec-selected-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
+          </marker>
+        </defs>
+        <rect class="box" x="28" y="132" width="128" height="66" rx="8"></rect>
+        <text x="92" y="158" text-anchor="middle" font-size="13">draft token</text>
+        <text x="92" y="180" text-anchor="middle" font-size="13">x = tok_4</text>
+        <path class="line" d="M166 165 C202 165, 210 165, 246 165" marker-end="url(#flashspec-selected-arrowhead)"></path>
+
+        <rect class="soft-box" x="258" y="56" width="330" height="218" rx="9"></rect>
+        <text x="423" y="88" text-anchor="middle" font-size="15">current tile logits</text>
+        <g>
+          <rect class="box" x="298" y="122" width="44" height="84" rx="5"></rect>
+          <rect class="box" x="350" y="100" width="44" height="106" rx="5"></rect>
+          <rect class="box" x="402" y="142" width="44" height="64" rx="5"></rect>
+          <rect class="accent-box" x="454" y="76" width="44" height="130" rx="5"></rect>
+          <rect class="box" x="506" y="116" width="44" height="90" rx="5"></rect>
+          <text class="muted" x="320" y="230" text-anchor="middle" font-size="11">tok_1</text>
+          <text class="muted" x="372" y="230" text-anchor="middle" font-size="11">tok_2</text>
+          <text class="muted" x="424" y="230" text-anchor="middle" font-size="11">tok_3</text>
+          <text x="476" y="230" text-anchor="middle" font-size="11">tok_4</text>
+          <text class="muted" x="528" y="230" text-anchor="middle" font-size="11">tok_5</text>
+        </g>
+
+        <path class="accent-line" d="M598 142 C636 142, 644 142, 682 142" marker-end="url(#flashspec-selected-arrowhead)"></path>
+        <rect class="accent-box" x="696" y="96" width="136" height="92" rx="8"></rect>
+        <text x="764" y="128" text-anchor="middle" font-size="13">record l_x</text>
+        <text class="muted" x="764" y="152" text-anchor="middle" font-size="12">one scalar</text>
+        <text class="muted" x="764" y="172" text-anchor="middle" font-size="12">not [V]</text>
+      </svg>
+      <div class="flashspec-tab-note">The tile still contributes to LSE and Gumbel-Max, but only one logit value is saved for acceptance.</div>
+    </div>
+
+    <div class="flashspec-tab-panel" id="flashspec-tab-gumbel" role="tabpanel" data-verify-panel="gumbel" hidden>
+      <svg class="flashspec-svg" viewBox="0 0 860 330" role="img" aria-labelledby="flashspec-gumbel-svg-title">
+        <title id="flashspec-gumbel-svg-title">Residual Gumbel-Max masks the drafted token, adds Gumbel noise, and keeps tile and global winners.</title>
+        <defs>
+          <marker id="flashspec-gumbel-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
+          </marker>
+        </defs>
+        <rect class="soft-box" x="26" y="72" width="178" height="186" rx="9"></rect>
+        <text x="115" y="104" text-anchor="middle" font-size="15">tile scores</text>
+        <text x="115" y="140" text-anchor="middle" font-size="13">score_i = l_i + g_i</text>
+        <text x="115" y="178" text-anchor="middle" font-size="13">if i == x:</text>
+        <text x="115" y="202" text-anchor="middle" font-size="13">score_i = -inf</text>
+        <text class="muted" x="115" y="232" text-anchor="middle" font-size="12">exclude draft token</text>
+
+        <path class="line" d="M216 165 C250 165, 258 165, 292 165" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="accent-box" x="306" y="72" width="194" height="186" rx="9"></rect>
+        <text x="403" y="104" text-anchor="middle" font-size="15">tile argmax</text>
+        <text x="403" y="142" text-anchor="middle" font-size="13">candidate =</text>
+        <text x="403" y="168" text-anchor="middle" font-size="13">max_with_index(scores)</text>
+        <text class="muted" x="403" y="208" text-anchor="middle" font-size="12">token id + noisy score</text>
+
+        <path class="accent-line" d="M512 165 C546 165, 554 165, 588 165" marker-end="url(#flashspec-gumbel-arrowhead)"></path>
+        <rect class="box" x="602" y="72" width="228" height="186" rx="9"></rect>
+        <text x="716" y="104" text-anchor="middle" font-size="15">global reduce</text>
+        <text x="716" y="142" text-anchor="middle" font-size="13">reduce_max(candidates)</text>
+        <text class="muted" x="716" y="178" text-anchor="middle" font-size="12">returns recovered_token</text>
+        <text class="muted" x="716" y="204" text-anchor="middle" font-size="12">only used on rejection</text>
+      </svg>
+      <div class="flashspec-tab-note">The recovered token is prepared speculatively during the same scan. If the draft is accepted, this candidate is simply unused.</div>
+    </div>
+  </div>
+
+  <p class="flashspec-caption">The tabs separate the fused kernel into its three responsibilities: maintain the normalization term, record the drafted token's target logit, and prepare a residual sample by Gumbel-Max.</p>
 </div>
 
 The complete greedy-draft FlashSpec verify/resample kernel looks like this:
