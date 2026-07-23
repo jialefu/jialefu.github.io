@@ -44,7 +44,7 @@ if [[ -n "$required_bundler_version" ]]; then
   bundle_cmd=(bundle "_${required_bundler_version}_")
 fi
 
-"${bundle_cmd[@]}" config set --local path vendor/bundle >/dev/null
+"${bundle_cmd[@]}" config set --local path "${BUNDLE_PATH:-$HOME/.jialefu-bundle}" >/dev/null
 
 if ! "${bundle_cmd[@]}" check >/dev/null 2>&1; then
   "${bundle_cmd[@]}" install
