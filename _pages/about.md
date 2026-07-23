@@ -32,9 +32,11 @@ Before graduate study, I completed a bachelor's degree in mathematics at Southea
   <i class="fa-brands fa-github"></i> <a href="https://github.com/jialefu">GitHub</a>.
 </p>
 
-<div style="overflow: hidden; margin-top: 1.5rem;" markdown="1">
+<div style="height: 3.5rem;"></div>
 
 ### News
+
+<div style="clear: both;" markdown="1">
 
 {% include news.liquid limit=true %}
 
