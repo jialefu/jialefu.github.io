@@ -1,0 +1,29 @@
+- organization: Moonshot AI
+  mark: K
+  url: https://www.moonshot.ai/
+  role: AI Infra Intern
+  location: Beijing
+  dates: Jul 2026–Present
+  description: MTP optimization for Kimi-K3.
+  mentor: Shaowei Liu
+  tone: blue
+- organization: LongCat Team, Meituan
+  mark: M
+  url: https://zhaopin.meituan.com/web/beidouprogram
+  role: Research Intern · Beidou Talent Program
+  location: Beijing
+  dates: Jun–Jul 2026
+  description: MTP optimization for LongCat-2.0.
+  mentor: Jianchao Tan
+  mentor_url: https://scholar.google.com/citations?user=1Gywy80AAAAJ&hl=en
+  tone: gold
+- organization: EAGLE CORP
+  mark: E
+  url: https://eagle.ai/
+  role: Research Intern
+  location: Remote
+  dates: Aug 2025–May 2026
+  description: Core contributor to EAGLE-4, working on architecture design, algorithm development, and the training system.
+  mentor: Hongyang Zhang
+  mentor_url: https://hongyanz.github.io/
+  tone: sage

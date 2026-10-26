@@ -1,6 +1,6 @@
 ---
 ---
-<div class="row">
+<div class="publication-row">
   {% capture badge_markup %}
     {%- if entry.abbr -%}
       {%- if site.data.venues[entry.abbr] -%}
@@ -9,7 +9,7 @@
           {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
         {%- endif -%}
         <abbr
-          class="badge venue-badge"
+          class="venue-badge"
           {% if venue_style %}
             {{ venue_style }}
           {% endif -%}
@@ -21,23 +21,18 @@
           {% endif %}
         </abbr>
       {% else %}
-        <abbr class="badge venue-badge">{{ entry.abbr }}</abbr>
+        <abbr class="venue-badge">{{ entry.abbr }}</abbr>
       {% endif %}
     {% endif %}
   {% endcapture %}
   {% assign badge_markup = badge_markup | strip %}
 
   {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-3 abbr">
+    <div class="publication-preview abbr">
       {% if entry.preview %}
         <div class="preview-thumb">
-          {% if badge_markup != '' %}
-            <div class="preview-badge">
-              {{ badge_markup }}
-            </div>
-          {% endif %}
           {% if entry.preview contains '://' %}
-            <img class="preview rounded" src="{{ entry.preview }}" alt="{{ entry.preview }}">
+            <img class="preview rounded" src="{{ entry.preview }}" alt="{{ entry.title }}">
           {% else %}
             {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
             {%
@@ -46,20 +41,20 @@
               path=entry_path
               sizes="200px"
               class="preview rounded"
-              alt=entry.preview
+              alt=entry.title
             %}
           {% endif %}
         </div>
-      {% elsif badge_markup != '' %}
-        {{ badge_markup }}
       {% endif %}
     </div>
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-7{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="publication-details">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <h3 class="title">
+      {% if entry.website %}<a href="{{ entry.website }}">{{ entry.title }}</a>{% elsif entry.pdf %}<a href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}
+    </h3>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -192,8 +187,16 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
-      {{ periodical | strip }}
+      {% if entry.abbr %}
+        <span class="venue-label">{{ badge_markup }} <span class="venue-year">{{ entry.year }}</span></span>
+        {% if entrytype_text != '' and entry.abbr != entry.journal %}<span class="venue-separator" aria-hidden="true">·</span>{{ entrytype | replace: '<em>In ', '<em>' | strip }}{% endif %}
+      {% else %}
+        {{ periodical | strip }}
+      {% endif %}
     </div>
+    {% if entry.contribution %}
+      <div class="contribution">{{ entry.contribution }}</div>
+    {% endif %}
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}

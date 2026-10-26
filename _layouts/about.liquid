@@ -1,80 +1,105 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+<div class="academic-home">
+  <section class="about-intro" id="about" aria-labelledby="profile-name">
+    <header class="identity">
+      <h1 class="signature" id="profile-name">{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="identity-subtitle">{{ page.subtitle }}</p>
+      <div class="profile-links" aria-label="Contact and profiles">
+        <a href="mailto:{{ site.data.socials.email }}" aria-label="Email" title="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/{{ site.data.socials.github_username }}" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+        <a href="{{ '/blog/' | relative_url }}" aria-label="Blog" title="Blog"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></a>
+        <span class="profile-email">{{ site.data.socials.email }}</span>
+      </div>
+    </header>
+    <div class="intro-grid">
+      <div class="intro-copy">{{ content }}</div>
+      {% if page.profile.image %}
+        <figure class="profile-portrait">
+          <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url | bust_file_cache }}" alt="Jiale Fu's profile illustration" width="240" height="240" fetchpriority="high">
+          <figcaption><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nanjing, China</figcaption>
+        </figure>
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+    </div>
+    <p class="research-interests"><span>Research interests</span> Speculative decoding · Sparse and linear attention · Algorithm–infrastructure co-design</p>
+  </section>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+  <section class="academic-section" id="news" aria-labelledby="news-heading">
+    <div class="section-heading">
+      <h2 id="news-heading"><i class="fa-regular fa-newspaper" aria-hidden="true"></i> News</h2>
+      <a class="section-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a>
+    </div>
+    {% include news.liquid limit=true %}
+  </section>
+
+  <section class="academic-section" id="education" aria-labelledby="education-heading">
+    <div class="section-heading">
+      <h2 id="education-heading"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h2>
+    </div>
+    <div class="education-grid">
+      {% for item in site.data.education %}
+        <article class="education-entry">
+          <div class="organization-mark tone-{{ item.tone }}" aria-hidden="true">{{ item.mark }}</div>
+          <div>
+            <h3><a href="{{ item.url }}">{{ item.institution }}</a></h3>
+            <p class="degree">{{ item.degree }}</p>
+            <p class="entry-detail">{{ item.detail }}</p>
+            <p class="entry-date">{{ item.dates }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="academic-section" id="experience" aria-labelledby="experience-heading">
+    <div class="section-heading">
+      <h2 id="experience-heading"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Research Experience</h2>
+    </div>
+    <div class="experience-list">
+      {% for item in site.data.experience %}
+        <article class="experience-entry">
+          <div class="organization-mark tone-{{ item.tone }}" aria-hidden="true">{{ item.mark }}</div>
+          <div class="experience-copy">
+            <div class="entry-heading">
+              <h3><a href="{{ item.url }}">{{ item.organization }}</a></h3>
+              <span class="entry-date">{{ item.dates }}</span>
+            </div>
+            <p class="entry-role">{{ item.role }} <span>· {{ item.location }}</span></p>
+            <p class="entry-detail">{{ item.description }} Mentored by {% if item.mentor_url %}<a href="{{ item.mentor_url }}">{{ item.mentor }}</a>{% else %}{{ item.mentor }}{% endif %}.</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if page.selected_papers %}
+    <section class="academic-section" id="publications" aria-labelledby="publications-heading">
+      <div class="section-heading">
+        <h2 id="publications-heading"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Selected Publications</h2>
+        <a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
       </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h2>
       {% include selected_papers.liquid %}
-    {% endif %}
+    </section>
+  {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+  <section class="academic-section" id="writing" aria-labelledby="writing-heading">
+    <div class="section-heading">
+      <h2 id="writing-heading"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Blogs &amp; Notes</h2>
+      <a class="section-link" href="{{ '/blog/' | relative_url }}">All writing <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="writing-list">
+      {% for item in site.data.writing %}
+        <article class="writing-entry">
+          <span class="entry-date">{{ item.year }}</span>
+          <div>
+            <h3><a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}{% if item.external %} <span class="external-arrow" aria-hidden="true">↗</span>{% endif %}</a></h3>
+            <p class="entry-detail">{{ item.description }}</p>
+            <p class="writing-source">{{ item.source }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 </div>

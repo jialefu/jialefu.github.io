@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
-description: publications in reverse chronological order.
+title: Publications
+description: Research on efficient inference, speculative decoding, and large language models.
 nav: true
 nav_order: 2
 ---

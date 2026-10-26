@@ -1,0 +1,12 @@
+- title: "DFlash-2's Selector and DSpark's Markov Head: An Equivalence Observation"
+  url: https://zhuanlan.zhihu.com/p/2073866383138604573
+  description: An equivalence observation between DFlash-2's Selector and DSpark's Markov Head.
+  source: Zhihu · In Chinese
+  year: 2026
+  external: true
+- title: "FlashSpec (Part I): One-Pass Verify-and-Resample for Greedy Drafts"
+  url: /blog/2026/flashspec/
+  description: A one-pass method that reduces memory traffic while preserving exact decoding semantics.
+  source: Technical blog
+  year: 2026
+  external: false

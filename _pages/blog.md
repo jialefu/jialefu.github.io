@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
 nav: true
 nav_order: 1
 pagination:
@@ -20,6 +20,19 @@ pagination:
   <div class="header-bar">
     <h1>{{ page.title }}</h1>
   </div>
+
+  {% assign external_writing = site.data.writing | where: 'external', true %}
+  <ul class="post-list">
+    {% for item in external_writing %}
+    <li>
+      <h3>
+        <a class="post-title" href="{{ item.url }}">{{ item.title }} <span class="external-arrow" aria-hidden="true">↗</span></a>
+      </h3>
+      <p>{{ item.description }}</p>
+      <p class="post-meta">{{ item.year }} &nbsp; &middot; &nbsp; {{ item.source }}</p>
+    </li>
+    {% endfor %}
+  </ul>
 
   {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
     <div class="tag-category-list">
