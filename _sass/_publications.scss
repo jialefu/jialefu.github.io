@@ -1,6 +1,28 @@
 /*******************************************************************************
  * Compact publication rows shared by the home page and bibliography.
  ******************************************************************************/
+.publication-heading-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  min-width: 0;
+}
+
+.publication-highlight-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--global-text-color-light);
+  font-size: 11px;
+  font-weight: 400;
+  white-space: nowrap;
+
+  svg { width: 10px; height: 10px; fill: var(--global-theme-color); }
+}
+
+.publication-list-legend { margin-bottom: 10px; }
+
 .publications {
   margin-top: 0;
 
@@ -34,6 +56,20 @@
     grid-template-columns: 138px minmax(0, 1fr);
     gap: 19px;
     align-items: start;
+  }
+
+  .publication-row.is-highlighted {
+    .title { color: var(--global-theme-color); }
+    .title a:hover { color: var(--global-hover-color); }
+  }
+
+  .publication-highlight {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    fill: var(--global-theme-color);
+    vertical-align: 1px;
   }
 
   .publication-details { min-width: 0; scroll-margin-top: 90px; }

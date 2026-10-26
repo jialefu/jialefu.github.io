@@ -103,7 +103,10 @@ layout: default
   {% if page.selected_papers %}
     <section class="academic-section" id="publications" aria-labelledby="publications-heading">
       <div class="section-heading">
-        <h2 id="publications-heading"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Selected Publications</h2>
+        <div class="publication-heading-title">
+          <h2 id="publications-heading"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Selected Publications</h2>
+          {% include publication_highlight_legend.liquid %}
+        </div>
         <a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
       </div>
       {% include selected_papers.liquid %}

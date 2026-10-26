@@ -1,6 +1,6 @@
 ---
 ---
-<div class="publication-row">
+<div class="publication-row{% if entry.highlight == 'true' %} is-highlighted{% endif %}">
   {% capture badge_markup %}
     {%- if entry.abbr -%}
       {%- if site.data.venues[entry.abbr] -%}
@@ -54,6 +54,7 @@
     <!-- Title -->
     <h3 class="title">
       {% if entry.website %}<a href="{{ entry.website }}">{{ entry.title }}</a>{% elsif entry.pdf %}<a href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}
+      {% if entry.highlight == 'true' %}<svg class="publication-highlight" viewBox="0 0 24 24" role="img" aria-label="Highlighted by Jiale Fu"><title>Highlighted by Jiale Fu</title><path d="m12 2.5 2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.52l-5.88 3.09 1.12-6.55L2.48 9.42l6.58-.96Z"/></svg>{% endif %}
     </h3>
     <!-- Author -->
     <div class="author">
