@@ -1,42 +1,18 @@
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <title>EAGLE-4: one flexible drafter for different batch sizes and hardware</title>
-  <defs>
-    <marker id="eagle-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M1 1L9 5L1 9" fill="none" stroke="#24313d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-  </defs>
-  <rect width="800" height="600" rx="28" fill="#fbfaf6"/>
-  <rect x="28" y="28" width="744" height="544" rx="24" fill="#fffdf8" stroke="#d9d4c7" stroke-width="2"/>
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <text x="92" y="86" font-size="18" font-weight="700" fill="#66707a">One flexible drafter</text>
-    <path d="M90 120H710" stroke="#c9c1b0" stroke-width="2" stroke-dasharray="6 8"/>
-    <rect x="84" y="220" width="254" height="174" rx="22" fill="#f2efe7"/>
-    <text x="124" y="271" font-size="32" font-weight="700" fill="#24313d">EAGLE-4</text>
-    <rect x="108" y="304" width="206" height="60" rx="14" fill="#234e70"/>
-    <text x="130" y="341" font-size="22" font-weight="600" fill="white">Efficient LM Head</text>
-    <g stroke="#24313d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#eagle-arrow)">
-      <path d="M338 268C410 268 402 202 476 202"/>
-      <path d="M338 308H476"/>
-      <path d="M338 348C410 348 402 414 476 414"/>
-    </g>
-    <g fill="#fff" stroke="#d9d4c7" stroke-width="2">
-      <rect x="492" y="160" width="220" height="84" rx="18"/>
-      <rect x="492" y="266" width="220" height="84" rx="18"/>
-      <rect x="492" y="372" width="220" height="84" rx="18"/>
-    </g>
-    <g font-size="22" font-weight="700" fill="#24313d">
-      <text x="548" y="210">Small batch</text>
-      <text x="548" y="316">Large batch</text>
-      <text x="548" y="422">Hardware</text>
-    </g>
-    <rect x="512" y="187" width="14" height="30" rx="5" fill="#2c7a7b"/>
-    <g fill="#234e70">
-      <rect x="510" y="291" width="8" height="30" rx="3"/>
-      <rect x="522" y="291" width="8" height="30" rx="3"/>
-      <rect x="534" y="291" width="8" height="30" rx="3"/>
-    </g>
-    <rect x="507" y="397" width="28" height="28" rx="6" fill="#d69e2e"/>
-    <rect x="198" y="490" width="404" height="44" rx="22" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
-    <text x="241" y="518" font-size="22" font-weight="700" fill="#24313d">flexible speculative decoding</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+<title id="title">EAGLE-4</title>
+<desc id="desc">Variable token batches feed one flexible drafter with an Efficient LM Head, adaptable to different hardware.</desc>
+<defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f7ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+ <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#caddef"/></pattern>
+ <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse"><path d="M1 1L6.5 4L1 7" fill="none" stroke="#397fc6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="640" height="480" fill="url(#paper)"/>
+<rect x="24" y="110" width="592" height="306" fill="url(#dots)" opacity=".55"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="30" y="33" font-size="13" font-weight="700" fill="#69839b" text-anchor="start">SPECULATIVE DECODING</text>
+<text x="30" y="77" font-size="32" font-weight="700" fill="#204d78" text-anchor="start">EAGLE-4</text>
+<path d="M30 99L610 99" stroke="#bfd5e9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="58" y="146" font-size="21" font-weight="500" fill="#204d78" text-anchor="start">Batch sizes</text><text x="453" y="146" font-size="21" font-weight="500" fill="#204d78" text-anchor="start">Hardware</text><rect x="58" y="174" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><path d="M92 187H211Q225 187 225 240" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="58" y="243" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="89" y="243" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="120" y="243" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><path d="M154 256H211Q225 256 225 240" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="58" y="312" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="89" y="312" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="120" y="312" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="151" y="312" width="25" height="25" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><path d="M185 325H211Q225 325 225 240" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M225 240L246 240" stroke="#397fc6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="250" y="162" width="164" height="178" rx="16" fill="#ffffff" stroke="#83b8e7" stroke-width="2" /><text x="332" y="196" font-size="25" font-weight="700" fill="#204d78" text-anchor="middle">Drafter</text><rect x="283.0" y="213" width="98" height="14" rx="4" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="275.0" y="235" width="114" height="14" rx="4" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="283.0" y="257" width="98" height="14" rx="4" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="265" y="291" width="134" height="33" rx="6" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><text x="332" y="313" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Efficient LM Head</text><path d="M414 250L445 250" stroke="#397fc6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="466" y="186" width="72" height="48" rx="6" fill="#ffffff" stroke="#83b8e7" stroke-width="2" /><rect x="484" y="196" width="36" height="28" rx="3" fill="#e8f2fc" stroke="#397fc6" stroke-width="2" /><path d="M488 181L488 186" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M488 234L488 239" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M497 181L497 186" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M497 234L497 239" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M506 181L506 186" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M506 234L506 239" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M515 181L515 186" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M515 234L515 239" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="484" y="249" width="72" height="48" rx="6" fill="#ffffff" stroke="#83b8e7" stroke-width="2" /><rect x="502" y="259" width="36" height="28" rx="3" fill="#e8f2fc" stroke="#397fc6" stroke-width="2" /><path d="M506 244L506 249" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M506 297L506 302" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M515 244L515 249" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M515 297L515 302" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M524 244L524 249" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M524 297L524 302" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M533 244L533 249" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M533 297L533 302" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="502" y="312" width="72" height="48" rx="6" fill="#ffffff" stroke="#83b8e7" stroke-width="2" /><rect x="520" y="322" width="36" height="28" rx="3" fill="#e8f2fc" stroke="#397fc6" stroke-width="2" /><path d="M524 307L524 312" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M524 360L524 365" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M533 307L533 312" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M533 360L533 365" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M542 307L542 312" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M542 360L542 365" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M551 307L551 312" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M551 360L551 365" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M447 208V328" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M447 210L461 210" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M447 273L479 273" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M447 328L497 328" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="320" y="393" font-size="25" font-weight="500" fill="#204d78" text-anchor="middle">One flexible speculative drafter</text>
+<path d="M30 432L610 432" stroke="#bfd5e9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="30" y="459" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">Flexible drafting across batch sizes and hardware</text>
+</g></svg>

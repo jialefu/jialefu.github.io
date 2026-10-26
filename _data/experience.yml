@@ -1,14 +1,15 @@
 - organization: Moonshot AI
-  mark: K
+  logo: moonshot.svg
   url: https://www.moonshot.ai/
   role: AI Infra Intern
   location: Beijing
   dates: Jul 2026–Present
-  description: MTP optimization for Kimi-K3.
+  description: MTP optimization for Kimi.
   mentor: Shaowei Liu
-  tone: blue
 - organization: LongCat Team, Meituan
-  mark: M
+  label: LongCat, Meituan
+  summary_role: Research Intern
+  logo: longcat.svg
   url: https://zhaopin.meituan.com/web/beidouprogram
   role: Research Intern · Beidou Talent Program
   location: Beijing
@@ -16,9 +17,8 @@
   description: MTP optimization for LongCat-2.0.
   mentor: Jianchao Tan
   mentor_url: https://scholar.google.com/citations?user=1Gywy80AAAAJ&hl=en
-  tone: gold
 - organization: EAGLE CORP
-  mark: E
+  logo: eagle.png
   url: https://eagle.ai/
   role: Research Intern
   location: Remote
@@ -26,4 +26,23 @@
   description: Core contributor to EAGLE-4, working on architecture design, algorithm development, and the training system.
   mentor: Hongyang Zhang
   mentor_url: https://hongyanz.github.io/
-  tone: sage
+- organization: Shopee R&D Center
+  label: Shopee
+  logo: shopee.svg
+  logo_size: small
+  url: https://careers.shopee.com/
+  role: Multimodal AI Intern
+  location: Shanghai
+  dates: Jun–Sep 2024
+  description: Multimodal tokenization for LMM pretraining, using a VQ-GAN-based tokenizer to unify image understanding and generation.
+  mentor: Heng Liu, Peng Hou
+- organization: Baidu Research
+  logo: baidu.svg
+  logo_size: small
+  url: https://research.baidu.com/
+  role: Research Intern
+  location: Beijing
+  dates: Nov 2023–May 2024
+  description: Graph-based in-context example retrieval for multi-step LLM reasoning.
+  mentor: Yaqing Wang
+  mentor_url: https://wangyaqing.github.io/

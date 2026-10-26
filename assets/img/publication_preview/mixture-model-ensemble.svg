@@ -1,73 +1,18 @@
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .bg { fill: #fbfaf6; }
-      .frame { fill: #fffdf8; stroke: #d9d4c7; stroke-width: 2; }
-      .soft { fill: #f2efe7; }
-      .ink { fill: #24313d; }
-      .muted { fill: #66707a; }
-      .navy { fill: #234e70; }
-      .teal { fill: #2c7a7b; }
-      .gold { fill: #d69e2e; }
-      .plum { fill: #ab4bb3; }
-      .coral { fill: #dd6b5f; }
-      .line { stroke: #24313d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-      .dash { stroke: #c9c1b0; stroke-width: 2; stroke-dasharray: 6 8; }
-      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    </style>
-    <marker id="arrow-me" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M1 1L9 5L1 9" fill="none" stroke="#24313d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-  </defs>
-
-  <rect class="bg" width="800" height="600" rx="28"/>
-  <rect x="28" y="28" width="744" height="544" rx="24" class="frame"/>
-  <path d="M90 120H710" class="dash"/>
-
-  <text x="92" y="86" font-size="18" font-weight="700" class="muted">Mixture-model view of LLM ensembling</text>
-
-  <circle cx="678" cy="84" r="28" fill="#fbf1fc" stroke="#d5afd9" stroke-width="2"/>
-  <path d="M678 62L684 76H699L687 85L692 100L678 91L664 100L669 85L657 76H672L678 62Z" class="plum"/>
-  <rect x="594" y="106" width="168" height="38" rx="19" fill="#fff" stroke="#d5afd9" stroke-width="2"/>
-  <text x="626" y="131" font-size="20" font-weight="700" class="plum">spotlight</text>
-
-  <rect x="84" y="174" width="188" height="174" rx="22" class="soft"/>
-  <rect x="84" y="372" width="188" height="174" rx="22" class="soft"/>
-  <text x="110" y="212" font-size="28" font-weight="700" class="ink">Model p</text>
-  <text x="110" y="410" font-size="28" font-weight="700" class="ink">Model q</text>
-
-  <path d="M116 308H244" class="line"/>
-  <path d="M128 308C146 292 164 248 180 248C198 248 214 294 232 308" stroke="#234e70" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="116" y="266" width="44" height="14" rx="7" fill="#c8d6e5"/>
-  <rect x="182" y="226" width="34" height="14" rx="7" fill="#9fbad0"/>
-
-  <path d="M116 506H244" class="line"/>
-  <path d="M128 506C146 492 164 444 180 444C200 444 216 472 232 506" stroke="#2c7a7b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="120" y="474" width="42" height="14" rx="7" fill="#bfe3dc"/>
-  <rect x="188" y="456" width="30" height="14" rx="7" fill="#8dcfc8"/>
-
-  <path d="M272 262C332 262 342 250 388 230" class="line" marker-end="url(#arrow-me)"/>
-  <path d="M272 458C334 458 346 444 388 428" class="line" marker-end="url(#arrow-me)"/>
-
-  <circle cx="452" cy="344" r="92" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
-  <path d="M452 252V344L528 300" stroke="#24313d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M452 344L396 416" stroke="#d69e2e" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="452" cy="344" r="16" class="ink"/>
-  <text x="386" y="324" font-size="22" font-weight="700" class="ink">Random</text>
-  <text x="394" y="352" font-size="22" font-weight="700" class="ink">select</text>
-  <text x="420" y="386" font-size="18" font-weight="700" class="gold">mixture</text>
-
-  <path d="M544 344C590 344 608 344 646 344" class="line" marker-end="url(#arrow-me)"/>
-
-  <rect x="618" y="246" width="112" height="196" rx="24" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
-  <text x="642" y="284" font-size="24" font-weight="700" class="ink">Sample</text>
-  <text x="646" y="314" font-size="24" font-weight="700" class="ink">once</text>
-  <rect x="642" y="344" width="62" height="18" rx="9" class="navy"/>
-  <rect x="642" y="374" width="82" height="18" rx="9" class="gold"/>
-  <rect x="642" y="404" width="48" height="18" rx="9" class="coral"/>
-  <circle cx="674" cy="228" r="30" fill="#fbf1fc" stroke="#d5afd9" stroke-width="2"/>
-  <path d="M660 228L670 238L690 218" stroke="#ab4bb3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <rect x="220" y="484" width="372" height="46" rx="23" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
-  <text x="248" y="513" font-size="22" font-weight="700" class="ink">ensemble quality at single-model cost</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+<title id="title">Mixture Ensembling</title>
+<desc id="desc">A mixture selector samples a single model per decoding step. The highlighted path generates the next token.</desc>
+<defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f7ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+ <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#caddef"/></pattern>
+ <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse"><path d="M1 1L6.5 4L1 7" fill="none" stroke="#397fc6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="640" height="480" fill="url(#paper)"/>
+<rect x="24" y="110" width="592" height="306" fill="url(#dots)" opacity=".55"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="30" y="33" font-size="13" font-weight="700" fill="#69839b" text-anchor="start">EFFICIENT GENERATION</text>
+<text x="30" y="77" font-size="32" font-weight="700" fill="#204d78" text-anchor="start">Mixture Ensembling</text>
+<path d="M30 99L610 99" stroke="#bfd5e9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="118" y="172" font-size="22" font-weight="500" fill="#204d78" text-anchor="middle">Sample</text><text x="118" y="202" font-size="26" font-weight="600" fill="#397fc6" text-anchor="middle">m ~ π</text><circle cx="118" cy="265" r="43" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="3"/><path d="M97 266H138M127 255L138 266L127 277" stroke="#397fc6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M162 265C196 265 195 174 235 174" stroke="#bfd5e9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/><rect x="241" y="142" width="158" height="65" rx="10" fill="#ffffff" stroke="#bfd5e9" stroke-width="2" /><text x="259" y="170" font-size="21" font-weight="600" fill="#69839b" text-anchor="start">Model 1</text><rect x="264" y="186" width="17" height="11" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><rect x="293" y="180" width="17" height="17" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><rect x="322" y="188" width="17" height="9" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><rect x="351" y="173" width="17" height="24" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><path d="M399 174C445 174 434 265 475 265" stroke="#bfd5e9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/><path d="M162 265C196 265 195 261 235 261" stroke="#397fc6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="241" y="229" width="158" height="65" rx="10" fill="#e8f2fc" stroke="#397fc6" stroke-width="2" /><text x="259" y="257" font-size="21" font-weight="600" fill="#397fc6" text-anchor="start">Model 2</text><rect x="264" y="272" width="17" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="293" y="263" width="17" height="21" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="322" y="255" width="17" height="29" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="351" y="269" width="17" height="15" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><path d="M399 261C445 261 434 265 475 265" stroke="#397fc6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><path d="M162 265C196 265 195 348 235 348" stroke="#bfd5e9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/><rect x="241" y="316" width="158" height="65" rx="10" fill="#ffffff" stroke="#bfd5e9" stroke-width="2" /><text x="259" y="344" font-size="21" font-weight="600" fill="#69839b" text-anchor="start">Model 3</text><rect x="264" y="349" width="17" height="22" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><rect x="293" y="358" width="17" height="13" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><rect x="322" y="353" width="17" height="18" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><rect x="351" y="362" width="17" height="9" rx="2" fill="#bfd5e9" stroke="none" stroke-width="2" /><path d="M399 348C445 348 434 265 475 265" stroke="#bfd5e9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7"/><rect x="483" y="229" width="108" height="72" rx="11" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><text x="537" y="258" font-size="22" font-weight="600" fill="#ffffff" text-anchor="middle">Next</text><text x="537" y="282" font-size="22" font-weight="600" fill="#ffffff" text-anchor="middle">token</text><text x="320" y="402" font-size="24" font-weight="500" fill="#204d78" text-anchor="middle">One model call per decoding step</text>
+<path d="M30 432L610 432" stroke="#bfd5e9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="30" y="459" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">Mixture-model sampling for efficient LLM ensembling</text>
+</g></svg>

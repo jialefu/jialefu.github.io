@@ -1,60 +1,18 @@
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .bg { fill: #fbfaf6; }
-      .frame { fill: #fffdf8; stroke: #d9d4c7; stroke-width: 2; }
-      .soft { fill: #f2efe7; }
-      .ink { fill: #24313d; }
-      .muted { fill: #66707a; }
-      .navy { fill: #234e70; }
-      .teal { fill: #2c7a7b; }
-      .gold { fill: #d69e2e; }
-      .coral { fill: #dd6b5f; }
-      .line { stroke: #24313d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-      .dash { stroke: #c9c1b0; stroke-width: 2; stroke-dasharray: 6 8; }
-      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    </style>
-    <marker id="arrow-cache" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M1 1L9 5L1 9" fill="none" stroke="#24313d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-  </defs>
-
-  <rect class="bg" width="800" height="600" rx="28"/>
-  <rect x="28" y="28" width="744" height="544" rx="24" class="frame"/>
-  <path d="M90 120H710" class="dash"/>
-
-  <text x="92" y="86" font-size="18" font-weight="700" class="muted">Adaptive cache reuse for diffusion decoding</text>
-
-  <rect x="88" y="184" width="446" height="208" rx="22" class="soft"/>
-  <text x="112" y="218" font-size="26" font-weight="700" class="ink">Diffusion sequence</text>
-
-  <rect x="112" y="252" width="54" height="96" rx="14" fill="#d6e4f0"/>
-  <rect x="176" y="252" width="54" height="96" rx="14" fill="#c7d7e7"/>
-  <rect x="240" y="252" width="54" height="96" rx="14" fill="#dcebc7"/>
-  <rect x="304" y="252" width="54" height="96" rx="14" fill="#d6e4f0"/>
-  <rect x="368" y="252" width="54" height="96" rx="14" fill="#c7d7e7"/>
-  <rect x="432" y="252" width="54" height="96" rx="14" fill="#dcebc7"/>
-
-  <rect x="126" y="268" width="26" height="64" rx="10" class="navy"/>
-  <rect x="190" y="268" width="26" height="64" rx="10" class="gold"/>
-  <rect x="254" y="268" width="26" height="64" rx="10" class="teal"/>
-  <rect x="318" y="268" width="26" height="64" rx="10" class="navy"/>
-  <rect x="382" y="268" width="26" height="64" rx="10" class="coral"/>
-  <rect x="446" y="268" width="26" height="64" rx="10" class="teal"/>
-
-  <path d="M160 366C240 418 334 430 448 406" class="line" marker-end="url(#arrow-cache)"/>
-  <rect x="566" y="190" width="146" height="192" rx="22" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
-  <text x="592" y="222" font-size="24" font-weight="700" class="ink">KV cache</text>
-  <rect x="592" y="252" width="94" height="18" rx="9" class="navy"/>
-  <rect x="592" y="284" width="76" height="18" rx="9" class="gold"/>
-  <rect x="592" y="316" width="112" height="18" rx="9" class="teal"/>
-  <rect x="592" y="348" width="64" height="18" rx="9" class="coral"/>
-
-  <path d="M486 300C518 300 532 300 566 300" class="line" marker-end="url(#arrow-cache)"/>
-  <circle cx="654" cy="164" r="28" fill="#fff7e5" stroke="#e7c46a" stroke-width="2"/>
-  <path d="M640 164H668" stroke="#d69e2e" stroke-width="5" stroke-linecap="round"/>
-  <path d="M654 150V178" stroke="#d69e2e" stroke-width="5" stroke-linecap="round"/>
-
-  <rect x="248" y="460" width="306" height="46" rx="23" fill="#fff" stroke="#d9d4c7" stroke-width="2"/>
-  <text x="280" y="489" font-size="22" font-weight="700" class="ink">selective reuse across denoising steps</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+<title id="title">d²Cache</title>
+<desc id="desc">Selected token KV states are refreshed while other states are cached and reused across diffusion denoising steps.</desc>
+<defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f7ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+ <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#caddef"/></pattern>
+ <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse"><path d="M1 1L6.5 4L1 7" fill="none" stroke="#397fc6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="640" height="480" fill="url(#paper)"/>
+<rect x="24" y="110" width="592" height="306" fill="url(#dots)" opacity=".55"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="30" y="33" font-size="13" font-weight="700" fill="#69839b" text-anchor="start">DIFFUSION INFERENCE</text>
+<text x="30" y="77" font-size="32" font-weight="700" fill="#204d78" text-anchor="start">d²Cache</text>
+<path d="M30 99L610 99" stroke="#bfd5e9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="42" y="150" font-size="21" font-weight="500" fill="#204d78" text-anchor="start">Denoising steps</text><text x="42" y="202" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">t1</text><rect x="78" y="178" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="121" y="178" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="164" y="178" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="207" y="178" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="250" y="178" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="293" y="178" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><path d="M350 205L350 232" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><text x="42" y="251" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">t2</text><rect x="78" y="227" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="121" y="227" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="164" y="227" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="207" y="227" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="250" y="227" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="293" y="227" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><path d="M350 254L350 281" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><text x="42" y="300" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">t3</text><rect x="78" y="276" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="121" y="276" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="164" y="276" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="207" y="276" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="250" y="276" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="293" y="276" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><path d="M350 303L350 330" stroke="#83b8e7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><text x="42" y="349" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">t4</text><rect x="78" y="325" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="121" y="325" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><rect x="164" y="325" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="207" y="325" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="250" y="325" width="33" height="32" rx="5" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="293" y="325" width="33" height="32" rx="5" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><path d="M353 225H398" stroke="#397fc6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="415" y="177" width="181" height="166" rx="12" fill="#ffffff" stroke="#83b8e7" stroke-width="2" /><text x="505" y="207" font-size="24" font-weight="600" fill="#204d78" text-anchor="middle">KV cache</text><rect x="434" y="224" width="143" height="22" rx="4" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="439" y="229" width="16" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="462" y="229" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="485" y="229" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="508" y="229" width="16" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="531" y="229" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="554" y="229" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="434" y="255" width="143" height="22" rx="4" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="439" y="260" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="462" y="260" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="485" y="260" width="16" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="508" y="260" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="531" y="260" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="554" y="260" width="16" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="434" y="286" width="143" height="22" rx="4" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><rect x="439" y="291" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="462" y="291" width="16" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="485" y="291" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="508" y="291" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><rect x="531" y="291" width="16" height="12" rx="2" fill="#397fc6" stroke="none" stroke-width="2" /><rect x="554" y="291" width="16" height="12" rx="2" fill="#83b8e7" stroke="none" stroke-width="2" /><path d="M505 344V376H309V355" stroke="#397fc6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="78" y="384" width="14" height="14" rx="3" fill="#397fc6" stroke="#397fc6" stroke-width="2" /><text x="101" y="397" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">Refresh</text><rect x="207" y="384" width="14" height="14" rx="3" fill="#e8f2fc" stroke="#bfd5e9" stroke-width="2" /><text x="230" y="397" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">Reuse</text>
+<path d="M30 432L610 432" stroke="#bfd5e9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="30" y="459" font-size="18" font-weight="500" fill="#69839b" text-anchor="start">Adaptive token selection for KV-state reuse</text>
+</g></svg>

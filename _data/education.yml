@@ -1,14 +1,12 @@
 - institution: Southeast University
-  mark: SEU
+  logo: southeast-university.png
   degree: M.S. in Computer Science
   dates: 2024–2027 (expected)
   detail: PALM Lab · Advised by Xu Yang
   url: https://www.seu.edu.cn/
-  tone: blue
 - institution: Southeast University
-  mark: SEU
+  logo: southeast-university.png
   degree: B.S. in Mathematics
   dates: 2020–2024
   detail: School of Mathematics
   url: https://www.seu.edu.cn/
-  tone: sage

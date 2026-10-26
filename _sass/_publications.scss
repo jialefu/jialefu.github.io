@@ -21,7 +21,7 @@
 
     > li {
       margin: 0;
-      padding: 18px 0;
+      padding: 15px 0;
       border-bottom: 1px solid var(--global-divider-color);
     }
 
@@ -31,8 +31,8 @@
 
   .publication-row {
     display: grid;
-    grid-template-columns: 174px minmax(0, 1fr);
-    gap: 23px;
+    grid-template-columns: 138px minmax(0, 1fr);
+    gap: 19px;
     align-items: start;
   }
 
@@ -45,7 +45,7 @@
     justify-content: center;
     width: 100%;
     aspect-ratio: 4 / 3;
-    padding: 3px;
+    padding: 0;
     margin-top: 3px;
     border: 1px solid var(--global-divider-color);
     border-radius: 5px;
@@ -59,7 +59,7 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 136px;
+    max-height: 104px;
     object-fit: contain;
     border-radius: 3px !important;
   }
@@ -176,17 +176,17 @@
 .citation, .citation-number { color: var(--global-theme-color); }
 
 @media (max-width: 767px) {
-  .publications .publication-row { grid-template-columns: 130px minmax(0, 1fr); gap: 18px; }
+  .publications .publication-row { grid-template-columns: 122px minmax(0, 1fr); gap: 16px; }
 }
 
 @media (max-width: 540px) {
   .publications {
-    .publication-row { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-    .publication-preview { width: 156px; }
+    .publication-row { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+    .publication-preview { width: 124px; }
     .title { font-size: 14px; }
     .author { font-size: 11.5px; }
     .periodical { font-size: 11px; }
-    ol.bibliography > li { padding: 21px 0; }
+    ol.bibliography > li { padding: 17px 0; }
     .links .btn { padding: 5px 11px; font-size: 10.5px; }
   }
 }

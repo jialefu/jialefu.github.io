@@ -11,18 +11,15 @@ layout: default
         <a href="https://github.com/{{ site.data.socials.github_username }}" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
         <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
         <a href="{{ '/blog/' | relative_url }}" aria-label="Blog" title="Blog"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></a>
-        <span class="profile-email">{{ site.data.socials.email }}</span>
       </div>
     </header>
-    <div class="intro-grid">
-      <div class="intro-copy">{{ content }}</div>
-      {% if page.profile.image %}
-        <figure class="profile-portrait">
-          <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url | bust_file_cache }}" alt="Jiale Fu's profile illustration" width="240" height="240" fetchpriority="high">
-          <figcaption><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nanjing, China</figcaption>
-        </figure>
-      {% endif %}
-    </div>
+    <div class="intro-copy">{{ content }}</div>
+    {% if page.profile.image %}
+      <figure class="profile-portrait">
+        <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url | bust_file_cache }}" alt="Jiale Fu's profile illustration" width="270" height="270" fetchpriority="high">
+        <figcaption><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nanjing, China</figcaption>
+      </figure>
+    {% endif %}
     <p class="research-interests"><span>Research interests</span> Speculative decoding · Sparse and linear attention · Algorithm–infrastructure co-design</p>
   </section>
 
@@ -38,14 +35,13 @@ layout: default
     <div class="section-heading">
       <h2 id="education-heading"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h2>
     </div>
-    <div class="education-grid">
+    <div class="organization-options education-options">
       {% for item in site.data.education %}
-        <article class="education-entry">
-          <div class="organization-mark tone-{{ item.tone }}" aria-hidden="true">{{ item.mark }}</div>
-          <div>
-            <h3><a href="{{ item.url }}">{{ item.institution }}</a></h3>
-            <p class="degree">{{ item.degree }}</p>
-            <p class="entry-detail">{{ item.detail }}</p>
+        <article class="organization-card education-card">
+          <span class="organization-logo" aria-hidden="true"><img src="{{ item.logo | prepend: '/assets/img/organizations/' | relative_url }}" alt="" width="48" height="48" loading="lazy"></span>
+          <div class="organization-summary">
+            <h3 class="organization-name"><a href="{{ item.url }}">{{ item.institution }}</a></h3>
+            <p class="organization-role">{{ item.degree }}</p>
             <p class="entry-date">{{ item.dates }}</p>
           </div>
         </article>
@@ -55,22 +51,52 @@ layout: default
 
   <section class="academic-section" id="experience" aria-labelledby="experience-heading">
     <div class="section-heading">
-      <h2 id="experience-heading"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Research Experience</h2>
+      <h2 id="experience-heading"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Internships</h2>
     </div>
-    <div class="experience-list">
-      {% for item in site.data.experience %}
-        <article class="experience-entry">
-          <div class="organization-mark tone-{{ item.tone }}" aria-hidden="true">{{ item.mark }}</div>
-          <div class="experience-copy">
-            <div class="entry-heading">
-              <h3><a href="{{ item.url }}">{{ item.organization }}</a></h3>
+    <div class="organization-disclosure" data-organization-group>
+      <div class="organization-options internship-options" aria-label="Internship details">
+        {% for item in site.data.experience %}
+          <button class="organization-button" type="button" id="internship-button-{{ forloop.index }}" aria-expanded="false" aria-controls="internship-panel-{{ forloop.index }}">
+            <span class="organization-logo{% if item.logo_size == 'small' %} organization-logo-small{% endif %}" aria-hidden="true"><img src="{{ item.logo | prepend: '/assets/img/organizations/' | relative_url }}" alt="" width="48" height="48" loading="lazy"></span>
+            <span class="organization-summary">
+              <span class="organization-name">{{ item.label | default: item.organization }}</span>
+              <span class="organization-role">{{ item.summary_role | default: item.role }}</span>
               <span class="entry-date">{{ item.dates }}</span>
+            </span>
+            <i class="fa-solid fa-chevron-down organization-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="organization-panel" id="internship-panel-{{ forloop.index }}" role="region" aria-labelledby="internship-button-{{ forloop.index }}" aria-hidden="true" hidden inert>
+            <div class="organization-panel-inner">
+              <div class="internship-detail">
+                <header class="internship-detail-header">
+                  <span class="organization-logo detail-logo{% if item.logo_size == 'small' %} organization-logo-small{% endif %}" aria-hidden="true"><img src="{{ item.logo | prepend: '/assets/img/organizations/' | relative_url }}" alt="" width="64" height="64" loading="lazy"></span>
+                  <div class="internship-detail-title">
+                    <h3><a href="{{ item.url }}">{{ item.organization }} <span aria-hidden="true">↗</span></a></h3>
+                    <p>{{ item.role }}</p>
+                  </div>
+                  <div class="internship-detail-meta">
+                    <span class="detail-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ item.dates }}</span>
+                    <span class="detail-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ item.location }}</span>
+                  </div>
+                  <button class="organization-close" type="button" aria-label="Close {{ item.organization }} internship details"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                </header>
+                <div class="internship-detail-body">
+                  <div class="detail-field">
+                    <span class="detail-field-label">Work</span>
+                    <p>{{ item.description }}</p>
+                  </div>
+                  {% if item.mentor %}
+                    <div class="detail-field">
+                      <span class="detail-field-label">Mentor</span>
+                      <p>{% if item.mentor_url %}<a href="{{ item.mentor_url }}">{{ item.mentor }}</a>{% else %}{{ item.mentor }}{% endif %}</p>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
             </div>
-            <p class="entry-role">{{ item.role }} <span>· {{ item.location }}</span></p>
-            <p class="entry-detail">{{ item.description }} Mentored by {% if item.mentor_url %}<a href="{{ item.mentor_url }}">{{ item.mentor }}</a>{% else %}{{ item.mentor }}{% endif %}.</p>
           </div>
-        </article>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </section>
 
