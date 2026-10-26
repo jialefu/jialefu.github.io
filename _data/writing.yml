@@ -1,9 +1,15 @@
-- title: "DFlash-2's Selector and DSpark's Markov Head: An Equivalence Observation"
-  url: https://zhuanlan.zhihu.com/p/2073866383138604573
-  description: An equivalence observation between DFlash-2's Selector and DSpark's Markov Head.
-  source: Zhihu · In Chinese
+- title: "EAGLE-4: Notes on the Efficient LM Head and Earlier Experiments"
+  url: /blog/2026/eagle4-efficient-lm-head/
+  description: The two-stage LM Head, frequency-aware SVD, local Top-k, and the experiments behind them.
+  source: Technical blog · English translation
   year: 2026
-  external: true
+  external: false
+- title: "DFlash-2's Selector and DSpark's Markov Head: An Equivalence Observation"
+  url: /blog/2026/markov-head-vs-selector/
+  description: A shared low-rank transition bias and the candidate truncation behind parallel calibration.
+  source: Technical blog · English translation
+  year: 2026
+  external: false
 - title: "FlashSpec (Part I): One-Pass Verify-and-Resample for Greedy Drafts"
   url: /blog/2026/flashspec/
   description: A one-pass method that reduces memory traffic while preserving exact decoding semantics.

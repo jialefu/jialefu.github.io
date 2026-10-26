@@ -11,6 +11,20 @@ pretty_table: true
 toc:
   sidebar: left
 _styles: |
+  .post {
+    --flashspec-logit: #3d7eae;
+    --flashspec-noise: #8ac6e8;
+    --flashspec-score: #225a87;
+    --flashspec-winner: #146a9c;
+  }
+
+  html[data-theme="dark"] .post {
+    --flashspec-logit: #72aada;
+    --flashspec-noise: #426d90;
+    --flashspec-score: #a6d6f4;
+    --flashspec-winner: #b2e3ff;
+  }
+
   @media (min-width: 992px) {
     .container[role="main"] {
       max-width: 1180px;
@@ -508,15 +522,15 @@ _styles: |
   }
 
   .flashspec-svg .logit-fill {
-    fill: color-mix(in srgb, #4c78a8 74%, var(--global-code-bg-color));
+    fill: color-mix(in srgb, var(--flashspec-logit) 74%, var(--global-code-bg-color));
   }
 
   .flashspec-svg .noise-fill {
-    fill: color-mix(in srgb, #f28e2b 76%, var(--global-code-bg-color));
+    fill: color-mix(in srgb, var(--flashspec-noise) 76%, var(--global-code-bg-color));
   }
 
   .flashspec-svg .score-fill {
-    fill: color-mix(in srgb, var(--global-theme-color) 54%, #f28e2b);
+    fill: var(--flashspec-score);
   }
 
   .flashspec-svg .masked-fill {
@@ -551,7 +565,7 @@ _styles: |
 
   .flashspec-svg .winner-ring {
     fill: none;
-    stroke: #2f9e44;
+    stroke: var(--flashspec-winner);
     stroke-linejoin: round;
     stroke-width: 2.4;
   }
@@ -650,11 +664,11 @@ _styles: |
     height: var(--flashspec-bar, 45%);
     min-height: 0.3rem;
     border-radius: 4px 4px 2px 2px;
-    background: color-mix(in srgb, #4c78a8 72%, var(--global-code-bg-color));
+    background: color-mix(in srgb, var(--flashspec-logit) 72%, var(--global-code-bg-color));
   }
 
   .flashspec-gumbel-bar.is-noise {
-    background: color-mix(in srgb, #f28e2b 74%, var(--global-code-bg-color));
+    background: color-mix(in srgb, var(--flashspec-noise) 74%, var(--global-code-bg-color));
   }
 
   .flashspec-gumbel-bar.is-stack {
@@ -669,13 +683,13 @@ _styles: |
   .flashspec-gumbel-stack-logit {
     width: 100%;
     flex: 0 0 var(--flashspec-logit-part, 50%);
-    background: color-mix(in srgb, #4c78a8 72%, var(--global-code-bg-color));
+    background: color-mix(in srgb, var(--flashspec-logit) 72%, var(--global-code-bg-color));
   }
 
   .flashspec-gumbel-stack-noise {
     width: 100%;
     flex: 0 0 var(--flashspec-noise-part, 50%);
-    background: color-mix(in srgb, #f28e2b 74%, var(--global-code-bg-color));
+    background: color-mix(in srgb, var(--flashspec-noise) 74%, var(--global-code-bg-color));
   }
 
   .flashspec-gumbel-cell.is-draft .flashspec-gumbel-bar,
@@ -689,7 +703,7 @@ _styles: |
   }
 
   .flashspec-gumbel-cell.is-sampled .flashspec-gumbel-bar {
-    outline: 2px solid #2f9e44;
+    outline: 2px solid var(--flashspec-winner);
     outline-offset: 2px;
   }
 
@@ -817,7 +831,7 @@ _styles: |
   }
 
   .flashspec-token.is-recovered .flashspec-token-bar {
-    background: #2f9e44;
+    background: var(--flashspec-winner);
   }
 
   .flashspec-token.is-masked {
